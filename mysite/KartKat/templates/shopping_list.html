@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping List</title>
     <style>
         body {
@@ -30,84 +30,84 @@
             z-index: 1000;
         }
 
-        header * {
-            display: inline;
-        }
+      header * {
+        display: inline;
+      }
 
-        header li {
-            margin: 20px;
-        }
+      header li {
+        margin: 20px;
+      }
 
-        header li a {
-            color: white;
-            text-decoration: none;
-        }
+      header li a {
+        color: white;
+        text-decoration: none;
+      }
 
-        .form-section {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+      .form-section {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-        .form-section h2 {
-            margin-top: 0;
-        }
+      .form-section h2 {
+        margin-top: 0;
+      }
 
-        .form-section form {
-            display: flex;
-            flex-direction: column;
-        }
+      .form-section form {
+        display: flex;
+        flex-direction: column;
+      }
 
-        .form-section form input,
-        .form-section form button {
-            margin-bottom: 10px;
-            padding: 10px;
-            font-size: 16px;
-        }
+      .form-section form input,
+      .form-section form button {
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 16px;
+      }
 
-        .form-section form button {
-            background-color: #023c40;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+      .form-section form button {
+        background-color: #023c40;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
 
-        .form-section form button:hover {
-            background-color: #035e60;
-        }
+      .form-section form button:hover {
+        background-color: #035e60;
+      }
 
-        .plus-icon {
-            cursor: pointer;
-            font-size: 20px;
-            margin-left: 10px;
-        }
+      .plus-icon {
+        cursor: pointer;
+        font-size: 20px;
+        margin-left: 10px;
+      }
 
-        .item-form,
-        .delete-buttons {
-            display: none;
-        }
+      .item-form,
+      .delete-buttons {
+        display: none;
+      }
 
-        .delete-button {
-            background-color: red;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-left: 10px;
-        }
+      .delete-button {
+        background-color: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 10px;
+      }
 
-        .delete-list-button {
-            background-color: red;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-left: 10px;
-        }
+      .delete-list-button {
+        background-color: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 10px;
+      }
 
         .modal {
             display: none;
@@ -123,55 +123,71 @@
             padding-top: 60px;
         }
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 10px;
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 10px;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .chat-message {
+        margin-bottom: 10px;
+      }
+
+      .chat-input {
+        display: flex;
+      }
+
+      .chat-input input {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      .chat-input button {
+        padding: 10px;
+        font-size: 16px;
+        background-color: #023c40;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+        .chat-input button:hover {
+            background-color: #035e60;
         }
 
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .chat-container {
-            display: flex;
-            flex-direction: column;
-            height: 300px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-
-        .chat-message {
-            margin-bottom: 10px;
-        }
-
-        .chat-input {
-            display: flex;
-        }
-
-        .chat-input input {
-            flex: 1;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        .chat-input button {
+        .save-recipe-button {
+            display: none;
+            margin-top: 10px;
             padding: 10px;
             font-size: 16px;
             background-color: #023c40;
@@ -181,7 +197,7 @@
             border-radius: 5px;
         }
 
-        .chat-input button:hover {
+        .save-recipe-button:hover {
             background-color: #035e60;
         }
 
@@ -204,67 +220,126 @@
         }
     </style>
     <script>
-        function toggleItemForm(listId) {
-            var form = document.getElementById('itemForm-' + listId);
-            var deleteButtons = document.querySelectorAll('.delete-button-' + listId);
-            if (form.style.display === 'none' || form.style.display === '') {
-                form.style.display = 'block';
-                deleteButtons.forEach(function(button) {
-                    button.style.display = 'inline';
-                });
-            } else {
-                form.style.display = 'none';
-                deleteButtons.forEach(function(button) {
-                    button.style.display = 'none';
-                });
-            }
+      function toggleItemForm(listId) {
+        var form = document.getElementById("itemForm-" + listId);
+        var deleteButtons = document.querySelectorAll(
+          ".delete-button-" + listId
+        );
+        if (form.style.display === "none" || form.style.display === "") {
+          form.style.display = "block";
+          deleteButtons.forEach(function (button) {
+            button.style.display = "inline";
+          });
+        } else {
+          form.style.display = "none";
+          deleteButtons.forEach(function (button) {
+            button.style.display = "none";
+          });
         }
+      }
 
-        function confirmDeleteList(listId) {
-            if (confirm("Are you sure you want to delete this list?")) {
-                document.getElementById('deleteListForm-' + listId).submit();
-            }
+      function confirmDeleteList(listId) {
+        if (confirm("Are you sure you want to delete this list?")) {
+          document.getElementById("deleteListForm-" + listId).submit();
         }
+      }
 
         function openChatbotModal() {
             document.getElementById('chatbotModal').style.display = 'block';
         }
 
-        function closeChatbotModal() {
-            document.getElementById('chatbotModal').style.display = 'none';
+      function closeChatbotModal() {
+        document.getElementById("chatbotModal").style.display = "none";
+      }
+
+      function sendMessage() {
+        var input = document.getElementById("chatInput");
+        var message = input.value;
+        if (message.trim() === "") return;
+
+        var chatContainer = document.getElementById("chatContainer");
+        var placeholder = document.getElementById("chatPlaceholder");
+
+        var userMessage = document.createElement("div");
+        userMessage.className = "chat-message";
+        userMessage.textContent = "You: " + message;
+        chatContainer.appendChild(userMessage);
+
+        // Send message to Django view
+        fetch('{% url "chatbot" %}', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-CSRFToken": "{{ csrf_token }}",
+          },
+          body: "message=" + encodeURIComponent(message),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            var botMessage = document.createElement("div");
+            botMessage.className = "chat-message";
+            botMessage.textContent = "Kat: " + data.response;
+            chatContainer.appendChild(botMessage);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            if (data.is_recipe) {
+              document.getElementById("saveRecipeButton").style.display =
+                "block";
+              document.getElementById("recipeName").value = extractRecipeName(
+                data.response
+              );
+              document.getElementById("recipeIngredients").value =
+                extractIngredients(data.response);
+              document.getElementById("recipeSteps").value = extractSteps(
+                data.response
+              );
+            }
+          });
+
+        input.value = "";
+      }
+
+      function extractRecipeName(response) {
+            const match = response.match(/Here is a recipe for (.+?)\n/);
+            return match ? match[1] : '';
         }
 
-        function sendMessage() {
-            var input = document.getElementById('chatInput');
-            var message = input.value;
-            if (message.trim() === '') return;
+      function extractIngredients(response) {
+        const match = response.match(/Ingredients:\s*([\s\S]+?)\s*Steps:/i); // Match everything between "Ingredients" and "Steps"
+        return match ? match[1].trim() : "";
+      }
 
-            var chatContainer = document.getElementById('chatContainer');
-            var userMessage = document.createElement('div');
-            userMessage.className = 'chat-message';
-            userMessage.textContent = 'You: ' + message;
-            chatContainer.appendChild(userMessage);
+      function extractSteps(response) {
+        const match = response.match(/Steps:\s*([\s\S]+)/i); // Match everything after "Steps"
+        return match ? match[1].trim() : "";
+      }
 
-            // Send message to Django view
-            fetch('{% url "chatbot" %}', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'X-CSRFToken': '{{ csrf_token }}'
-                },
-                body: 'message=' + encodeURIComponent(message)
-            })
-            .then(response => response.json())
-            .then(data => {
-                var botMessage = document.createElement('div');
-                botMessage.className = 'chat-message';
-                botMessage.textContent = 'Bot: ' + data.response;
-                chatContainer.appendChild(botMessage);
-                chatContainer.scrollTop = chatContainer.scrollHeight;
-            });
+      function saveRecipe() {
+        const recipeName = document.getElementById("recipeName").value;
+        const ingredients = document.getElementById("recipeIngredients").value;
+        const steps = document.getElementById("recipeSteps").value;
+        console.log("recipe name: ", recipeName);
+        console.log("recipe ingredients: ", ingredients);
+        console.log("recipe steps: ", steps);
 
-            input.value = '';
-        }
+        fetch('{% url "save_recipe" %}', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-CSRFToken": "{{ csrf_token }}",
+          },
+          body: `recipe_name=${encodeURIComponent(
+            recipeName
+          )}&ingredients=${encodeURIComponent(
+            ingredients
+          )}&steps=${encodeURIComponent(steps)}`,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            alert(data.status);
+            document.getElementById("saveRecipeButton").style.display = "none";
+          });
+      }
 
         function toggleAddItemSection() {
             var section = document.getElementById('addItemSection');
@@ -370,13 +445,12 @@
     </div>
 
     <button onclick="toggleAddItemSection()">Add New Shopping List</button>
-    <section id="addItemSection" class="form-section" style="display: none;">
-        <h2>Add New Shopping List</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" name="add_list">Add Shopping List</button>
-        </form>
+    <section id="addItemSection" class="form-section" style="display: none">
+      <h2>Add New Shopping List</h2>
+      <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit" name="add_list">Add Shopping List</button>
+      </form>
     </section>
 
     <!-- Chatbot Button -->
@@ -384,14 +458,33 @@
 
     <!-- Chatbot Modal -->
     <div id="chatbotModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeChatbotModal()">&times;</span>
-            <div id="chatContainer" class="chat-container"></div>
-            <div class="chat-input">
-                <input type="text" id="chatInput" placeholder="Type your message...">
-                <button onclick="sendMessage()">Send</button>
-            </div>
+      <div class="modal-content">
+        <span class="close" onclick="closeChatbotModal()">&times;</span>
+        <div id="chatContainer" class="chat-container">
+          <div id="chatPlaceholder" class="chat-message">
+            Kat: Meowdy! Try asking questions about recipes, shopping lists, or
+            money saving tips! 😺
+          </div>
         </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Type your message..."
+          />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+        <button
+          id="saveRecipeButton"
+          class="save-recipe-button"
+          onclick="saveRecipe()"
+        >
+          Save Recipe
+        </button>
+        <input type="hidden" id="recipeName" />
+        <input type="hidden" id="recipeIngredients" />
+        <input type="hidden" id="recipeSteps" />
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -31,6 +31,14 @@ class GroceryItem(models.Model):
     def __str__(self):
         return self.name
 
+class Recipe(models.Model):
+    name = models.CharField(max_length=200)
+    ingredients = models.TextField()
+    steps = models.TextField()
+
+    def __str__(self):
+        return self.name
+
 class Inventory(models.Model):
     store_name = models.CharField(max_length=200)
     grocery_item = models.ForeignKey(GroceryItem, on_delete=models.CASCADE)  # Link to GroceryItem
@@ -38,3 +46,4 @@ class Inventory(models.Model):
 
     def __str__(self):
         return self.store_name
+
