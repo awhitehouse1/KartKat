@@ -36,6 +36,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+import os
+
+API_KEY = os.environ.get('API_KEY')
 
 # Application definition
 
