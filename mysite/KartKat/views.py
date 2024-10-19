@@ -11,25 +11,46 @@ from django.contrib.auth import logout
 from django.views import generic, View
 from datetime import datetime
 
-
-def index(request):
-    return render(request, "index.html")
-
-def map(request):
-    key = os.environ.get('API_KEY')
-    context = {
-        'key': key,
-    }
-    return render(request, 'map.html', context)
-
 from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
 from .models import ShoppingList, ShoppingListItem
 from .forms import ShoppingListForm, ShoppingListItemForm
+from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+client = OpenAI(
+    api_key = os.getenv('OPEN_API_KEY')
+)
+
+@csrf_exempt
+def chatbot(request):
+    if request.method == 'POST':
+        message = request.POST.get('message')
+        try:
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "user", "content": message},
+                ]
+            )
+            chatbot_response = response.choices[0].message.content.strip()
+            return JsonResponse({'response': chatbot_response})
+        except Exception as e:
+            return JsonResponse({'response': 'An error occurred'}, status=500)
+    return JsonResponse({'response': 'Invalid request method'}, status=400)
 
 def index(request):
     return render(request, 'index.html')
 
 def shopping_list(request):
+    form = ShoppingListForm()
+    item_form = ShoppingListItemForm()
+
     if request.method == 'POST':
         if 'add_list' in request.POST:
             form = ShoppingListForm(request.POST)
@@ -45,9 +66,6 @@ def shopping_list(request):
                 item.shopping_list = shopping_list
                 item.save()
                 return redirect('index')
-    else:
-        form = ShoppingListForm()
-        item_form = ShoppingListItemForm()
 
     shopping_lists = ShoppingList.objects.all()
     context = {
@@ -67,7 +85,13 @@ def delete_list(request, list_id):
     shopping_list.delete()
     return redirect('index')
 
+def map(request):
+    key = os.environ.get('API_KEY')
+    context = {
+        'key': key,
+    }
+    return render(request, 'map.html', context)
+
 def logout_view(request):
     logout(request)
     return redirect('index')
-
