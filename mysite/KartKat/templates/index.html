@@ -8,9 +8,10 @@
 </head>
 <body>
     {% if user.is_authenticated %}
+        {% include 'navbar.html' %}
         {% include 'shopping_list.html' %}
     {% else %}
-        {% include 'shopping_list.html' %}
+        {% include 'google_login.html' %}
     {% endif %}
 </body>
 </html>
