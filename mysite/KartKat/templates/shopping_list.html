@@ -11,11 +11,11 @@
             font-family: sans-serif;
             margin: 0;
             padding: 0;
-            padding-top: 100px; /* Add padding to the top to account for the fixed header */
+            padding-top: 100px;
         }
 
         main {
-            color: black; /* Change this to black or remove it if not needed */
+            color: black;
         }
 
         header {
@@ -27,7 +27,7 @@
             height: 80px;
             display: flex;
             align-items: center;
-            z-index: 1000; /* Ensure the header is above other content */
+            z-index: 1000;
         }
 
         header * {
@@ -109,7 +109,6 @@
             margin-left: 10px;
         }
 
-        /* Chatbot Modal Styles */
         .modal {
             display: none;
             position: fixed;
@@ -185,6 +184,24 @@
         .chat-input button:hover {
             background-color: #035e60;
         }
+
+        .item-checkbox {
+            margin-right: 10px;
+        }
+
+        .crossed-out {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .item-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .item-list li {
+            margin-bottom: 5px;
+        }
     </style>
     <script>
         function toggleItemForm(listId) {
@@ -209,7 +226,6 @@
             }
         }
 
-        // Chatbot Modal Functions
         function openChatbotModal() {
             document.getElementById('chatbotModal').style.display = 'block';
         }
@@ -259,27 +275,59 @@
             }
         }
 
+        function toggleItemStatus(listId, itemId) {
+            const itemElement = document.getElementById(`item-${listId}-${itemId}`);
+            const checkbox = itemElement.querySelector('input[type="checkbox"]');
+            const itemList = document.getElementById(`item-list-${listId}`);
+
+            if (checkbox.checked) {
+                itemElement.classList.add('crossed-out');
+                itemList.appendChild(itemElement);
+            } else {
+                itemElement.classList.remove('crossed-out');
+                itemList.insertBefore(itemElement, itemList.firstChild);
+            }
+        }
+
         function toggleItemForm(listId) {
             const itemList = document.getElementById(`item-list-${listId}`);
             const itemForm = document.getElementById(`itemForm-${listId}`);
             const toggleIcon = document.getElementById(`toggle-icon-${listId}`);
 
-            // Toggle display of the list and form
             if (itemList.style.display === "none") {
                 itemList.style.display = "block";
                 itemForm.style.display = "block";
-                toggleIcon.innerHTML = "-"; // Change the icon to "-"
+                toggleIcon.innerHTML = "-";
             } else {
                 itemList.style.display = "none";
                 itemForm.style.display = "none";
-                toggleIcon.innerHTML = "+"; // Change the icon back to "+"
+                toggleIcon.innerHTML = "+";
+            }
         }
-}
 
+        function deleteCrossedOffItems() {
+            const crossedOffItems = document.querySelectorAll('.crossed-out');
+            const itemsToDelete = Array.from(crossedOffItems).map(item => {
+                const [_, listId, itemId] = item.id.split('-');
+                return { listId, itemId };
+            });
+
+            // Send the list of items to delete to the server
+            fetch('{% url "delete_crossed_off_items" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: JSON.stringify({ items: itemsToDelete })
+            });
+        }
+
+        // Add event listener for page unload
+        window.addEventListener('beforeunload', deleteCrossedOffItems);
     </script>
 </head>
 <body>
-
     <h1>Shopping List</h1>
 
     <div class="tabs">
@@ -290,10 +338,11 @@
                 {{ list.name }}
                 <span class="plus-icon" id="toggle-icon-{{ list.id }}" onclick="toggleItemForm({{ list.id }})">+</span>
                 <button class="delete-list-button" onclick="confirmDeleteList({{ list.id }})">Delete List</button>
-                <ul id="item-list-{{ list.id }}" style="display: none;">
+                <ul id="item-list-{{ list.id }}" class="item-list" style="display: none;">
                     {% for item in list.items.all %}
-                    <li>
-                        {{ item.name }}
+                    <li id="item-{{ list.id }}-{{ item.id }}">
+                        <input type="checkbox" class="item-checkbox" onchange="toggleItemStatus({{ list.id }}, {{ item.id }})">
+                        <span>{{ item.name }}</span>
                         <form method="post" action="{% url 'delete_item' item.id %}" class="delete-buttons delete-button-{{ list.id }}">
                             {% csrf_token %}
                             <button type="submit" class="delete-button">Delete</button>
@@ -319,7 +368,6 @@
         <p>You don't have any shopping lists right now. Try creating one!</p>
         {% endif %}
     </div>
-
 
     <button onclick="toggleAddItemSection()">Add New Shopping List</button>
     <section id="addItemSection" class="form-section" style="display: none;">

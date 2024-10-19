@@ -1,5 +1,7 @@
 
 import os
+import json
+#from django.db.models.fields import json
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from datetime import datetime
@@ -95,3 +97,16 @@ def map(request):
 def logout_view(request):
     logout(request)
     return redirect('index')
+
+
+@csrf_exempt
+def delete_crossed_off_items(request):
+    if request.method == 'POST':
+        data = json.loads(request.body.decode('utf-8'))  # decode the bytes to string
+        for item in data["items"]:
+            list_id = item['listId']
+            item_id = item['itemId']
+            ShoppingListItem.objects.filter(id=item_id, shopping_list_id=list_id).delete()
+
+        return JsonResponse({'status': 'success'})
+    return JsonResponse({'status': 'error'}, status=400)
