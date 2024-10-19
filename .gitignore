@@ -54,6 +54,7 @@ docs/_build/
 
 # Ignore the virtual environment directory
 venv/
+/.env
 
 # Ignore Python cache files
 __pycache__/
@@ -71,5 +72,6 @@ __pycache__/
 # C extensions
 *.so
 
-/mysite/db.sqlite3
-/.idea/misc.xml
+*.sqlite3
+.idea
+/mysite/kartkat/migrations/

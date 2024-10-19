@@ -26,6 +26,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import ShoppingList, ShoppingListItem
 from .forms import ShoppingListForm, ShoppingListItemForm
 
+def index(request):
+    return render(request, 'index.html')
+
 def shopping_list(request):
     if request.method == 'POST':
         if 'add_list' in request.POST:
