@@ -53,6 +53,8 @@
             display: flex;
             justify-content: flex-start;
             text-align: center;
+            flex-grow: 1; /* This ensures the left part takes up the remaining space */
+
         }
 
         .logo {
@@ -100,14 +102,15 @@
     <nav class="nav">
         <div class="navleft">
             <a class="active navdesign" href="{% url 'index' %}">Shopping List</a>
-            <a class="active navdesign" href="{% url 'recipe_list'}">Recipe Page</a>
+            <a class="active navdesign" href="{% url 'recipe_list' %}">Recipe Page</a>
             <a class="active navdesign" href="{% url 'map' %}">Search Grocery Stores</a>
+            <a class="navdesign" href="{% url 'rewards' %}">Rewards</a>
+
         </div>
         <div class="navspecial">
             <a class="navdesign" href="{% url 'logout' %}">Logout</a>
         </div>
     </nav>
     <!-- Main content goes here -->
-
 </body>
 </html>

@@ -16,6 +16,7 @@ urlpatterns = [
     path('shopping-list/delete-list/<int:list_id>/', views.delete_list, name='delete_list'),
     path('delete-crossed-off-items/', views.delete_crossed_off_items, name='delete_crossed_off_items'),
     path('map/', views.map, name="map"),
+    path("rewards", views.rewards, name="rewards"),
     path('chatbot/', views.chatbot, name='chatbot'),
     path('save-recipe/', views.save_recipe, name='save_recipe'),
     path('recipes/', views.recipe_list, name='recipe_list'),
