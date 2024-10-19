@@ -5,54 +5,108 @@
     <title>Title</title>
     <style>
         body {
-            height: 125vh;
-            background-color: white;
-            font-family: sans-serif;
+            font-family: "Avenir", "Proxima Nova", Serif;
+            background-color: #F7F4EB;
+            margin: 0; /* Remove margin to eliminate space at the top */
+            padding: 0; /* Remove any additional padding */
+        }
+
+        h1 {
+            color: #728370;
+        }
+
+        a {
+            color: #198754;
+        }
+
+        a:hover {
+            color: #ccc;
+        }
+
+        button#logout {
+            border: none;
+            background: none;
+            padding-top: 0;
+            padding-bottom: 0;
             margin: 0;
-            padding: 0;
-            padding-top: 100px; /* Add padding to the top to account for the fixed header */
+            outline: none;
         }
 
-        main {
-            color: black; /* Change this to black or remove it if not needed */
-        }
-
-        header {
-            background-color: #023c40;
-            position: fixed;
+        nav {
+            height: 70px; /* Adjust navbar height */
+            list-style-type: none;
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+            overflow: hidden;
+            background-color: #2a9d8f;
+            display: flex;
+            justify-content: space-between; /* Ensure items are spaced on the left and right */
+            align-items: center; /* Center align items vertically */
+            position: fixed; /* Make navbar fixed at the top */
             top: 0;
             left: 0;
             right: 0;
-            height: 80px;
+            padding: 0 20px; /* Add some padding for the content */
+        }
+
+        .navleft {
+            display: flex;
+            justify-content: flex-start;
+            text-align: center;
+            flex-grow: 1; /* This ensures the left part takes up the remaining space */
+        }
+
+        .logo {
+            display: block;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            padding: 0px 40px;
+            text-decoration: none;
+            font-size: xx-large;
+            margin-top: -15px;
+        }
+
+        .navspecial {
             display: flex;
             align-items: center;
-            z-index: 1000; /* Ensure the header is above other content */
         }
 
-        header * {
-            display: inline;
+        .nav {
+            display: flex;
+            align-items: center;
+            font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         }
 
-        header li {
-            margin: 20px;
-        }
-
-        header li a {
+        .navdesign {
+            display: block;
             color: white;
+            text-align: center;
+            padding: 12px 40px;
             text-decoration: none;
+            font-size: 20px;
         }
+
+        .brsmall {
+            display: block;
+            margin-bottom: .5em;
+            flex-grow: 1;
+        }
+
     </style>
 </head>
 <body>
-<header>
-        <nav>
-            <ul>
-                <li><a href="{% url 'index' %}">Shopping List</a></li>
-                <li><a href="recipe.html">Recipe Page</a></li>
-                <li><a href="{% url 'map' %}">Search Grocery Stores</a></li>
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="nav">
+        <div class="navleft">
+            <a class="active navdesign" href="{% url 'index' %}">Shopping List</a>
+            <a class="active navdesign" href="recipe.html">Recipe Page</a>
+            <a class="active navdesign" href="{% url 'map' %}">Search Grocery Stores</a>
+            <a class="navdesign" href="{% url 'rewards' %}">Rewards</a>
+        </div>
+        <div class="navspecial">
+            <a class="navdesign" href="{% url 'logout' %}">Logout</a>
+        </div>
+    </nav>
+    <!-- Main content goes here -->
 </body>
 </html>
