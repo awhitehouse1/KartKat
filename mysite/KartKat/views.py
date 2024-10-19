@@ -111,6 +111,7 @@ def delete_list(request, list_id):
     shopping_list.delete()
     return redirect('index')
 
+
 def map(request):
     key = os.environ.get('API_KEY')
     context = {
