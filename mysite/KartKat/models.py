@@ -39,3 +39,12 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.name
+
+class Inventory(models.Model):
+    store_name = models.CharField(max_length=200)
+    grocery_item = models.ForeignKey(GroceryItem, on_delete=models.CASCADE)  # Link to GroceryItem
+    price = models.DecimalField(max_digits=5, decimal_places=2)
+
+    def __str__(self):
+        return self.store_name
+

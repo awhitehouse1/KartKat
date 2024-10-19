@@ -3,9 +3,16 @@
 {% block content %}
 <script>
     function initMap() {
-        // Define your Google Maps initialization logic here
+        let autocomplete;
+        let placesService;
+        let directionsService;
+        let directionsRenderer;
+        let originLocation;
+        let openInfoWindow = null; // Variable to track the currently open info window
+
+        // Initialize the map
         var mapOptions = {
-            center: {lat: 38.0336, lng: -78.5080},
+            center: { lat: 38.0336, lng: -78.5080 },
             zoom: 15,
             styles: [
                 {
@@ -16,29 +23,120 @@
                 }
             ]
         };
+
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-        // Assuming you have your locations data available in `data`
-        data.locations.forEach(function(location) {
-            var marker = new google.maps.Marker({
-                position: { lat: parseFloat(location.lat), lng: parseFloat(location.long) },
-                map: map,
-                title: location.name
-            });
+        var input = document.getElementById('search-input');
+        if (!input) {
+            console.error('Search input not found.');
+            return;
+        }
 
-            // Optionally, you can add an info window to display additional information
-            var infoWindow = new google.maps.InfoWindow({
-                content: `<h3>${location.name}</h3>`
-            });
+        autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
 
-            marker.addListener('click', function() {
-                infoWindow.open(map, marker);
+        // Initialize Places service
+        placesService = new google.maps.places.PlacesService(map);
+
+        // Initialize Directions service and renderer
+        directionsService = new google.maps.DirectionsService();
+        directionsRenderer = new google.maps.DirectionsRenderer();
+        directionsRenderer.setMap(map);
+
+        // Add listener when the user selects a place
+        autocomplete.addListener('place_changed', function () {
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                window.alert("No details available for input: '" + place.name + "'");
+                return;
+            }
+
+            // Store the searched location as the origin
+            originLocation = place.geometry.location;
+
+            // If the place has a geometry, then present it on the map
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                map.setCenter(place.geometry.location);
+                map.setZoom(10); // Default zoom for searched location
+            }
+
+            var request = {
+                location: place.geometry.location,
+                radius: 5000, // 5km radius, adjust as necessary
+                type: ['grocery_or_supermarket'] // Look for grocery stores
+            };
+
+            placesService.nearbySearch(request, function (results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    results.forEach(function (result) {
+                        var marker = new google.maps.Marker({
+                            position: result.geometry.location,
+                            map: map,
+                            title: result.name
+                        });
+
+                        // Add event listener for marker click
+                        marker.addListener('click', function () {
+                            if (!originLocation) {
+                                window.alert("Please search for a location first.");
+                                return;
+                            }
+
+                            // Close the currently open info window, if any
+                            if (openInfoWindow) {
+                                openInfoWindow.close();
+                            }
+
+                            // Calculate and display the route
+                            calculateAndDisplayRoute(originLocation, result.geometry.location);
+
+                            // Create a new info window for the selected marker
+                            var infoWindow = new google.maps.InfoWindow({
+                                content: `<h3>${result.name}</h3><p>${result.vicinity}</p>`
+                            });
+
+                            // Open the new info window
+                            infoWindow.open(map, marker);
+
+                            // Set the newly opened info window as the current one
+                            openInfoWindow = infoWindow;
+                        });
+                    });
+                }
             });
         });
+
+        function calculateAndDisplayRoute(origin, destination) {
+            var selectedMode = document.getElementById('mode').value; // Get the selected mode (driving, walking, etc.)
+
+            directionsService.route({
+                origin: origin,
+                destination: destination,
+                travelMode: google.maps.TravelMode[selectedMode.toUpperCase()] // Use the selected mode
+            }, function (response, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    directionsRenderer.setDirections(response);
+
+                    // Extract duration and distance from the first route
+                    var route = response.routes[0].legs[0];
+                    var distance = route.distance.text;
+                    var duration = route.duration.text;
+
+                    // Display the distance and duration
+                    document.getElementById('route-info').innerHTML =
+                        `${selectedMode.charAt(0).toUpperCase() + selectedMode.slice(1).toLowerCase()} Distance: ${distance}, Duration: ${duration}`;
+                } else {
+                    window.alert('Directions request failed due to ' + status);
+                }
+            });
+        }
     }
 </script>
+
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABHMSzBkIlURtKlubDpx6QDLzfmBtmYbE&callback=initMap">  <!-- Use the key variable here -->
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABHMSzBkIlURtKlubDpx6QDLzfmBtmYbE&callback=initMap&libraries=places">
 </script>
 
 <style>
@@ -64,6 +162,16 @@
 </style>
 
 <div class="linkholder">
+    <center>
+        <input id="search-input" type="text" placeholder="Search for grocery stores" style="width: 500px; padding: 8px; margin-bottom: 10px;">
+        <select id="mode" style="margin-left: 10px;">
+            <option value="DRIVING">Driving</option>
+            <option value="WALKING">Walking</option>
+            <option value="BICYCLING">Bicycling</option>
+        </select>
+    </center>
+    <div id="route-info" style="margin-top: 10px; text-align: center; font-weight: bold;"></div>
+
     <div class="mapholder">
         <div id="map"></div>
     </div>

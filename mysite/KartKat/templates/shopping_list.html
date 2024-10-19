@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping List</title>
     <style>
-      body {
-        height: 125vh;
-        background-color: white;
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
-        padding-top: 100px; /* Add padding to the top to account for the fixed header */
-      }
+        body {
+            height: 125vh;
+            background-color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px; /* Add padding to the top to account for the fixed header */
+        }
 
-      main {
-        color: black; /* Change this to black or remove it if not needed */
-      }
+        main {
+            color: black; /* Change this to black or remove it if not needed */
+        }
 
-      header {
-        background-color: #023c40;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        z-index: 1000; /* Ensure the header is above other content */
-      }
+        header {
+            background-color: #023c40;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            z-index: 1000; /* Ensure the header is above other content */
+        }
 
       header * {
         display: inline;
@@ -109,20 +109,20 @@
         margin-left: 10px;
       }
 
-      /* Chatbot Modal Styles */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1001;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.4);
-        padding-top: 60px;
-      }
+        /* Chatbot Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
 
       .modal-content {
         background-color: #fefefe;
@@ -182,25 +182,25 @@
         border-radius: 5px;
       }
 
-      .chat-input button:hover {
-        background-color: #035e60;
-      }
+        .chat-input button:hover {
+            background-color: #035e60;
+        }
 
-      .save-recipe-button {
-        display: none;
-        margin-top: 10px;
-        padding: 10px;
-        font-size: 16px;
-        background-color: #023c40;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-      }
+        .save-recipe-button {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #023c40;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-      .save-recipe-button:hover {
-        background-color: #035e60;
-      }
+        .save-recipe-button:hover {
+            background-color: #035e60;
+        }
     </style>
     <script>
       function toggleItemForm(listId) {
@@ -227,10 +227,10 @@
         }
       }
 
-      // Chatbot Modal Functions
-      function openChatbotModal() {
-        document.getElementById("chatbotModal").style.display = "block";
-      }
+        // Chatbot Modal Functions
+        function openChatbotModal() {
+            document.getElementById('chatbotModal').style.display = 'block';
+        }
 
       function closeChatbotModal() {
         document.getElementById("chatbotModal").style.display = "none";
@@ -325,70 +325,56 @@
           });
       }
 
-      function toggleAddItemSection() {
-        var section = document.getElementById("addItemSection");
-        if (section.style.display === "none" || section.style.display === "") {
-          section.style.display = "block";
-        } else {
-          section.style.display = "none";
+        function toggleAddItemSection() {
+            var section = document.getElementById('addItemSection');
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
         }
-      }
     </script>
-  </head>
-  <body>
+</head>
+<body>
+
     <h1>Shopping List</h1>
 
     <div class="tabs">
-      {% if shopping_lists %}
-      <ul>
-        {% for list in shopping_lists %}
-        <li>
-          {{ list.name }}
-          <span class="plus-icon" onclick="toggleItemForm({{ list.id }})"
-            >+</span
-          >
-          <button
-            class="delete-list-button"
-            onclick="confirmDeleteList({{ list.id }})"
-          >
-            Delete List
-          </button>
-          <ul>
-            {% for item in list.items.all %}
+        {% if shopping_lists %}
+        <ul>
+            {% for list in shopping_lists %}
             <li>
-              {{ item.name }}
-              <form
-                method="post"
-                action="{% url 'delete_item' item.id %}"
-                class="delete-buttons delete-button-{{ list.id }}"
-              >
-                {% csrf_token %}
-                <button type="submit" class="delete-button">Delete</button>
-              </form>
+                {{ list.name }}
+                <span class="plus-icon" onclick="toggleItemForm({{ list.id }})">+</span>
+                <button class="delete-list-button" onclick="confirmDeleteList({{ list.id }})">Delete List</button>
+                <ul>
+                    {% for item in list.items.all %}
+                    <li>
+                        {{ item.name }}
+                        <form method="post" action="{% url 'delete_item' item.id %}" class="delete-buttons delete-button-{{ list.id }}">
+                            {% csrf_token %}
+                            <button type="submit" class="delete-button">Delete</button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div id="itemForm-{{ list.id }}" class="item-form">
+                    <form method="post" class="form-section">
+                        {% csrf_token %}
+                        <input type="hidden" name="list_id" value="{{ list.id }}">
+                        {{ item_form.as_p }}
+                        <button type="submit" name="add_item">Add Item</button>
+                    </form>
+                </div>
+                <form id="deleteListForm-{{ list.id }}" method="post" action="{% url 'delete_list' list.id %}">
+                    {% csrf_token %}
+                </form>
             </li>
             {% endfor %}
-          </ul>
-          <div id="itemForm-{{ list.id }}" class="item-form">
-            <form method="post" class="form-section">
-              {% csrf_token %}
-              <input type="hidden" name="list_id" value="{{ list.id }}" />
-              {{ item_form.as_p }}
-              <button type="submit" name="add_item">Add Item</button>
-            </form>
-          </div>
-          <form
-            id="deleteListForm-{{ list.id }}"
-            method="post"
-            action="{% url 'delete_list' list.id %}"
-          >
-            {% csrf_token %}
-          </form>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p>You don't have any shopping lists right now. Try creating one!</p>
-      {% endif %}
+        </ul>
+        {% else %}
+        <p>You don't have any shopping lists right now. Try creating one!</p>
+        {% endif %}
     </div>
 
     <button onclick="toggleAddItemSection()">Add New Shopping List</button>

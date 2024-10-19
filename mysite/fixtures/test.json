@@ -1,0 +1,18 @@
+[
+    {
+        "model": "KartKat.inventory",
+        "fields": {
+            "name": "Whole Milk Inventory",
+            "grocery_item": 1,
+            "price": "4.50"
+        }
+    },
+    {
+        "model": "KartKat.inventory",
+        "fields": {
+            "name": "2% Milk Inventory",
+            "grocery_item": 2,
+            "price": "4.20"
+        }
+    }
+]
