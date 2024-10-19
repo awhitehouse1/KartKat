@@ -71,5 +71,6 @@ __pycache__/
 # C extensions
 *.so
 
-/mysite/db.sqlite3
-/.idea/misc.xml
+*.sqlite3
+.idea
+/mysite/kartkat/migrations/

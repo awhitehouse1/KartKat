@@ -1,3 +1,16 @@
+
+import os
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponse
+from datetime import datetime
+from django.db import IntegrityError
+from django.http import HttpResponse
+from django.db.models import Sum
+from django.http import HttpResponse
+from django.contrib.auth import logout
+from django.views import generic, View
+from datetime import datetime
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
@@ -28,8 +41,10 @@ def chatbot(request):
             return JsonResponse({'response': 'An error occurred'}, status=500)
     return JsonResponse({'response': 'Invalid request method'}, status=400)
 
-
 def shopping_list(request):
+    form = ShoppingListForm()
+    item_form = ShoppingListItemForm()
+
     if request.method == 'POST':
         if 'add_list' in request.POST:
             form = ShoppingListForm(request.POST)
@@ -45,9 +60,6 @@ def shopping_list(request):
                 item.shopping_list = shopping_list
                 item.save()
                 return redirect('index')
-    else:
-        form = ShoppingListForm()
-        item_form = ShoppingListItemForm()
 
     shopping_lists = ShoppingList.objects.all()
     context = {
@@ -66,3 +78,10 @@ def delete_list(request, list_id):
     shopping_list = get_object_or_404(ShoppingList, id=list_id)
     shopping_list.delete()
     return redirect('index')
+
+def map(request):
+    key = os.environ.get('API_KEY')
+    context = {
+        'key': key,
+    }
+    return render(request, 'map.html', context)
