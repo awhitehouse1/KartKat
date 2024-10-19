@@ -7,35 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 style="text-align: center;"> My google OAuth Project </h1>
     {% if user.is_authenticated %}
-    <p>Welcome. You are logged in as {{user.username}} </p>
+        {% include 'shopping_list.html' %}
     {% else %}
-    <a href="{% provider_login_url 'google' %}">Login with Google</a>
+        {% include 'shopping_list.html' %}
     {% endif %}
-    <title>Title</title>
-{#<body>#}
-{#<nav>#}
-{#    <ul>#}
-{#        <li><a href="test.html">Shopping List</a></li>#}
-{#        <li><a href="recipe.html">Recipe Page</a></li>#}
-{#    </ul>#}
-{#</nav>#}
-{##}
-{#<div class="tabs">#}
-{#    <button class="tablinks" onclick="openList(event, 'List1')">List 1</button>#}
-{#    <button class="tablinks" onclick="openList(event, 'List2')">List 2</button>#}
-{#    <button class="tablinks" onclick="openList(event, 'List3')">List 3</button>#}
-{#</div>#}
-{##}
-{#<button onclick="addNewList()">Add New Shopping List</button>#}
-{##}
-{#<section id="addItemSection">#}
-{#    <h2>Add Items to List</h2>#}
-{#    <form>#}
-{#        <input type="text" id="item" name="item" placeholder="Enter item">#}
-{#        <button type="submit">Add Item</button>#}
-{#    </form>#}
-{#</section>#}
-{</body>}
+</body>
 </html>
