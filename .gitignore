@@ -54,6 +54,7 @@ docs/_build/
 
 # Ignore the virtual environment directory
 venv/
+/.env
 
 # Ignore Python cache files
 __pycache__/
