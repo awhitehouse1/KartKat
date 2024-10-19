@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+import os
+
+API_KEY = os.environ.get('API_KEY')
 
 # Application definition
 
@@ -37,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'kartkat'
+    'kartkat',
 ]
 
 MIDDLEWARE = [

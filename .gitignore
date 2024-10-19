@@ -1,3 +1,4 @@
+
 # Distribution / packaging
 bin/
 build/
@@ -50,6 +51,18 @@ docs/_build/
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# Ignore the virtual environment directory
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore other common files
+*.log
+*.env
+=======
 /mysite/db.sqliteq3
 
 __pycache__/
