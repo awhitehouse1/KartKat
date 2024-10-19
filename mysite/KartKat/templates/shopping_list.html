@@ -1,4 +1,3 @@
-{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -250,6 +249,15 @@
 
             input.value = '';
         }
+
+        function toggleAddItemSection() {
+            var section = document.getElementById('addItemSection');
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
     </script>
 </head>
 <body>
@@ -262,14 +270,69 @@
         </nav>
     </header>
 
-    {% if user.is_authenticated %}
-        {% include 'navbar.html' %}
-        {% include 'shopping_list.html' %}
-    {% else %}
-        {% include 'google_login.html' %}
-    {% endif %}
+    <h1>Shopping List</h1>
 
-    
+    <div class="tabs">
+        {% if shopping_lists %}
+        <ul>
+            {% for list in shopping_lists %}
+            <li>
+                {{ list.name }}
+                <span class="plus-icon" onclick="toggleItemForm({{ list.id }})">+</span>
+                <button class="delete-list-button" onclick="confirmDeleteList({{ list.id }})">Delete List</button>
+                <ul>
+                    {% for item in list.items.all %}
+                    <li>
+                        {{ item.name }}
+                        <form method="post" action="{% url 'delete_item' item.id %}" class="delete-buttons delete-button-{{ list.id }}">
+                            {% csrf_token %}
+                            <button type="submit" class="delete-button">Delete</button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div id="itemForm-{{ list.id }}" class="item-form">
+                    <form method="post" class="form-section">
+                        {% csrf_token %}
+                        <input type="hidden" name="list_id" value="{{ list.id }}">
+                        {{ item_form.as_p }}
+                        <button type="submit" name="add_item">Add Item</button>
+                    </form>
+                </div>
+                <form id="deleteListForm-{{ list.id }}" method="post" action="{% url 'delete_list' list.id %}">
+                    {% csrf_token %}
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>You don't have any shopping lists right now. Try creating one!</p>
+        {% endif %}
+    </div>
 
+    <button onclick="toggleAddItemSection()">Add New Shopping List</button>
+    <section id="addItemSection" class="form-section" style="display: none;">
+        <h2>Add New Shopping List</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="add_list">Add Shopping List</button>
+        </form>
+    </section>
+
+    <!-- Chatbot Button -->
+    <button onclick="openChatbotModal()">Open Chatbot</button>
+
+    <!-- Chatbot Modal -->
+    <div id="chatbotModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeChatbotModal()">&times;</span>
+            <div id="chatContainer" class="chat-container"></div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

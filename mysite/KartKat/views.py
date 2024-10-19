@@ -41,6 +41,9 @@ def chatbot(request):
             return JsonResponse({'response': 'An error occurred'}, status=500)
     return JsonResponse({'response': 'Invalid request method'}, status=400)
 
+def index(request):
+    return render(request, 'index.html')
+
 def shopping_list(request):
     form = ShoppingListForm()
     item_form = ShoppingListItemForm()
