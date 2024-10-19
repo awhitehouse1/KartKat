@@ -1,6 +1,33 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
 from .models import ShoppingList, ShoppingListItem
 from .forms import ShoppingListForm, ShoppingListItemForm
+from openai import OpenAI
+
+
+client = OpenAI(
+    api_key = "key here"
+)
+
+@csrf_exempt
+def chatbot(request):
+    if request.method == 'POST':
+        message = request.POST.get('message')
+        try:
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "user", "content": message},
+                ]
+            )
+            chatbot_response = response.choices[0].message.content.strip()
+            return JsonResponse({'response': chatbot_response})
+        except Exception as e:
+            return JsonResponse({'response': 'An error occurred'}, status=500)
+    return JsonResponse({'response': 'Invalid request method'}, status=400)
+
 
 def shopping_list(request):
     if request.method == 'POST':
