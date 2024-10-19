@@ -258,6 +258,24 @@
                 section.style.display = 'none';
             }
         }
+
+        function toggleItemForm(listId) {
+            const itemList = document.getElementById(`item-list-${listId}`);
+            const itemForm = document.getElementById(`itemForm-${listId}`);
+            const toggleIcon = document.getElementById(`toggle-icon-${listId}`);
+
+            // Toggle display of the list and form
+            if (itemList.style.display === "none") {
+                itemList.style.display = "block";
+                itemForm.style.display = "block";
+                toggleIcon.innerHTML = "-"; // Change the icon to "-"
+            } else {
+                itemList.style.display = "none";
+                itemForm.style.display = "none";
+                toggleIcon.innerHTML = "+"; // Change the icon back to "+"
+        }
+}
+
     </script>
 </head>
 <body>
@@ -270,9 +288,9 @@
             {% for list in shopping_lists %}
             <li>
                 {{ list.name }}
-                <span class="plus-icon" onclick="toggleItemForm({{ list.id }})">+</span>
+                <span class="plus-icon" id="toggle-icon-{{ list.id }}" onclick="toggleItemForm({{ list.id }})">+</span>
                 <button class="delete-list-button" onclick="confirmDeleteList({{ list.id }})">Delete List</button>
-                <ul>
+                <ul id="item-list-{{ list.id }}" style="display: none;">
                     {% for item in list.items.all %}
                     <li>
                         {{ item.name }}
@@ -283,7 +301,7 @@
                     </li>
                     {% endfor %}
                 </ul>
-                <div id="itemForm-{{ list.id }}" class="item-form">
+                <div id="itemForm-{{ list.id }}" class="item-form" style="display: none;">
                     <form method="post" class="form-section">
                         {% csrf_token %}
                         <input type="hidden" name="list_id" value="{{ list.id }}">
@@ -301,6 +319,7 @@
         <p>You don't have any shopping lists right now. Try creating one!</p>
         {% endif %}
     </div>
+
 
     <button onclick="toggleAddItemSection()">Add New Shopping List</button>
     <section id="addItemSection" class="form-section" style="display: none;">
