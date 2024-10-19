@@ -98,6 +98,9 @@ def logout_view(request):
     logout(request)
     return redirect('index')
 
+def rewards(request):
+    return render(request, 'rewards.html')
+
 
 @csrf_exempt
 def delete_crossed_off_items(request):
