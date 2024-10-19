@@ -67,3 +67,7 @@ def delete_list(request, list_id):
     shopping_list.delete()
     return redirect('index')
 
+def logout_view(request):
+    logout(request)
+    return redirect('index')
+
