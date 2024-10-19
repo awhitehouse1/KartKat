@@ -79,7 +79,59 @@
         .form-section form button:hover {
             background-color: #035e60;
         }
+
+        .plus-icon {
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        .item-form,
+        .delete-buttons {
+            display: none;
+        }
+
+        .delete-button {
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .delete-list-button {
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
     </style>
+    <script>
+        function toggleItemForm(listId) {
+            var form = document.getElementById('itemForm-' + listId);
+            var deleteButtons = document.querySelectorAll('.delete-button-' + listId);
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+                deleteButtons.forEach(function(button) {
+                    button.style.display = 'inline';
+                });
+            } else {
+                form.style.display = 'none';
+                deleteButtons.forEach(function(button) {
+                    button.style.display = 'none';
+                });
+            }
+        }
+
+        function confirmDeleteList(listId) {
+            if (confirm("Are you sure you want to delete this list?")) {
+                document.getElementById('deleteListForm-' + listId).submit();
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -97,7 +149,33 @@
         {% if shopping_lists %}
         <ul>
             {% for list in shopping_lists %}
-            <li>{{ list.name }}</li>
+            <li>
+                {{ list.name }}
+                <span class="plus-icon" onclick="toggleItemForm({{ list.id }})">+</span>
+                <button class="delete-list-button" onclick="confirmDeleteList({{ list.id }})">Delete List</button>
+                <ul>
+                    {% for item in list.items.all %}
+                    <li>
+                        {{ item.name }} ({{ item.quantity }})
+                        <form method="post" action="{% url 'delete_item' item.id %}" class="delete-buttons delete-button-{{ list.id }}">
+                            {% csrf_token %}
+                            <button type="submit" class="delete-button">Delete</button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div id="itemForm-{{ list.id }}" class="item-form">
+                    <form method="post" class="form-section">
+                        {% csrf_token %}
+                        <input type="hidden" name="list_id" value="{{ list.id }}">
+                        {{ item_form.as_p }}
+                        <button type="submit" name="add_item">Add Item</button>
+                    </form>
+                </div>
+                <form id="deleteListForm-{{ list.id }}" method="post" action="{% url 'delete_list' list.id %}">
+                    {% csrf_token %}
+                </form>
+            </li>
             {% endfor %}
         </ul>
         {% else %}
@@ -111,7 +189,7 @@
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Add Shopping List</button>
+            <button type="submit" name="add_list">Add Shopping List</button>
         </form>
     </section>
 </body>
