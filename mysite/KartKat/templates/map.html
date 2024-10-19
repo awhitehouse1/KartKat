@@ -2,7 +2,10 @@
 {% load static %}
 {% block content %}
 <script>
+
     function initMap() {
+        let autocomplete;
+        let placesService;
         // Define your Google Maps initialization logic here
         var mapOptions = {
             center: {lat: 38.0336, lng: -78.5080},
@@ -16,7 +19,75 @@
                 }
             ]
         };
+
+                // Create the search box and link it to the UI element
+
+
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        var input = document.getElementById('search-input');
+    if (!input) {
+        console.error('Search input not found.');
+        return;
+    }
+
+    autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);
+
+    // Initialize Places service
+    placesService = new google.maps.places.PlacesService(map);
+
+    // Add listener when the user selects a place
+    autocomplete.addListener('place_changed', function () {
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+            window.alert("No details available for input: '" + place.name + "'");
+            return;
+        }
+
+        // If the place has a geometry, then present it on the map
+        if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(10); // Default zoom for searched location
+        }
+
+        var request = {
+            location: place.geometry.location,
+            radius: 5000, // 5km radius, adjust as necessary
+            type: ['grocery_or_supermarket'] // Look for grocery stores
+        };
+                placesService.nearbySearch(request, function(results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                results.forEach(function(result) {
+                    var marker = new google.maps.Marker({
+                        position: result.geometry.location,
+                        map: map,
+                        title: result.name
+                    });
+
+                    // Optionally, add an info window for each grocery store
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: `<h3>${result.name}</h3><p>${result.vicinity}</p>`
+                    });
+
+                    marker.addListener('click', function() {
+                        infoWindow.open(map, marker);
+                    });
+                });
+            }
+        });
+        // Optional: Add a marker to the searched location
+        /*
+        new google.maps.Marker({
+            position: place.geometry.location,
+            map: map,
+            title: place.name
+        });
+
+         */
+    });
 
         // Assuming you have your locations data available in `data`
         data.locations.forEach(function(location) {
@@ -38,7 +109,7 @@
     }
 </script>
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABHMSzBkIlURtKlubDpx6QDLzfmBtmYbE&callback=initMap">  <!-- Use the key variable here -->
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABHMSzBkIlURtKlubDpx6QDLzfmBtmYbE&callback=initMap&libraries=places">  <!-- Use the key variable here -->
 </script>
 
 <style>
@@ -64,6 +135,7 @@
 </style>
 
 <div class="linkholder">
+<center><input id="search-input" type="text" placeholder="Search for grocery stores" style="width: 500px; padding: 8px; margin-bottom: 10px;"></center>
     <div class="mapholder">
         <div id="map"></div>
     </div>
