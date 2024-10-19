@@ -30,6 +30,7 @@ class GroceryItem(models.Model):
 
     def __str__(self):
         return self.name
+
 class Inventory(models.Model):
     store_name = models.CharField(max_length=200)
     grocery_item = models.ForeignKey(GroceryItem, on_delete=models.CASCADE)  # Link to GroceryItem
