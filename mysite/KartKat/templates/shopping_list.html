@@ -1,315 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping List</title>
     <style>
-        body {
-            height: 125vh;
-            background-color: white;
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            padding-top: 100px; /* Add padding to the top to account for the fixed header */
-        }
+      body {
+        height: 125vh;
+        background-color: white;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-top: 100px; /* Add padding to the top to account for the fixed header */
+      }
 
-        main {
-            color: black; /* Change this to black or remove it if not needed */
-        }
+      main {
+        color: black; /* Change this to black or remove it if not needed */
+      }
 
-        header {
-            background-color: #023c40;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            z-index: 1000; /* Ensure the header is above other content */
-        }
+      header {
+        background-color: #023c40;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        z-index: 1000; /* Ensure the header is above other content */
+      }
 
-        header * {
-            display: inline;
-        }
+      header * {
+        display: inline;
+      }
 
-        header li {
-            margin: 20px;
-        }
+      header li {
+        margin: 20px;
+      }
 
-        header li a {
-            color: white;
-            text-decoration: none;
-        }
+      header li a {
+        color: white;
+        text-decoration: none;
+      }
 
-        .form-section {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+      .form-section {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-        .form-section h2 {
-            margin-top: 0;
-        }
+      .form-section h2 {
+        margin-top: 0;
+      }
 
-        .form-section form {
-            display: flex;
-            flex-direction: column;
-        }
+      .form-section form {
+        display: flex;
+        flex-direction: column;
+      }
 
-        .form-section form input,
-        .form-section form button {
-            margin-bottom: 10px;
-            padding: 10px;
-            font-size: 16px;
-        }
+      .form-section form input,
+      .form-section form button {
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 16px;
+      }
 
-        .form-section form button {
-            background-color: #023c40;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+      .form-section form button {
+        background-color: #023c40;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
 
-        .form-section form button:hover {
-            background-color: #035e60;
-        }
+      .form-section form button:hover {
+        background-color: #035e60;
+      }
 
-        .plus-icon {
-            cursor: pointer;
-            font-size: 20px;
-            margin-left: 10px;
-        }
+      .plus-icon {
+        cursor: pointer;
+        font-size: 20px;
+        margin-left: 10px;
+      }
 
-        .item-form,
-        .delete-buttons {
-            display: none;
-        }
+      .item-form,
+      .delete-buttons {
+        display: none;
+      }
 
-        .delete-button {
-            background-color: red;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-left: 10px;
-        }
+      .delete-button {
+        background-color: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 10px;
+      }
 
-        .delete-list-button {
-            background-color: red;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-left: 10px;
-        }
+      .delete-list-button {
+        background-color: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 10px;
+      }
 
-        /* Chatbot Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1001;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
-        }
+      /* Chatbot Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1001;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+      }
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 10px;
-        }
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 10px;
+      }
 
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
 
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
 
-        .chat-container {
-            display: flex;
-            flex-direction: column;
-            height: 300px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
+      .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
 
-        .chat-message {
-            margin-bottom: 10px;
-        }
+      .chat-message {
+        margin-bottom: 10px;
+      }
 
-        .chat-input {
-            display: flex;
-        }
+      .chat-input {
+        display: flex;
+      }
 
-        .chat-input input {
-            flex: 1;
-            padding: 10px;
-            font-size: 16px;
-        }
+      .chat-input input {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+      }
 
-        .chat-input button {
-            padding: 10px;
-            font-size: 16px;
-            background-color: #023c40;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+      .chat-input button {
+        padding: 10px;
+        font-size: 16px;
+        background-color: #023c40;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
 
-        .chat-input button:hover {
-            background-color: #035e60;
-        }
+      .chat-input button:hover {
+        background-color: #035e60;
+      }
+
+      .save-recipe-button {
+        display: none;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #023c40;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .save-recipe-button:hover {
+        background-color: #035e60;
+      }
     </style>
     <script>
-        function toggleItemForm(listId) {
-            var form = document.getElementById('itemForm-' + listId);
-            var deleteButtons = document.querySelectorAll('.delete-button-' + listId);
-            if (form.style.display === 'none' || form.style.display === '') {
-                form.style.display = 'block';
-                deleteButtons.forEach(function(button) {
-                    button.style.display = 'inline';
-                });
-            } else {
-                form.style.display = 'none';
-                deleteButtons.forEach(function(button) {
-                    button.style.display = 'none';
-                });
+      function toggleItemForm(listId) {
+        var form = document.getElementById("itemForm-" + listId);
+        var deleteButtons = document.querySelectorAll(
+          ".delete-button-" + listId
+        );
+        if (form.style.display === "none" || form.style.display === "") {
+          form.style.display = "block";
+          deleteButtons.forEach(function (button) {
+            button.style.display = "inline";
+          });
+        } else {
+          form.style.display = "none";
+          deleteButtons.forEach(function (button) {
+            button.style.display = "none";
+          });
+        }
+      }
+
+      function confirmDeleteList(listId) {
+        if (confirm("Are you sure you want to delete this list?")) {
+          document.getElementById("deleteListForm-" + listId).submit();
+        }
+      }
+
+      // Chatbot Modal Functions
+      function openChatbotModal() {
+        document.getElementById("chatbotModal").style.display = "block";
+      }
+
+      function closeChatbotModal() {
+        document.getElementById("chatbotModal").style.display = "none";
+      }
+
+      function sendMessage() {
+        var input = document.getElementById("chatInput");
+        var message = input.value;
+        if (message.trim() === "") return;
+
+        var chatContainer = document.getElementById("chatContainer");
+        var placeholder = document.getElementById("chatPlaceholder");
+
+        var userMessage = document.createElement("div");
+        userMessage.className = "chat-message";
+        userMessage.textContent = "You: " + message;
+        chatContainer.appendChild(userMessage);
+
+        // Send message to Django view
+        fetch('{% url "chatbot" %}', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-CSRFToken": "{{ csrf_token }}",
+          },
+          body: "message=" + encodeURIComponent(message),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            var botMessage = document.createElement("div");
+            botMessage.className = "chat-message";
+            botMessage.textContent = "Kat: " + data.response;
+            chatContainer.appendChild(botMessage);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            if (data.is_recipe) {
+              document.getElementById("saveRecipeButton").style.display =
+                "block";
+              document.getElementById("recipeName").value = extractRecipeName(
+                data.response
+              );
+              document.getElementById("recipeIngredients").value =
+                extractIngredients(data.response);
+              document.getElementById("recipeSteps").value = extractSteps(
+                data.response
+              );
             }
+          });
+
+        input.value = "";
+      }
+
+      function extractRecipeName(response) {
+            const match = response.match(/Here is a recipe for (.+?)\n/);
+            return match ? match[1] : '';
         }
 
-        function confirmDeleteList(listId) {
-            if (confirm("Are you sure you want to delete this list?")) {
-                document.getElementById('deleteListForm-' + listId).submit();
-            }
+      function extractIngredients(response) {
+        const match = response.match(/Ingredients:\s*([\s\S]+?)\s*Steps:/i); // Match everything between "Ingredients" and "Steps"
+        return match ? match[1].trim() : "";
+      }
+
+      function extractSteps(response) {
+        const match = response.match(/Steps:\s*([\s\S]+)/i); // Match everything after "Steps"
+        return match ? match[1].trim() : "";
+      }
+
+      function saveRecipe() {
+        const recipeName = document.getElementById("recipeName").value;
+        const ingredients = document.getElementById("recipeIngredients").value;
+        const steps = document.getElementById("recipeSteps").value;
+        console.log("recipe name: ", recipeName);
+        console.log("recipe ingredients: ", ingredients);
+        console.log("recipe steps: ", steps);
+
+        fetch('{% url "save_recipe" %}', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-CSRFToken": "{{ csrf_token }}",
+          },
+          body: `recipe_name=${encodeURIComponent(
+            recipeName
+          )}&ingredients=${encodeURIComponent(
+            ingredients
+          )}&steps=${encodeURIComponent(steps)}`,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            alert(data.status);
+            document.getElementById("saveRecipeButton").style.display = "none";
+          });
+      }
+
+      function toggleAddItemSection() {
+        var section = document.getElementById("addItemSection");
+        if (section.style.display === "none" || section.style.display === "") {
+          section.style.display = "block";
+        } else {
+          section.style.display = "none";
         }
-
-        // Chatbot Modal Functions
-        function openChatbotModal() {
-            document.getElementById('chatbotModal').style.display = 'block';
-        }
-
-        function closeChatbotModal() {
-            document.getElementById('chatbotModal').style.display = 'none';
-        }
-
-        function sendMessage() {
-            var input = document.getElementById('chatInput');
-            var message = input.value;
-            if (message.trim() === '') return;
-
-            var chatContainer = document.getElementById('chatContainer');
-            var userMessage = document.createElement('div');
-            userMessage.className = 'chat-message';
-            userMessage.textContent = 'You: ' + message;
-            chatContainer.appendChild(userMessage);
-
-            // Send message to Django view
-            fetch('{% url "chatbot" %}', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'X-CSRFToken': '{{ csrf_token }}'
-                },
-                body: 'message=' + encodeURIComponent(message)
-            })
-            .then(response => response.json())
-            .then(data => {
-                var botMessage = document.createElement('div');
-                botMessage.className = 'chat-message';
-                botMessage.textContent = 'Bot: ' + data.response;
-                chatContainer.appendChild(botMessage);
-                chatContainer.scrollTop = chatContainer.scrollHeight;
-            });
-
-            input.value = '';
-        }
-
-        function toggleAddItemSection() {
-            var section = document.getElementById('addItemSection');
-            if (section.style.display === 'none' || section.style.display === '') {
-                section.style.display = 'block';
-            } else {
-                section.style.display = 'none';
-            }
-        }
+      }
     </script>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Shopping List</h1>
 
     <div class="tabs">
-        {% if shopping_lists %}
-        <ul>
-            {% for list in shopping_lists %}
+      {% if shopping_lists %}
+      <ul>
+        {% for list in shopping_lists %}
+        <li>
+          {{ list.name }}
+          <span class="plus-icon" onclick="toggleItemForm({{ list.id }})"
+            >+</span
+          >
+          <button
+            class="delete-list-button"
+            onclick="confirmDeleteList({{ list.id }})"
+          >
+            Delete List
+          </button>
+          <ul>
+            {% for item in list.items.all %}
             <li>
-                {{ list.name }}
-                <span class="plus-icon" onclick="toggleItemForm({{ list.id }})">+</span>
-                <button class="delete-list-button" onclick="confirmDeleteList({{ list.id }})">Delete List</button>
-                <ul>
-                    {% for item in list.items.all %}
-                    <li>
-                        {{ item.name }}
-                        <form method="post" action="{% url 'delete_item' item.id %}" class="delete-buttons delete-button-{{ list.id }}">
-                            {% csrf_token %}
-                            <button type="submit" class="delete-button">Delete</button>
-                        </form>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <div id="itemForm-{{ list.id }}" class="item-form">
-                    <form method="post" class="form-section">
-                        {% csrf_token %}
-                        <input type="hidden" name="list_id" value="{{ list.id }}">
-                        {{ item_form.as_p }}
-                        <button type="submit" name="add_item">Add Item</button>
-                    </form>
-                </div>
-                <form id="deleteListForm-{{ list.id }}" method="post" action="{% url 'delete_list' list.id %}">
-                    {% csrf_token %}
-                </form>
+              {{ item.name }}
+              <form
+                method="post"
+                action="{% url 'delete_item' item.id %}"
+                class="delete-buttons delete-button-{{ list.id }}"
+              >
+                {% csrf_token %}
+                <button type="submit" class="delete-button">Delete</button>
+              </form>
             </li>
             {% endfor %}
-        </ul>
-        {% else %}
-        <p>You don't have any shopping lists right now. Try creating one!</p>
-        {% endif %}
+          </ul>
+          <div id="itemForm-{{ list.id }}" class="item-form">
+            <form method="post" class="form-section">
+              {% csrf_token %}
+              <input type="hidden" name="list_id" value="{{ list.id }}" />
+              {{ item_form.as_p }}
+              <button type="submit" name="add_item">Add Item</button>
+            </form>
+          </div>
+          <form
+            id="deleteListForm-{{ list.id }}"
+            method="post"
+            action="{% url 'delete_list' list.id %}"
+          >
+            {% csrf_token %}
+          </form>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>You don't have any shopping lists right now. Try creating one!</p>
+      {% endif %}
     </div>
 
     <button onclick="toggleAddItemSection()">Add New Shopping List</button>
-    <section id="addItemSection" class="form-section" style="display: none;">
-        <h2>Add New Shopping List</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" name="add_list">Add Shopping List</button>
-        </form>
+    <section id="addItemSection" class="form-section" style="display: none">
+      <h2>Add New Shopping List</h2>
+      <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit" name="add_list">Add Shopping List</button>
+      </form>
     </section>
 
     <!-- Chatbot Button -->
@@ -317,14 +405,33 @@
 
     <!-- Chatbot Modal -->
     <div id="chatbotModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeChatbotModal()">&times;</span>
-            <div id="chatContainer" class="chat-container"></div>
-            <div class="chat-input">
-                <input type="text" id="chatInput" placeholder="Type your message...">
-                <button onclick="sendMessage()">Send</button>
-            </div>
+      <div class="modal-content">
+        <span class="close" onclick="closeChatbotModal()">&times;</span>
+        <div id="chatContainer" class="chat-container">
+          <div id="chatPlaceholder" class="chat-message">
+            Kat: Meowdy! Try asking questions about recipes, shopping lists, or
+            money saving tips! 😺
+          </div>
         </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Type your message..."
+          />
+          <button onclick="sendMessage()">Send</button>
+        </div>
+        <button
+          id="saveRecipeButton"
+          class="save-recipe-button"
+          onclick="saveRecipe()"
+        >
+          Save Recipe
+        </button>
+        <input type="hidden" id="recipeName" />
+        <input type="hidden" id="recipeIngredients" />
+        <input type="hidden" id="recipeSteps" />
+      </div>
     </div>
-</body>
+  </body>
 </html>

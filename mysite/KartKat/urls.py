@@ -17,6 +17,7 @@ urlpatterns = [
 
     path('map/', views.map, name="map"),
     path('chatbot/', views.chatbot, name='chatbot'),
-
-
+    path('save-recipe/', views.save_recipe, name='save_recipe'),
+    path('recipes/', views.recipe_list, name='recipe_list'),
+    path('delete-recipe/<int:recipe_id>/', views.delete_recipe, name='delete_recipe'),
 ]

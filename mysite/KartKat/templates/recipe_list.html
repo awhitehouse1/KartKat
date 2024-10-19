@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #023c40;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .recipe {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .recipe h2 {
+            margin-top: 0;
+        }
+        .recipe p {
+            margin: 5px 0;
+        }
+        .delete-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        .delete-button:hover {
+            background-color: darkred;
+        }
+    </style>
+    <script>
+        function deleteRecipe(recipeId) {
+            fetch(`/delete-recipe/${recipeId}/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'Recipe deleted successfully') {
+                    document.getElementById(`recipe-${recipeId}`).remove();
+                } else {
+                    alert('Failed to delete recipe');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        {% for recipe in recipes %}
+        <div class="recipe" id="recipe-{{ recipe.id }}">
+            <h2>{{ recipe.name }}</h2>
+            <h3>Ingredients:</h3>
+            <p>{{ recipe.ingredients|linebreaksbr }}</p>
+            <h3>Steps:</h3>
+            <p>{{ recipe.steps|linebreaksbr }}</p>
+            <button class="delete-button" onclick="deleteRecipe({{ recipe.id }})">Delete</button>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

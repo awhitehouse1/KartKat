@@ -14,7 +14,7 @@ from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
-from .models import ShoppingList, ShoppingListItem
+from .models import ShoppingList, ShoppingListItem, Recipe
 from .forms import ShoppingListForm, ShoppingListItemForm
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -34,18 +34,42 @@ def chatbot(request):
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[
-                    {"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "system", "content": "You are a helpful assistant. You can answer questions about recipes, shopping lists, and saving money. You are a feminist. Your name is Kat and you are a cat assistant. Make cat puns and meow occaisionally. make the responses concise, but be a girl boss. Do not use markup. When the user asks for recipes, return in this format: 'Here is a recipe for [recipe name]' give each ingredient a new line using the '\\n' char, then list the steps with numbers on their own line."},
                     {"role": "user", "content": message},
                 ]
             )
             chatbot_response = response.choices[0].message.content.strip()
-            return JsonResponse({'response': chatbot_response})
+            is_recipe = "Here is a recipe for" in chatbot_response
+            return JsonResponse({'response': chatbot_response, 'is_recipe': is_recipe})
         except Exception as e:
             return JsonResponse({'response': 'An error occurred'}, status=500)
     return JsonResponse({'response': 'Invalid request method'}, status=400)
 
 def index(request):
     return render(request, 'index.html')
+
+def save_recipe(request):
+    if request.method == 'POST':
+        recipe_name = request.POST.get('recipe_name')
+        ingredients = request.POST.get('ingredients')
+        steps = request.POST.get('steps')
+    
+        Recipe.objects.create(name=recipe_name, ingredients=ingredients, steps=steps)
+        return JsonResponse({'status': 'Recipe saved successfully'})
+    return JsonResponse({'status': 'Invalid request method'}, status=400)
+
+@csrf_exempt
+def delete_recipe(request, recipe_id):
+    if request.method == 'POST':
+        recipe = get_object_or_404(Recipe, id=recipe_id)
+        recipe.delete()
+        return JsonResponse({'status': 'Recipe deleted successfully'})
+    return JsonResponse({'status': 'Invalid request method'}, status=400)
+
+def recipe_list(request):
+    recipes = Recipe.objects.all()
+    return render(request, 'recipe_list.html', {'recipes': recipes})
+
 
 def shopping_list(request):
     form = ShoppingListForm()
