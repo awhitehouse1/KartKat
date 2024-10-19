@@ -187,80 +187,8 @@
             background-color: #035e60;
         }
     </style>
-    <script>
-        function toggleItemForm(listId) {
-            var form = document.getElementById('itemForm-' + listId);
-            var deleteButtons = document.querySelectorAll('.delete-button-' + listId);
-            if (form.style.display === 'none' || form.style.display === '') {
-                form.style.display = 'block';
-                deleteButtons.forEach(function(button) {
-                    button.style.display = 'inline';
-                });
-            } else {
-                form.style.display = 'none';
-                deleteButtons.forEach(function(button) {
-                    button.style.display = 'none';
-                });
-            }
-        }
-
-        function confirmDeleteList(listId) {
-            if (confirm("Are you sure you want to delete this list?")) {
-                document.getElementById('deleteListForm-' + listId).submit();
-            }
-        }
-
-        // Chatbot Modal Functions
-        function openChatbotModal() {
-            document.getElementById('chatbotModal').style.display = 'block';
-        }
-
-        function closeChatbotModal() {
-            document.getElementById('chatbotModal').style.display = 'none';
-        }
-
-        function sendMessage() {
-            var input = document.getElementById('chatInput');
-            var message = input.value;
-            if (message.trim() === '') return;
-
-            var chatContainer = document.getElementById('chatContainer');
-            var userMessage = document.createElement('div');
-            userMessage.className = 'chat-message';
-            userMessage.textContent = 'You: ' + message;
-            chatContainer.appendChild(userMessage);
-
-            // Send message to Django view
-            fetch('{% url "chatbot" %}', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'X-CSRFToken': '{{ csrf_token }}'
-                },
-                body: 'message=' + encodeURIComponent(message)
-            })
-            .then(response => response.json())
-            .then(data => {
-                var botMessage = document.createElement('div');
-                botMessage.className = 'chat-message';
-                botMessage.textContent = 'Bot: ' + data.response;
-                chatContainer.appendChild(botMessage);
-                chatContainer.scrollTop = chatContainer.scrollHeight;
-            });
-
-            input.value = '';
-        }
-    </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{% url 'index' %}">Shopping List</a></li>
-                <li><a href="recipe.html">Recipe Page</a></li>
-            </ul>
-        </nav>
-    </header>
 
     {% if user.is_authenticated %}
         {% include 'navbar.html' %}
