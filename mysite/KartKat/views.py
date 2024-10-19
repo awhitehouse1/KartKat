@@ -88,3 +88,7 @@ def map(request):
         'key': key,
     }
     return render(request, 'map.html', context)
+
+def logout_view(request):
+    logout(request)
+    return redirect('index')
