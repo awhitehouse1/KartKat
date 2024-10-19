@@ -15,3 +15,6 @@ class GroceryItem(models.Model):
     vitamin_d = models.DecimalField(max_digits=5, decimal_places=2)
     vitamin_b12 = models.DecimalField(max_digits=5, decimal_places=2)
     type = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
