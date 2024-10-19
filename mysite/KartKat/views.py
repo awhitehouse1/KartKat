@@ -94,6 +94,8 @@ def map(request):
     }
     return render(request, 'map.html', context)
 
+def rewards(request):
+    return render(request, 'rewards.html')
 def logout_view(request):
     logout(request)
     return redirect('index')

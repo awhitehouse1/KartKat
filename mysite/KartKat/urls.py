@@ -17,6 +17,7 @@ urlpatterns = [
     path('delete-crossed-off-items/', views.delete_crossed_off_items, name='delete_crossed_off_items'),
     path('map/', views.map, name="map"),
     path('chatbot/', views.chatbot, name='chatbot'),
+    path('rewards/', views.rewards, name="rewards"),
 
 
 ]
