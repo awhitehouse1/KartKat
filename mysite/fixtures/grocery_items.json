@@ -1618,7 +1618,7 @@
         "model": "KartKat.groceryitem",
         "pk": 85,
         "fields": {
-            "name": "Frozen Pizza (Pepperoni, 12\")",
+            "name": "Frozen Pizza (Pepperoni, 12)",
             "brand": "DiGiorno",
             "is_woman_owned": false,
             "min_price": 4.99,
@@ -1884,7 +1884,7 @@
         "model": "KartKat.groceryitem",
         "pk": 99,
         "fields": {
-            "name": "Frozen Apple Pie (9\")",
+            "name": "Frozen Apple Pie (9)",
             "brand": "Marie Callender\u2019s",
             "is_woman_owned": false,
             "min_price": 4.99,

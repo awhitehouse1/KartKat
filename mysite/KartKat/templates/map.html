@@ -3,7 +3,11 @@
 {% block content %}
 <title>Map</title>
 
+<html class="whatever" data-shoppingList = "{{ shopping_list }}"></html>
+<html class="whatever" data-storesAndProducts = "{{ stores_and_products }}"></html>
+
 <script>
+
     function initMap() {
     let autocomplete;
     let placesService;
@@ -217,19 +221,32 @@
     function displayLocationList(locations) {
             const locationListElement = document.getElementById('location-list');
             const sortSelectElement = document.getElementById('sort-select');
+
+            const htmlElement = document.documentElement;
+            // Access the data-variableName attribute
+            let shoppingList = htmlElement.getAttribute('data-shoppingList');
+            shoppingList = shoppingList.replace(/'/g, '"');
+            const jsonShoppingList = JSON.parse(shoppingList);
+            let storesAndProducts = htmlElement.getAttribute('data-storesAndProducts');
+            storesAndProducts = storesAndProducts.replace(/(?<!\w)'(.*?)'(?!\w)/g, '"$1"');
+            storesAndProducts = storesAndProducts.replace(/Decimal\("([^"]+)"\)/g, '"$1"');
+            const jsonStoresAndProducts = JSON.parse(storesAndProducts);
+
             if (locations.length > 0) {
                 locationListElement.innerHTML = '<h2>Nearby Grocery Stores:</h2>';
                 const ul = document.createElement('ul');
                 locations.forEach((location, index) => {
-                    // var totalPrice = 0;
-                    // var locationItems = storesAndProducts[location.name];
-                    // shoppingLists["Fruits"].forEach((item, index) => {
-                    //     totalPrice += locationItems.hasOwnProperty(item) ? locationItems[item] : 0;
-                    // });
+                    let totalPrice = 0;
+                    let locationItems = jsonStoresAndProducts[location.name];
+                    if (typeof locationItems === 'object' && locationItems !== null) {
+                        jsonShoppingList["Fruits"].forEach((item, index) => {
+                            totalPrice += locationItems.hasOwnProperty(item) ? locationItems[item] : 0;
+                        });
+                    }
 
                     const li = document.createElement('li');
                     const routeInfo = location.routeInfo ?
-                        `<br>Distance: ${location.routeInfo.distance}, Travel Time: ${location.routeInfo.duration}` :
+                        `<br>Distance: ${location.routeInfo.distance}, Travel Time: ${location.routeInfo.duration}, Price: $${totalPrice}` :
                         '<br>Route information not available';
                     li.innerHTML = `<strong>${index + 1}. ${location.name}</strong> - ${location.vicinity}${routeInfo}`;
                     ul.appendChild(li);
@@ -336,17 +353,5 @@
 <div id="location-list" style="margin-top: 20px; padding: 20px;">
     <!-- The list of locations will be inserted here -->
 </div>
-
-<h2>Shopping Lists</h2>
-<ul>
-    {% for list_name, items in shopping_list.items %}
-        <li><strong>{{ list_name }}</strong></li>
-        <ul>
-            {% for item in items %}
-                <li>{{ item }}</li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
-</ul>
 
 {% endblock %}

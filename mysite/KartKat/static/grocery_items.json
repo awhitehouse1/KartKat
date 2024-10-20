@@ -1618,7 +1618,7 @@
         "model": "KartKat.groceryitem",
         "pk": 85,
         "fields": {
-            "name": "Frozen Pizza (Pepperoni, 12\")",
+            "name": "Frozen Pizza (Pepperoni, 12)",
             "brand": "DiGiorno",
             "is_woman_owned": false,
             "min_price": 4.99,
