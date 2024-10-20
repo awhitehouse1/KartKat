@@ -51,6 +51,7 @@ class Reward(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
     unlocked = models.BooleanField(default=False)
+    link = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name

@@ -9,7 +9,7 @@ urlpatterns = [
     path('app/',include('auth_app.urls')),
 
     path('accounts/', include('allauth.urls')),
-
+    path('add_item/', views.shopping_list, name='add_item'),
     path('logout', views.logout_view, name='logout'),
     path("", views.shopping_list, name="index"),
     path('shopping-list/delete-item/<int:item_id>/', views.delete_item, name='delete_item'),

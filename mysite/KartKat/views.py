@@ -22,6 +22,10 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from fuzzywuzzy import process
 
+from django.http import JsonResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import ShoppingListForm, ShoppingListItemForm
+from .models import ShoppingList
 load_dotenv()
 
 
@@ -147,17 +151,24 @@ def recipe_list(request):
     return render(request, 'recipe_list.html', {'recipes': recipes})
 
 
+
 def shopping_list(request):
     form = ShoppingListForm()
     item_form = ShoppingListItemForm()
+    print("here")
 
     if request.method == 'POST':
+        print("request", request.POST)
+        # Adding a new shopping list
         if 'add_list' in request.POST:
             form = ShoppingListForm(request.POST)
             if form.is_valid():
                 form.save()
                 return redirect('index')
-        elif 'add_item' in request.POST:
+
+        # Adding a new item to an existing shopping list
+        else:
+            
             list_id = request.POST.get('list_id')
             shopping_list = get_object_or_404(ShoppingList, id=list_id)
             item_form = ShoppingListItemForm(request.POST)
@@ -165,6 +176,18 @@ def shopping_list(request):
                 item = item_form.save(commit=False)
                 item.shopping_list = shopping_list
                 item.save()
+
+                # If the request is AJAX, return JSON response
+                if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+                    return JsonResponse({
+                        'success': True,
+                        'item': {
+                            'id': item.id,
+                            'name': item.name,
+                        }
+                    })
+
+                # If not an AJAX request, redirect to index
                 return redirect('index')
 
     shopping_lists = ShoppingList.objects.all()
@@ -211,7 +234,15 @@ def delete_crossed_off_items(request):
             list_id = item['listId']
             item_id = item['itemId']
             shopping_list_item = get_object_or_404(ShoppingListItem, id=item_id, shopping_list_id=list_id)
-
+            ShoppingListItem.objects.filter(id=item_id, shopping_list_id=list_id).delete()
+            grocery_items = GroceryItem.objects.all()
+            grocery_item_names = [grocery_item.name for grocery_item in grocery_items]
+            closest_match, score = process.extractOne(shopping_list_item.name, grocery_item_names)
+            if score >= 80:  # Example threshold for a good match
+                rewards = Reward.objects.all()
+                grocery_item = get_object_or_404(GroceryItem, name=closest_match)
+                ShoppingListItem.objects.filter(id=item_id, shopping_list_id=list_id).delete()
+                print("grocery item", grocery_item)
             grocery_items = GroceryItem.objects.all()
             grocery_item_names = [grocery_item.name for grocery_item in grocery_items]
             closest_match, score = process.extractOne(shopping_list_item.name, grocery_item_names)
@@ -236,8 +267,6 @@ def delete_crossed_off_items(request):
                 elif grocery_item.type == "Seafood":
                     print("Seafood")
                     rewards.filter(name="Seafood Lover").update(unlocked=True)     
-
-            ShoppingListItem.objects.filter(id=item_id, shopping_list_id=list_id).delete()
 
         return JsonResponse({'status': 'success'})
     return JsonResponse({'status': 'error'}, status=400)
