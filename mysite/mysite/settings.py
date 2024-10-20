@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
-
-#from django.contrib.auth import middleware
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -35,8 +33,6 @@ SECRET_KEY = 'django-insecure-y$s2#uec%)3igpi!5u2p0c7n3#78-fzv#bfoctt3o(3b#lv56k
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-import os
 
 API_KEY = os.environ.get('API_KEY')
 
@@ -91,7 +87,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -101,7 +96,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -121,7 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -132,7 +125,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
@@ -151,7 +143,7 @@ AUTHENTICATION_BACKENDS = [
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        'SCOPE' : [
+        'SCOPE': [
             'profile',
             'email'
         ],
@@ -160,7 +152,17 @@ SOCIALACCOUNT_PROVIDERS = {
             'secret': os.environ['CLIENT_SECRET'],
         },
         'AUTH_PARAMS': {
-            'access_type':'online',
-        }
+            'access_type': 'online',
+        },
+        'LOGIN_REDIRECT_URL': '/',  # Optional
     }
 }
+
+# Enable auto signup for social accounts
+SOCIALACCOUNT_AUTO_SIGNUP = True
+SOCIALACCOUNT_LOGIN_ON_GET = True  # Automatically log in users on GET
+
+# Optional: Logout on GET request
+ACCOUNT_LOGOUT_ON_GET = True  # Optional: Logout on GET request
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True  # Ensure redirection after login
+

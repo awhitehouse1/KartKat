@@ -1,139 +1,144 @@
 {% extends 'mapBase.html' %}
 {% load static %}
 {% block content %}
-
+<title>Map</title>
 <script>
     function initMap() {
-        let autocomplete;
-        let placesService;
-        let directionsService;
-        let directionsRenderer;
-        let originLocation;
-        let openInfoWindow = null; // Variable to track the currently open info window
+    let autocomplete;
+    let placesService;
+    let directionsService;
+    let directionsRenderer;
+    let originLocation;
+    let openInfoWindow = null;
+    let currentMarkers = [];
+    let map;
+    const MIN_ZOOM = 12; // Set the minimum zoom level
 
-        // Initialize the map
-        var mapOptions = {
-            center: { lat: 38.0336, lng: -78.5080 },
-            zoom: 15,
-            styles: [
-                {
-                    featureType: 'poi',
-                    stylers: [
-                        { visibility: 'off' }
-                    ]
-                }
-            ]
-        };
+    var mapOptions = {
+        center: { lat: 38.0336, lng: -78.5080 },
+        zoom: 15,
+        minZoom: MIN_ZOOM, // Set the minimum zoom level for the map
+        styles: [
+            {
+                featureType: 'poi',
+                stylers: [
+                    { visibility: 'off' }
+                ]
+            }
+        ]
+    };
 
-        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-        var input = document.getElementById('search-input');
-        if (!input) {
-            console.error('Search input not found.');
+    var input = document.getElementById('search-input');
+    if (!input) {
+        console.error('Search input not found.');
+        return;
+    }
+
+    autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);
+
+    placesService = new google.maps.places.PlacesService(map);
+
+    directionsService = new google.maps.DirectionsService();
+    directionsRenderer = new google.maps.DirectionsRenderer();
+    directionsRenderer.setMap(map);
+
+    autocomplete.addListener('place_changed', function () {
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+            window.alert("No details available for input: '" + place.name + "'");
             return;
         }
 
-        autocomplete = new google.maps.places.Autocomplete(input);
-        autocomplete.bindTo('bounds', map);
+        originLocation = place.geometry.location;
+        searchNearbyPlaces();
+    });
 
-        // Initialize Places service
-        placesService = new google.maps.places.PlacesService(map);
-
-        // Initialize Directions service and renderer
-        directionsService = new google.maps.DirectionsService();
-        directionsRenderer = new google.maps.DirectionsRenderer();
-        directionsRenderer.setMap(map);
-
-        // Add listener when the user selects a place
-        autocomplete.addListener('place_changed', function () {
-            var place = autocomplete.getPlace();
-            if (!place.geometry) {
-                window.alert("No details available for input: '" + place.name + "'");
-                return;
-            }
-
-            // Store the searched location as the origin
-            originLocation = place.geometry.location;
-
-            // If the place has a geometry, then present it on the map
-            if (place.geometry.viewport) {
-                map.fitBounds(place.geometry.viewport);
-            } else {
-                map.setCenter(place.geometry.location);
-                map.setZoom(10); // Default zoom for searched location
-            }
-
-            var request = {
-                location: place.geometry.location,
-                radius: 5000, // 5km radius, adjust as necessary
-                type: ['grocery_or_supermarket'] // Look for grocery stores
-            };
-
-            placesService.nearbySearch(request, function (results, status) {
-                if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    results.forEach(function (result) {
-                        var marker = new google.maps.Marker({
-                            position: result.geometry.location,
-                            map: map,
-                            title: result.name
-                        });
-
-                        // Add event listener for marker click
-                        marker.addListener('click', function () {
-                            if (!originLocation) {
-                                window.alert("Please search for a location first.");
-                                return;
-                            }
-
-                            // Close the currently open info window, if any
-                            if (openInfoWindow) {
-                                openInfoWindow.close();
-                            }
-
-                            // Calculate and display the route
-                            calculateAndDisplayRoute(originLocation, result.geometry.location);
-
-                            // Create a new info window for the selected marker
-                            var infoWindow = new google.maps.InfoWindow({
-                                content: `<h3>${result.name}</h3><p>${result.vicinity}</p>`
-                            });
-
-                            // Open the new info window
-                            infoWindow.open(map, marker);
-
-                            // Set the newly opened info window as the current one
-                            openInfoWindow = infoWindow;
-                        });
-                    });
-                }
-            });
-        });
-
-        function calculateAndDisplayRoute(origin, destination) {
-            var selectedMode = document.getElementById('mode').value; // Get the selected mode (driving, walking, etc.)
-
-            directionsService.route({
-                origin: origin,
-                destination: destination,
-                travelMode: google.maps.TravelMode[selectedMode.toUpperCase()] // Use the selected mode
-            }, function (response, status) {
-                if (status === google.maps.DirectionsStatus.OK) {
-                    directionsRenderer.setDirections(response);
-
-                    // Extract duration and distance from the first route
-                    var route = response.routes[0].legs[0];
-                    var distance = route.distance.text;
-                    var duration = route.duration.text;
-
-                    // Display the distance and duration
-                    document.getElementById('route-info').innerHTML =
-                        `${selectedMode.charAt(0).toUpperCase() + selectedMode.slice(1).toLowerCase()} Distance: ${distance}, Duration: ${duration}`;
-                } else {
-                    window.alert('Directions request failed due to ' + status);
-                }
-            });
+    document.getElementById('radius-input').addEventListener('change', function() {
+        if (originLocation) {
+            searchNearbyPlaces();
         }
+    });
+
+    function searchNearbyPlaces() {
+        currentMarkers.forEach(marker => marker.setMap(null));
+        currentMarkers = [];
+
+        var radiusValue = parseInt(document.getElementById('radius-input').value);
+
+        var request = {
+            location: originLocation,
+            radius: radiusValue * 1000 || 5000, // Convert km to meters
+            type: ['grocery_or_supermarket']
+        };
+
+        placesService.nearbySearch(request, function (results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                results.forEach(function (result) {
+                    var marker = new google.maps.Marker({
+                        position: result.geometry.location,
+                        map: map,
+                        title: result.name
+                    });
+
+                    currentMarkers.push(marker);
+
+                    marker.addListener('click', function () {
+                        if (openInfoWindow) {
+                            openInfoWindow.close();
+                        }
+
+                        calculateAndDisplayRoute(originLocation, result.geometry.location);
+
+                        var infoWindow = new google.maps.InfoWindow({
+                            content: `<h3>${result.name}</h3><p>${result.vicinity}</p>`
+                        });
+
+                        infoWindow.open(map, marker);
+                        openInfoWindow = infoWindow;
+                    });
+                });
+
+                // Adjust map bounds to fit all markers
+                var bounds = new google.maps.LatLngBounds();
+                currentMarkers.forEach(marker => bounds.extend(marker.getPosition()));
+                map.fitBounds(bounds);
+
+                // Add a listener for when the zoom changes
+                google.maps.event.addListenerOnce(map, 'zoom_changed', function() {
+                    if (map.getZoom() > MIN_ZOOM) {
+                        map.setZoom(MIN_ZOOM);
+                    }
+                });
+            }
+        });
     }
+
+    function calculateAndDisplayRoute(origin, destination) {
+        var selectedMode = document.getElementById('mode').value;
+
+        directionsService.route({
+            origin: origin,
+            destination: destination,
+            travelMode: google.maps.TravelMode[selectedMode.toUpperCase()]
+        }, function (response, status) {
+            if (status === google.maps.DirectionsStatus.OK) {
+                directionsRenderer.setDirections(response);
+
+                var route = response.routes[0].legs[0];
+                var distance = route.distance.text;
+                var duration = route.duration.text;
+
+                document.getElementById('route-info').innerHTML =
+                    `${selectedMode.charAt(0).toUpperCase() + selectedMode.slice(1).toLowerCase()} Distance: ${distance}, Duration: ${duration}`;
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
+    }
+}
 </script>
 
 <script async defer
@@ -183,17 +188,27 @@
             height: 250px; /* Even smaller height for very small screens */
         }
     }
+
+    #radius-input {
+        width: 150px;
+        padding: 8px;
+        margin-left: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
 </style>
 
 <!-- Add the search bar in a container between the navbar and the map -->
 <div class="search-container">
     <center>
-        <input id="search-input" type="text" placeholder="Search for grocery stores">
+        <input id="search-input" type="text" placeholder="Enter your start location">
         <select id="mode">
             <option value="DRIVING">Driving</option>
             <option value="WALKING">Walking</option>
             <option value="BICYCLING">Bicycling</option>
         </select>
+        <input id="radius-input" type="number" placeholder="Enter radius in miles" style="margin-left: 10px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
     </center>
 </div>
 
