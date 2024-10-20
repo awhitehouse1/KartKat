@@ -6,7 +6,7 @@
     <title>Recipes</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
@@ -26,7 +26,9 @@
 
         .container {
             padding: 20px;
-            margin-top: 80px; /* Make sure this margin is enough to clear the height of the navbar */
+            margin-top: 60px; /* Make sure this margin is enough to clear the height of the navbar */
+            font-family: sans-serif;
+            
         }
 
         .recipe {
@@ -37,7 +39,7 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: relative;
-            z-index: -1; /* Ensure the recipes don't overlap with the navbar */
+            z-index: 1; /* Ensure the recipes don't overlap with the navbar */
         }
 
         .recipe h2 {
@@ -60,14 +62,34 @@
         .delete-button:hover {
             background-color: darkred;
         }
+        .container h1 {
+            padding-top: 35px;
+            color:#023c40;
+        }
     </style>
     <script>
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
         function deleteRecipe(recipeId) {
+            const csrftoken = getCookie('csrftoken');
             fetch(`/delete-recipe/${recipeId}/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
-                    'X-CSRFToken': '{{ csrf_token }}'
+                    'X-CSRFToken': csrftoken
                 }
             })
             .then(response => response.json())
@@ -84,6 +106,7 @@
 <body>
     {% include 'navbar.html' %}
     <div class="container">
+        <h1>Recipes</h1>
         {% for recipe in recipes %}
         <div class="recipe" id="recipe-{{ recipe.id }}">
             <h2>{{ recipe.name }}</h2>
