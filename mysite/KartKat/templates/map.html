@@ -68,6 +68,13 @@
         sortAndDisplayLocations();
     });
 
+    // Add event listener for the mode select
+    document.getElementById('mode').addEventListener('change', function() {
+        if (originLocation) {
+            searchNearbyPlaces(); // Update nearby grocery stores based on the selected mode
+        }
+    });
+
     function searchNearbyPlaces() {
         currentMarkers.forEach(marker => marker.setMap(null));
         currentMarkers = [];
