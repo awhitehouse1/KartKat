@@ -1,3 +1,4 @@
+{% load static %}
 {% load socialaccount %}
 
 <!DOCTYPE html>
@@ -10,17 +11,28 @@
         body {
             text-align: center;
             font-family: Arial, sans-serif;
+            background-color: #2a9d8f; /* Set the green background color */
+            background-image: url("{% static 'images/KartKatLogin.gif' %}");
+            background-size: 75% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         h1 {
-            margin-top: 50px;
             color: #023c40;
+            margin-bottom: 20px;
         }
 
         .login-button {
-            margin-top: 20px;
+            margin-top: 0px; /* Adjust as needed */
             padding: 10px 20px;
-            background-color: #4285f4; /* Google blue */
+            background-color: #2a9d8f; /* Google blue */
             color: white;
             border: none;
             border-radius: 5px;
@@ -34,7 +46,7 @@
         }
 
         .manual-login-section {
-            margin-top: 30px;
+            margin-top: 0px;
         }
 
         .manual-login-section a {
@@ -45,11 +57,42 @@
         .manual-login-section a:hover {
             text-decoration: underline;
         }
+
+        .logo {
+            margin-top: -100px; 
+            max-width: 600px; /* Adjust max width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Space below the logo */
+        }
+
+        .tagline {
+            color: #023c40; /* Tagline color */
+            font-size: 18px; /* Tagline font size */
+            margin-top: -110px; /* Space above the tagline */
+            margin-bottom: 20px; /* Space below the tagline */
+            font-size: 24px; /* Increased font size */
+            font-weight: bold; /* Bold text */
+            font-style: italic; /* Italic text */
+        }
+        
+        .highlight-purchasing {
+            color: #dda15e; /* Color for "purr-chasing" */
+        }
+
+        .highlight-pawsitively {
+            color: #2a9d8f; /* Color for "paws-itively" */
+        }
     </style>
 </head>
 <body>
 
-    <h1>KatKart</h1>
+    <!-- Logo Image -->
+    <img src="{% static 'images/KartKatLogo.png' %}" alt="KatKart Logo" class="logo">
+
+    <!-- Tagline -->
+    <div class="tagline">
+        Make <span class="highlight-purchasing">purr-chasing</span> groceries <span class="highlight-pawsitively">paws-itively</span> easy!
+    </div>
 
     <!-- Google Login Button -->
     {% if not user.is_authenticated %}
@@ -58,7 +101,7 @@
 
     <!-- Manual Sign In / Sign Up Options -->
     <div class="manual-login-section">
-        <p>Or sign in manually:</p>
+        <p><b>Or Make an Account for Free!:</p>
         <a href="{% url 'account_login' %}">Sign In</a> |
         <a href="{% url 'account_signup' %}">Sign Up</a>
     </div>
