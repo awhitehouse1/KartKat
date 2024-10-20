@@ -303,6 +303,11 @@ background-repeat:no-repeat;
       cursor: pointer;
       border-radius: 5px;
       margin-left: 10px;
+      padding: 10px;
+}
+
+.add_item_section {
+  width: 60%;
 }
 
 .add_new_sl_button {
@@ -322,8 +327,19 @@ background-repeat:no-repeat;
   margin-top: -300px;
   margin-left: 570px;
   transform: scaleX(-1);
-  position: absolute;
+  
 }
+
+.add_sl_btn {
+  background-color: #035e60;
+  width: 20%;
+  
+}
+
+.add-item-section {
+            width: 50%; /* Set the desired width */
+            margin: 40px;
+        }
   </style>
   <script>
     function toggleItemForm(listId) {
@@ -638,11 +654,11 @@ background-repeat:no-repeat;
   </div>
 
   <button class="add_new_sl_button" onclick="toggleAddItemSection()">Add New Shopping List ✨</button>
-  <section id="addItemSection" class="form-section" style="display: none">
+  <section id="addItemSection" class="form-section add-item-section" style="display: none">
     <h2>Add New Shopping List</h2>
     <form method="post">
       {% csrf_token %} {{ form.as_p }}
-      <button type="submit" name="add_list">Add Shopping List</button>
+      <button class= "add_sl_btn" type="submit" name="add_list">Add Shopping List</button>
     </form>
   </section>
 
