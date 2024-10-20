@@ -1,0 +1,6918 @@
+[
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 0,
+        "fields": {
+            "name": "Whole Milk (1 Gal)",
+            "brand": "Organic Valley",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 6.99,
+            "calories": 150,
+            "protein": 8.0,
+            "fat": 8.0,
+            "carbs": 12.0,
+            "calcium": 300.0,
+            "vitamin_d": 120.0,
+            "vitamin_b12": 1.2,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 1,
+        "fields": {
+            "name": "2% Milk (1 Gal)",
+            "brand": "Horizon",
+            "is_woman_owned": true,
+            "min_price": 3.79,
+            "max_price": 6.59,
+            "calories": 130,
+            "protein": 8.0,
+            "fat": 5.0,
+            "carbs": 12.0,
+            "calcium": 290.0,
+            "vitamin_d": 100.0,
+            "vitamin_b12": 1.0,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 2,
+        "fields": {
+            "name": "Greek Yogurt (Plain)",
+            "brand": "Chobani",
+            "is_woman_owned": false,
+            "min_price": 1.29,
+            "max_price": 1.99,
+            "calories": 120,
+            "protein": 15.0,
+            "fat": 0.0,
+            "carbs": 10.0,
+            "calcium": 180.0,
+            "vitamin_d": 80.0,
+            "vitamin_b12": 0.8,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 3,
+        "fields": {
+            "name": "Cottage Cheese (16 oz)",
+            "brand": "Daisy",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 3.99,
+            "calories": 90,
+            "protein": 13.0,
+            "fat": 2.0,
+            "carbs": 4.0,
+            "calcium": 100.0,
+            "vitamin_d": 40.0,
+            "vitamin_b12": 0.6,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 4,
+        "fields": {
+            "name": "Cheddar Cheese (8 oz)",
+            "brand": "Tillamook",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.49,
+            "calories": 110,
+            "protein": 7.0,
+            "fat": 9.0,
+            "carbs": 1.0,
+            "calcium": 200.0,
+            "vitamin_d": 90.0,
+            "vitamin_b12": 1.0,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 5,
+        "fields": {
+            "name": "Butter (1 lb)",
+            "brand": "Kerrygold",
+            "is_woman_owned": true,
+            "min_price": 3.79,
+            "max_price": 5.99,
+            "calories": 100,
+            "protein": 0.0,
+            "fat": 11.0,
+            "carbs": 0.0,
+            "calcium": 30.0,
+            "vitamin_d": 40.0,
+            "vitamin_b12": 0.2,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 6,
+        "fields": {
+            "name": "Heavy Cream (16 oz)",
+            "brand": "Land O'Lakes",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 100,
+            "protein": 0.0,
+            "fat": 10.0,
+            "carbs": 1.0,
+            "calcium": 50.0,
+            "vitamin_d": 40.0,
+            "vitamin_b12": 0.4,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 7,
+        "fields": {
+            "name": "Sour Cream (16 oz)",
+            "brand": "Daisy",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 60,
+            "protein": 1.0,
+            "fat": 5.0,
+            "carbs": 2.0,
+            "calcium": 80.0,
+            "vitamin_d": 40.0,
+            "vitamin_b12": 0.5,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 8,
+        "fields": {
+            "name": "Skim Milk (1 Gal)",
+            "brand": "Organic Valley",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 6.99,
+            "calories": 90,
+            "protein": 8.0,
+            "fat": 0.0,
+            "carbs": 12.0,
+            "calcium": 300.0,
+            "vitamin_d": 120.0,
+            "vitamin_b12": 1.2,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 9,
+        "fields": {
+            "name": "String Cheese (12 ct)",
+            "brand": "Sargento",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 80,
+            "protein": 6.0,
+            "fat": 6.0,
+            "carbs": 1.0,
+            "calcium": 150.0,
+            "vitamin_d": 60.0,
+            "vitamin_b12": 0.8,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 10,
+        "fields": {
+            "name": "Brie Cheese (8 oz)",
+            "brand": "Pr\u00e9sident",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 100,
+            "protein": 5.0,
+            "fat": 9.0,
+            "carbs": 0.0,
+            "calcium": 180.0,
+            "vitamin_d": 50.0,
+            "vitamin_b12": 0.5,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 11,
+        "fields": {
+            "name": "Swiss Cheese (8 oz)",
+            "brand": "Sargento",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 100,
+            "protein": 8.0,
+            "fat": 8.0,
+            "carbs": 1.0,
+            "calcium": 200.0,
+            "vitamin_d": 60.0,
+            "vitamin_b12": 1.0,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 12,
+        "fields": {
+            "name": "Lactose-Free Milk (1 Gal)",
+            "brand": "Lactaid",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 110,
+            "protein": 8.0,
+            "fat": 2.0,
+            "carbs": 13.0,
+            "calcium": 300.0,
+            "vitamin_d": 120.0,
+            "vitamin_b12": 1.2,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 13,
+        "fields": {
+            "name": "Cream Cheese (8 oz)",
+            "brand": "Philadelphia",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.29,
+            "calories": 80,
+            "protein": 2.0,
+            "fat": 8.0,
+            "carbs": 1.0,
+            "calcium": 100.0,
+            "vitamin_d": 40.0,
+            "vitamin_b12": 0.4,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 14,
+        "fields": {
+            "name": "Goat Cheese (4 oz)",
+            "brand": "Montchevre",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 6.99,
+            "calories": 70,
+            "protein": 5.0,
+            "fat": 6.0,
+            "carbs": 1.0,
+            "calcium": 130.0,
+            "vitamin_d": 40.0,
+            "vitamin_b12": 0.8,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 15,
+        "fields": {
+            "name": "Feta Cheese (8 oz)",
+            "brand": "Athenos",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 70,
+            "protein": 5.0,
+            "fat": 6.0,
+            "carbs": 1.0,
+            "calcium": 140.0,
+            "vitamin_d": 30.0,
+            "vitamin_b12": 0.7,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 16,
+        "fields": {
+            "name": "Kefir (32 oz)",
+            "brand": "Lifeway",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 150,
+            "protein": 11.0,
+            "fat": 8.0,
+            "carbs": 12.0,
+            "calcium": 300.0,
+            "vitamin_d": 100.0,
+            "vitamin_b12": 1.0,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 17,
+        "fields": {
+            "name": "Ricotta Cheese (15 oz)",
+            "brand": "Galbani",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 100,
+            "protein": 9.0,
+            "fat": 7.0,
+            "carbs": 4.0,
+            "calcium": 240.0,
+            "vitamin_d": 60.0,
+            "vitamin_b12": 0.9,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 18,
+        "fields": {
+            "name": "Chocolate Milk (1 Gal)",
+            "brand": "TruMoo",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 200,
+            "protein": 8.0,
+            "fat": 5.0,
+            "carbs": 28.0,
+            "calcium": 300.0,
+            "vitamin_d": 120.0,
+            "vitamin_b12": 1.2,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 19,
+        "fields": {
+            "name": "Half-and-Half (1 qt)",
+            "brand": "Organic Valley",
+            "is_woman_owned": true,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 40,
+            "protein": 1.0,
+            "fat": 3.0,
+            "carbs": 1.0,
+            "calcium": 100.0,
+            "vitamin_d": 50.0,
+            "vitamin_b12": 0.6,
+            "type": "Dairy Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 20,
+        "fields": {
+            "name": "Organic Bananas (1 lb)",
+            "brand": "Dole",
+            "is_woman_owned": false,
+            "min_price": 0.69,
+            "max_price": 0.99,
+            "calories": 89,
+            "protein": 1.1,
+            "fat": 0.3,
+            "carbs": 23.0,
+            "calcium": 5.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 21,
+        "fields": {
+            "name": "Red Apples (1 lb)",
+            "brand": "Gala",
+            "is_woman_owned": false,
+            "min_price": 1.29,
+            "max_price": 1.99,
+            "calories": 52,
+            "protein": 0.3,
+            "fat": 0.2,
+            "carbs": 14.0,
+            "calcium": 6.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 22,
+        "fields": {
+            "name": "Organic Spinach (5 oz)",
+            "brand": "Earthbound",
+            "is_woman_owned": true,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 23,
+            "protein": 2.9,
+            "fat": 0.4,
+            "carbs": 3.6,
+            "calcium": 99.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 23,
+        "fields": {
+            "name": "Organic Carrots (1 lb)",
+            "brand": "Bolthouse",
+            "is_woman_owned": false,
+            "min_price": 0.99,
+            "max_price": 1.49,
+            "calories": 41,
+            "protein": 0.9,
+            "fat": 0.2,
+            "carbs": 10.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 24,
+        "fields": {
+            "name": "Avocados (1 ct)",
+            "brand": "Calavo",
+            "is_woman_owned": false,
+            "min_price": 0.99,
+            "max_price": 2.49,
+            "calories": 160,
+            "protein": 2.0,
+            "fat": 15.0,
+            "carbs": 9.0,
+            "calcium": 18.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 25,
+        "fields": {
+            "name": "Organic Blueberries (6 oz)",
+            "brand": "Driscoll's",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 57,
+            "protein": 0.7,
+            "fat": 0.3,
+            "carbs": 14.0,
+            "calcium": 9.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 26,
+        "fields": {
+            "name": "Organic Strawberries (1 lb)",
+            "brand": "Driscoll's",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 32,
+            "protein": 0.7,
+            "fat": 0.3,
+            "carbs": 7.7,
+            "calcium": 16.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 27,
+        "fields": {
+            "name": "Broccoli (1 lb)",
+            "brand": "Mann's",
+            "is_woman_owned": true,
+            "min_price": 1.29,
+            "max_price": 2.99,
+            "calories": 55,
+            "protein": 3.7,
+            "fat": 0.6,
+            "carbs": 11.2,
+            "calcium": 70.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 28,
+        "fields": {
+            "name": "Organic Bell Peppers (1 ct)",
+            "brand": "Melissa's",
+            "is_woman_owned": false,
+            "min_price": 0.99,
+            "max_price": 2.49,
+            "calories": 31,
+            "protein": 1.0,
+            "fat": 0.3,
+            "carbs": 6.0,
+            "calcium": 18.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 29,
+        "fields": {
+            "name": "Cucumbers (1 ct)",
+            "brand": "Sunset",
+            "is_woman_owned": false,
+            "min_price": 0.69,
+            "max_price": 1.49,
+            "calories": 16,
+            "protein": 0.7,
+            "fat": 0.1,
+            "carbs": 3.6,
+            "calcium": 16.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 30,
+        "fields": {
+            "name": "Organic Kale (1 bunch)",
+            "brand": "Taylor Farms",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.99,
+            "calories": 33,
+            "protein": 2.9,
+            "fat": 0.6,
+            "carbs": 6.0,
+            "calcium": 150.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 31,
+        "fields": {
+            "name": "Romaine Lettuce (1 head)",
+            "brand": "Tanimura & Antle",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.99,
+            "calories": 17,
+            "protein": 1.2,
+            "fat": 0.3,
+            "carbs": 3.3,
+            "calcium": 36.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 32,
+        "fields": {
+            "name": "Organic Tomatoes (1 lb)",
+            "brand": "Wholesum",
+            "is_woman_owned": true,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 18,
+            "protein": 0.9,
+            "fat": 0.2,
+            "carbs": 3.9,
+            "calcium": 18.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 33,
+        "fields": {
+            "name": "Organic Zucchini (1 lb)",
+            "brand": "Jacobs Farm",
+            "is_woman_owned": true,
+            "min_price": 1.49,
+            "max_price": 2.99,
+            "calories": 17,
+            "protein": 1.2,
+            "fat": 0.3,
+            "carbs": 3.1,
+            "calcium": 22.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 34,
+        "fields": {
+            "name": "Baby Bella Mushrooms (8 oz)",
+            "brand": "Monterey",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 22,
+            "protein": 3.0,
+            "fat": 0.3,
+            "carbs": 3.3,
+            "calcium": 2.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 35,
+        "fields": {
+            "name": "Sweet Potatoes (1 lb)",
+            "brand": "Nature's Way",
+            "is_woman_owned": false,
+            "min_price": 1.29,
+            "max_price": 2.49,
+            "calories": 86,
+            "protein": 1.6,
+            "fat": 0.1,
+            "carbs": 20.1,
+            "calcium": 39.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 36,
+        "fields": {
+            "name": "Organic Celery (1 bunch)",
+            "brand": "Cal-Organic",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 14,
+            "protein": 0.7,
+            "fat": 0.2,
+            "carbs": 3.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 37,
+        "fields": {
+            "name": "Organic Red Grapes (1 lb)",
+            "brand": "Sunview",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 69,
+            "protein": 0.7,
+            "fat": 0.2,
+            "carbs": 18.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 38,
+        "fields": {
+            "name": "Organic Oranges (3 lb bag)",
+            "brand": "Sunkist",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.99,
+            "calories": 47,
+            "protein": 0.9,
+            "fat": 0.1,
+            "carbs": 12.0,
+            "calcium": 52.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 39,
+        "fields": {
+            "name": "Organic Pineapple (1 ct)",
+            "brand": "Dole",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 5.99,
+            "calories": 50,
+            "protein": 0.5,
+            "fat": 0.1,
+            "carbs": 13.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Fresh Produce"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 40,
+        "fields": {
+            "name": "Classic Salted Potato Chips",
+            "brand": "Cape Cod",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 150,
+            "protein": 2.0,
+            "fat": 9.0,
+            "carbs": 16.0,
+            "calcium": 1.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 41,
+        "fields": {
+            "name": "Chocolate Chip Cookies",
+            "brand": "Tate's",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 200,
+            "protein": 2.0,
+            "fat": 10.0,
+            "carbs": 30.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 42,
+        "fields": {
+            "name": "Organic Tortilla Chips",
+            "brand": "Late July",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 140,
+            "protein": 2.0,
+            "fat": 6.0,
+            "carbs": 18.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 43,
+        "fields": {
+            "name": "Veggie Straws",
+            "brand": "Sensible Portions",
+            "is_woman_owned": true,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 130,
+            "protein": 2.0,
+            "fat": 6.0,
+            "carbs": 19.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 44,
+        "fields": {
+            "name": "Peanut Butter Pretzels",
+            "brand": "Snyder\u2019s",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 150,
+            "protein": 4.0,
+            "fat": 7.0,
+            "carbs": 18.0,
+            "calcium": 8.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 45,
+        "fields": {
+            "name": "Fruit Snacks",
+            "brand": "Annie\u2019s",
+            "is_woman_owned": true,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 100,
+            "protein": 1.0,
+            "fat": 0.5,
+            "carbs": 25.0,
+            "calcium": 4.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 46,
+        "fields": {
+            "name": "Chocolate Covered Almonds",
+            "brand": "Emerald",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.99,
+            "calories": 200,
+            "protein": 6.0,
+            "fat": 13.0,
+            "carbs": 15.0,
+            "calcium": 70.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 47,
+        "fields": {
+            "name": "Sea Salt Popcorn",
+            "brand": "SkinnyPop",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 100,
+            "protein": 2.0,
+            "fat": 5.0,
+            "carbs": 15.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 48,
+        "fields": {
+            "name": "Granola Bars (Chocolate Chip)",
+            "brand": "KIND",
+            "is_woman_owned": true,
+            "min_price": 4.49,
+            "max_price": 6.49,
+            "calories": 180,
+            "protein": 5.0,
+            "fat": 9.0,
+            "carbs": 21.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 49,
+        "fields": {
+            "name": "Pretzel Crisps",
+            "brand": "Snack Factory",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 120,
+            "protein": 3.0,
+            "fat": 3.0,
+            "carbs": 21.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 50,
+        "fields": {
+            "name": "Trail Mix",
+            "brand": "Planters",
+            "is_woman_owned": false,
+            "min_price": 5.49,
+            "max_price": 7.99,
+            "calories": 220,
+            "protein": 7.0,
+            "fat": 12.0,
+            "carbs": 21.0,
+            "calcium": 25.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 51,
+        "fields": {
+            "name": "Sweet & Salty Kettle Corn",
+            "brand": "Boom Chicka Pop",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 140,
+            "protein": 2.0,
+            "fat": 7.0,
+            "carbs": 18.0,
+            "calcium": 5.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 52,
+        "fields": {
+            "name": "Veggie Chips",
+            "brand": "Terra",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.49,
+            "calories": 150,
+            "protein": 2.0,
+            "fat": 7.0,
+            "carbs": 20.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 53,
+        "fields": {
+            "name": "Dark Chocolate Covered Pretzels",
+            "brand": "Snyder's",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 160,
+            "protein": 3.0,
+            "fat": 9.0,
+            "carbs": 20.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 54,
+        "fields": {
+            "name": "Rice Cakes (Lightly Salted)",
+            "brand": "Quaker",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 3.49,
+            "calories": 70,
+            "protein": 1.0,
+            "fat": 0.5,
+            "carbs": 14.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 55,
+        "fields": {
+            "name": "Sriracha Cashews",
+            "brand": "Wonderful",
+            "is_woman_owned": false,
+            "min_price": 5.49,
+            "max_price": 7.49,
+            "calories": 160,
+            "protein": 6.0,
+            "fat": 13.0,
+            "carbs": 8.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 56,
+        "fields": {
+            "name": "Caramel Popcorn",
+            "brand": "Pirate\u2019s Booty",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 150,
+            "protein": 1.0,
+            "fat": 7.0,
+            "carbs": 23.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 57,
+        "fields": {
+            "name": "Chocolate Pretzel Bites",
+            "brand": "Pretzel Crisps",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.49,
+            "calories": 190,
+            "protein": 3.0,
+            "fat": 10.0,
+            "carbs": 24.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 58,
+        "fields": {
+            "name": "Apple Cinnamon Granola",
+            "brand": "Nature Valley",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 180,
+            "protein": 4.0,
+            "fat": 8.0,
+            "carbs": 28.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 59,
+        "fields": {
+            "name": "Cinnamon Rolls (Mini)",
+            "brand": "Pillsbury",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 230,
+            "protein": 3.0,
+            "fat": 11.0,
+            "carbs": 33.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Snack Food"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 60,
+        "fields": {
+            "name": "Whole Wheat Bread (1 lb)",
+            "brand": "Dave\u2019s Killer Bread",
+            "is_woman_owned": true,
+            "min_price": 4.49,
+            "max_price": 6.49,
+            "calories": 120,
+            "protein": 5.0,
+            "fat": 2.0,
+            "carbs": 20.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 61,
+        "fields": {
+            "name": "Croissants (4 ct)",
+            "brand": "La Brea Bakery",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 200,
+            "protein": 5.0,
+            "fat": 10.0,
+            "carbs": 25.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 62,
+        "fields": {
+            "name": "Multigrain Bread (1 lb)",
+            "brand": "Nature\u2019s Own",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 110,
+            "protein": 4.0,
+            "fat": 1.0,
+            "carbs": 21.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 63,
+        "fields": {
+            "name": "Sourdough Bread (1 loaf)",
+            "brand": "San Luis Sourdough",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.49,
+            "calories": 120,
+            "protein": 4.0,
+            "fat": 1.0,
+            "carbs": 23.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 64,
+        "fields": {
+            "name": "Brioche Buns (4 ct)",
+            "brand": "King\u2019s Hawaiian",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 150,
+            "protein": 4.0,
+            "fat": 7.0,
+            "carbs": 21.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 65,
+        "fields": {
+            "name": "Bagels (Plain, 6 ct)",
+            "brand": "Thomas\u2019",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.49,
+            "calories": 210,
+            "protein": 6.0,
+            "fat": 1.0,
+            "carbs": 45.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 66,
+        "fields": {
+            "name": "Cinnamon Rolls (4 ct)",
+            "brand": "Pillsbury",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.49,
+            "calories": 200,
+            "protein": 3.0,
+            "fat": 8.0,
+            "carbs": 30.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 67,
+        "fields": {
+            "name": "Rye Bread (1 lb)",
+            "brand": "Arnold",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 130,
+            "protein": 4.0,
+            "fat": 1.0,
+            "carbs": 25.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 68,
+        "fields": {
+            "name": "Whole Grain Bread (1 lb)",
+            "brand": "Oroweat",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 6.99,
+            "calories": 110,
+            "protein": 5.0,
+            "fat": 2.0,
+            "carbs": 18.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 69,
+        "fields": {
+            "name": "English Muffins (6 ct)",
+            "brand": "Thomas\u2019",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 120,
+            "protein": 4.0,
+            "fat": 0.5,
+            "carbs": 25.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 70,
+        "fields": {
+            "name": "Apple Cinnamon Pastries",
+            "brand": "Entenmann\u2019s",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.49,
+            "calories": 280,
+            "protein": 3.0,
+            "fat": 14.0,
+            "carbs": 39.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 71,
+        "fields": {
+            "name": "Garlic Bread (1 loaf)",
+            "brand": "New York Bakery",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 150,
+            "protein": 4.0,
+            "fat": 6.0,
+            "carbs": 24.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 72,
+        "fields": {
+            "name": "Danish Pastry (Apple, 1 ct)",
+            "brand": "Sara Lee",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.99,
+            "calories": 290,
+            "protein": 3.0,
+            "fat": 14.0,
+            "carbs": 39.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 73,
+        "fields": {
+            "name": "Focaccia Bread (1 loaf)",
+            "brand": "La Brea Bakery",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.49,
+            "calories": 180,
+            "protein": 5.0,
+            "fat": 7.0,
+            "carbs": 25.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 74,
+        "fields": {
+            "name": "Plain Bagels (6 ct)",
+            "brand": "Lender\u2019s",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 250,
+            "protein": 9.0,
+            "fat": 1.0,
+            "carbs": 50.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 75,
+        "fields": {
+            "name": "Hot Dog Buns (8 ct)",
+            "brand": "Wonder",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.49,
+            "calories": 130,
+            "protein": 3.0,
+            "fat": 1.0,
+            "carbs": 24.0,
+            "calcium": 25.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 76,
+        "fields": {
+            "name": "Soft Pretzel Rolls (4 ct)",
+            "brand": "Auntie Anne\u2019s",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.99,
+            "calories": 210,
+            "protein": 5.0,
+            "fat": 9.0,
+            "carbs": 30.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 77,
+        "fields": {
+            "name": "Buttery Croissants (4 ct)",
+            "brand": "Trader Joe\u2019s",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 220,
+            "protein": 5.0,
+            "fat": 10.0,
+            "carbs": 25.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 78,
+        "fields": {
+            "name": "Soft Dinner Rolls (6 ct)",
+            "brand": "King\u2019s Hawaiian",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 130,
+            "protein": 4.0,
+            "fat": 1.0,
+            "carbs": 24.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 79,
+        "fields": {
+            "name": "French Bread (1 loaf)",
+            "brand": "Boudin",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 130,
+            "protein": 4.0,
+            "fat": 0.5,
+            "carbs": 25.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 80,
+        "fields": {
+            "name": "Sweet Rolls (Cinnamon, 6 ct)",
+            "brand": "Entenmann\u2019s",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 180,
+            "protein": 4.0,
+            "fat": 8.0,
+            "carbs": 28.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 81,
+        "fields": {
+            "name": "Gluten-Free Bread (1 loaf)",
+            "brand": "Udi\u2019s",
+            "is_woman_owned": true,
+            "min_price": 5.99,
+            "max_price": 7.99,
+            "calories": 90,
+            "protein": 3.0,
+            "fat": 1.0,
+            "carbs": 18.0,
+            "calcium": 25.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breads and Pastries"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 82,
+        "fields": {
+            "name": "Frozen Veggie Mix (16 oz)",
+            "brand": "Green Giant",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 90,
+            "protein": 3.0,
+            "fat": 0.5,
+            "carbs": 20.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 83,
+        "fields": {
+            "name": "Frozen French Fries (32 oz)",
+            "brand": "Ore-Ida",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 5.49,
+            "calories": 150,
+            "protein": 2.0,
+            "fat": 7.0,
+            "carbs": 22.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 84,
+        "fields": {
+            "name": "Frozen Spinach (10 oz)",
+            "brand": "Birds Eye",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.99,
+            "calories": 50,
+            "protein": 5.0,
+            "fat": 0.5,
+            "carbs": 8.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 85,
+        "fields": {
+            "name": "Frozen Pizza (Pepperoni, 12\")",
+            "brand": "DiGiorno",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 8.99,
+            "calories": 300,
+            "protein": 14.0,
+            "fat": 14.0,
+            "carbs": 30.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 86,
+        "fields": {
+            "name": "Frozen Mixed Berries (16 oz)",
+            "brand": "Wyman\u2019s",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 70,
+            "protein": 1.0,
+            "fat": 0.5,
+            "carbs": 18.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 87,
+        "fields": {
+            "name": "Frozen Mac & Cheese (6 ct)",
+            "brand": "Stouffer\u2019s",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 7.99,
+            "calories": 300,
+            "protein": 10.0,
+            "fat": 15.0,
+            "carbs": 35.0,
+            "calcium": 100.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.5,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 88,
+        "fields": {
+            "name": "Frozen Chicken Nuggets (20 ct)",
+            "brand": "Tyson",
+            "is_woman_owned": false,
+            "min_price": 5.49,
+            "max_price": 8.99,
+            "calories": 200,
+            "protein": 10.0,
+            "fat": 12.0,
+            "carbs": 15.0,
+            "calcium": 25.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 89,
+        "fields": {
+            "name": "Frozen Garlic Bread (1 loaf)",
+            "brand": "New York Bakery",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 180,
+            "protein": 4.0,
+            "fat": 9.0,
+            "carbs": 25.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 90,
+        "fields": {
+            "name": "Frozen Veggie Burgers (4 ct)",
+            "brand": "MorningStar Farms",
+            "is_woman_owned": true,
+            "min_price": 5.99,
+            "max_price": 7.99,
+            "calories": 140,
+            "protein": 11.0,
+            "fat": 5.0,
+            "carbs": 15.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 91,
+        "fields": {
+            "name": "Frozen Waffles (6 ct)",
+            "brand": "Eggo",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.49,
+            "calories": 170,
+            "protein": 3.0,
+            "fat": 7.0,
+            "carbs": 27.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 92,
+        "fields": {
+            "name": "Frozen Tater Tots (32 oz)",
+            "brand": "Ore-Ida",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.49,
+            "calories": 140,
+            "protein": 2.0,
+            "fat": 7.0,
+            "carbs": 22.0,
+            "calcium": 5.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 93,
+        "fields": {
+            "name": "Frozen Ice Cream (1.5 qt)",
+            "brand": "Haagen-Dazs",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 8.49,
+            "calories": 300,
+            "protein": 4.0,
+            "fat": 18.0,
+            "carbs": 30.0,
+            "calcium": 100.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 94,
+        "fields": {
+            "name": "Frozen Corn on the Cob (6 ct)",
+            "brand": "Green Giant",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 70,
+            "protein": 2.0,
+            "fat": 0.5,
+            "carbs": 15.0,
+            "calcium": 2.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 95,
+        "fields": {
+            "name": "Frozen Lasagna (2 ct)",
+            "brand": "Stouffer\u2019s",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 8.99,
+            "calories": 350,
+            "protein": 20.0,
+            "fat": 20.0,
+            "carbs": 35.0,
+            "calcium": 200.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.5,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 96,
+        "fields": {
+            "name": "Frozen Fruit Bars (6 ct)",
+            "brand": "Outshine",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.49,
+            "calories": 90,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 22.0,
+            "calcium": 25.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 97,
+        "fields": {
+            "name": "Frozen Burritos (4 ct)",
+            "brand": "Amy\u2019s Kitchen",
+            "is_woman_owned": true,
+            "min_price": 5.49,
+            "max_price": 7.99,
+            "calories": 250,
+            "protein": 12.0,
+            "fat": 9.0,
+            "carbs": 32.0,
+            "calcium": 150.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 98,
+        "fields": {
+            "name": "Frozen Breakfast Sandwich (2 ct)",
+            "brand": "Jimmy Dean",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.99,
+            "calories": 300,
+            "protein": 12.0,
+            "fat": 15.0,
+            "carbs": 30.0,
+            "calcium": 100.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 99,
+        "fields": {
+            "name": "Frozen Apple Pie (9\")",
+            "brand": "Marie Callender\u2019s",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 250,
+            "protein": 1.0,
+            "fat": 12.0,
+            "carbs": 45.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 100,
+        "fields": {
+            "name": "Frozen Chocolate Chip Cookie Dough",
+            "brand": "Toll House",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.99,
+            "calories": 140,
+            "protein": 2.0,
+            "fat": 7.0,
+            "carbs": 20.0,
+            "calcium": 25.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 101,
+        "fields": {
+            "name": "Frozen Pot Pie (Chicken, 6 ct)",
+            "brand": "Marie Callender\u2019s",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 9.49,
+            "calories": 320,
+            "protein": 16.0,
+            "fat": 15.0,
+            "carbs": 33.0,
+            "calcium": 120.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Frozen Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 102,
+        "fields": {
+            "name": "Oatmeal (Instant, 10 ct)",
+            "brand": "Quaker",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 5.49,
+            "calories": 150,
+            "protein": 5.0,
+            "fat": 2.0,
+            "carbs": 27.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 103,
+        "fields": {
+            "name": "Breakfast Bars (Granola, 6 ct)",
+            "brand": "Nature Valley",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 200,
+            "protein": 4.0,
+            "fat": 9.0,
+            "carbs": 28.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 104,
+        "fields": {
+            "name": "Pancake Mix (32 oz)",
+            "brand": "Aunt Jemima",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 140,
+            "protein": 3.0,
+            "fat": 1.0,
+            "carbs": 29.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 105,
+        "fields": {
+            "name": "Breakfast Sausages (12 ct)",
+            "brand": "Jimmy Dean",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.99,
+            "calories": 190,
+            "protein": 10.0,
+            "fat": 15.0,
+            "carbs": 1.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 106,
+        "fields": {
+            "name": "Cereal (Frosted Flakes, 18 oz)",
+            "brand": "Kellogg\u2019s",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.49,
+            "calories": 150,
+            "protein": 2.0,
+            "fat": 1.0,
+            "carbs": 36.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 107,
+        "fields": {
+            "name": "Yogurt (Strawberry, 32 oz)",
+            "brand": "Stonyfield Organic",
+            "is_woman_owned": true,
+            "min_price": 5.49,
+            "max_price": 7.99,
+            "calories": 130,
+            "protein": 6.0,
+            "fat": 4.0,
+            "carbs": 17.0,
+            "calcium": 200.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.9,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 108,
+        "fields": {
+            "name": "Bagels (Plain, 6 ct)",
+            "brand": "Thomas\u2019",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 210,
+            "protein": 6.0,
+            "fat": 1.0,
+            "carbs": 45.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 109,
+        "fields": {
+            "name": "Frozen Waffles (6 ct)",
+            "brand": "Eggo",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.49,
+            "calories": 170,
+            "protein": 3.0,
+            "fat": 7.0,
+            "carbs": 27.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 110,
+        "fields": {
+            "name": "Breakfast Burritos (4 ct)",
+            "brand": "Amy\u2019s Kitchen",
+            "is_woman_owned": true,
+            "min_price": 5.49,
+            "max_price": 7.99,
+            "calories": 230,
+            "protein": 10.0,
+            "fat": 8.0,
+            "carbs": 28.0,
+            "calcium": 150.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 111,
+        "fields": {
+            "name": "Cereal (Cheerios, 12 oz)",
+            "brand": "General Mills",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 100,
+            "protein": 3.0,
+            "fat": 1.0,
+            "carbs": 22.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 112,
+        "fields": {
+            "name": "Fruit and Nut Bars (6 ct)",
+            "brand": "KIND",
+            "is_woman_owned": true,
+            "min_price": 5.49,
+            "max_price": 7.99,
+            "calories": 200,
+            "protein": 6.0,
+            "fat": 9.0,
+            "carbs": 25.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 113,
+        "fields": {
+            "name": "Oatmeal Cups (Apple & Cinnamon, 6 ct)",
+            "brand": "Quaker",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 6.49,
+            "calories": 160,
+            "protein": 5.0,
+            "fat": 3.0,
+            "carbs": 30.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 114,
+        "fields": {
+            "name": "Granola (Honey Almond, 12 oz)",
+            "brand": "Nature Valley",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.49,
+            "calories": 210,
+            "protein": 5.0,
+            "fat": 9.0,
+            "carbs": 30.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 115,
+        "fields": {
+            "name": "Breakfast Sandwich (Bacon, 2 ct)",
+            "brand": "Jimmy Dean",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.99,
+            "calories": 320,
+            "protein": 16.0,
+            "fat": 20.0,
+            "carbs": 32.0,
+            "calcium": 100.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 116,
+        "fields": {
+            "name": "Breakfast Smoothies (Mixed Berry, 4 ct)",
+            "brand": "Odwalla",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.99,
+            "calories": 160,
+            "protein": 2.0,
+            "fat": 2.0,
+            "carbs": 36.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 117,
+        "fields": {
+            "name": "Instant Grits (Cheddar, 6 ct)",
+            "brand": "Quaker",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 140,
+            "protein": 4.0,
+            "fat": 1.0,
+            "carbs": 28.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 118,
+        "fields": {
+            "name": "Breakfast Quesadillas (4 ct)",
+            "brand": "Evol",
+            "is_woman_owned": true,
+            "min_price": 5.99,
+            "max_price": 8.49,
+            "calories": 240,
+            "protein": 12.0,
+            "fat": 10.0,
+            "carbs": 24.0,
+            "calcium": 100.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 119,
+        "fields": {
+            "name": "Frozen Breakfast Potatoes (Hash Browns, 20 oz)",
+            "brand": "Ore-Ida",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 130,
+            "protein": 2.0,
+            "fat": 7.0,
+            "carbs": 20.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 120,
+        "fields": {
+            "name": "Cereal (Special K, 18 oz)",
+            "brand": "Kellogg\u2019s",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.49,
+            "calories": 130,
+            "protein": 3.0,
+            "fat": 1.0,
+            "carbs": 28.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 121,
+        "fields": {
+            "name": "Pancake Mix (Buttermilk, 32 oz)",
+            "brand": "Aunt Jemima",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 150,
+            "protein": 4.0,
+            "fat": 2.0,
+            "carbs": 32.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Breakfast Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 122,
+        "fields": {
+            "name": "Canned Black Beans (15 oz)",
+            "brand": "Goya",
+            "is_woman_owned": false,
+            "min_price": 0.99,
+            "max_price": 1.99,
+            "calories": 100,
+            "protein": 7.0,
+            "fat": 0.5,
+            "carbs": 18.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 123,
+        "fields": {
+            "name": "Canned Tomato Sauce (15 oz)",
+            "brand": "Hunt's",
+            "is_woman_owned": false,
+            "min_price": 0.89,
+            "max_price": 1.49,
+            "calories": 70,
+            "protein": 2.0,
+            "fat": 0.0,
+            "carbs": 15.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 124,
+        "fields": {
+            "name": "Canned Peas (15 oz)",
+            "brand": "Green Giant",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 70,
+            "protein": 3.0,
+            "fat": 0.0,
+            "carbs": 12.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 125,
+        "fields": {
+            "name": "Canned Sweet Corn (15 oz)",
+            "brand": "Green Giant",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 90,
+            "protein": 3.0,
+            "fat": 0.5,
+            "carbs": 20.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 126,
+        "fields": {
+            "name": "Canned Pineapple (15 oz)",
+            "brand": "Dole",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 3.49,
+            "calories": 80,
+            "protein": 0.5,
+            "fat": 0.5,
+            "carbs": 22.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 127,
+        "fields": {
+            "name": "Canned Chickpeas (15 oz)",
+            "brand": "Goya",
+            "is_woman_owned": false,
+            "min_price": 1.29,
+            "max_price": 2.49,
+            "calories": 130,
+            "protein": 6.0,
+            "fat": 2.0,
+            "carbs": 22.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 128,
+        "fields": {
+            "name": "Canned Green Beans (15 oz)",
+            "brand": "Del Monte",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 70,
+            "protein": 2.0,
+            "fat": 0.5,
+            "carbs": 15.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 129,
+        "fields": {
+            "name": "Canned Refried Beans (16 oz)",
+            "brand": "Old El Paso",
+            "is_woman_owned": false,
+            "min_price": 1.69,
+            "max_price": 2.99,
+            "calories": 180,
+            "protein": 6.0,
+            "fat": 5.0,
+            "carbs": 28.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 130,
+        "fields": {
+            "name": "Canned Salmon (14.75 oz)",
+            "brand": "Bumble Bee",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 190,
+            "protein": 22.0,
+            "fat": 9.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 131,
+        "fields": {
+            "name": "Canned Carrots (15 oz)",
+            "brand": "Del Monte",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 80,
+            "protein": 1.0,
+            "fat": 0.5,
+            "carbs": 19.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 132,
+        "fields": {
+            "name": "Canned Spaghetti (15 oz)",
+            "brand": "Chef Boyardee",
+            "is_woman_owned": false,
+            "min_price": 1.29,
+            "max_price": 2.49,
+            "calories": 200,
+            "protein": 6.0,
+            "fat": 6.0,
+            "carbs": 34.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 133,
+        "fields": {
+            "name": "Canned Mixed Vegetables (15 oz)",
+            "brand": "Del Monte",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 60,
+            "protein": 2.0,
+            "fat": 0.5,
+            "carbs": 13.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 134,
+        "fields": {
+            "name": "Canned Tomato Soup (10.75 oz)",
+            "brand": "Campbell\u2019s",
+            "is_woman_owned": false,
+            "min_price": 1.0,
+            "max_price": 1.89,
+            "calories": 150,
+            "protein": 3.0,
+            "fat": 6.0,
+            "carbs": 23.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 135,
+        "fields": {
+            "name": "Canned Mushrooms (7 oz)",
+            "brand": "Libby\u2019s",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 50,
+            "protein": 2.0,
+            "fat": 0.0,
+            "carbs": 11.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 136,
+        "fields": {
+            "name": "Canned Cranberry Sauce (14 oz)",
+            "brand": "Ocean Spray",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 130,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 33.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 137,
+        "fields": {
+            "name": "Canned Pork & Beans (15 oz)",
+            "brand": "Bush\u2019s Best",
+            "is_woman_owned": false,
+            "min_price": 1.29,
+            "max_price": 2.49,
+            "calories": 180,
+            "protein": 7.0,
+            "fat": 5.0,
+            "carbs": 26.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 138,
+        "fields": {
+            "name": "Canned Clams (6.5 oz)",
+            "brand": "Bumble Bee",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 150,
+            "protein": 25.0,
+            "fat": 4.0,
+            "carbs": 4.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 3.5,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 139,
+        "fields": {
+            "name": "Canned Potatoes (15 oz)",
+            "brand": "Del Monte",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 70,
+            "protein": 2.0,
+            "fat": 0.5,
+            "carbs": 15.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 140,
+        "fields": {
+            "name": "Canned Baked Beans (15 oz)",
+            "brand": "Bush\u2019s Best",
+            "is_woman_owned": false,
+            "min_price": 1.79,
+            "max_price": 3.29,
+            "calories": 160,
+            "protein": 6.0,
+            "fat": 2.5,
+            "carbs": 30.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 141,
+        "fields": {
+            "name": "Canned Chili (15 oz)",
+            "brand": "Wolf Brand Chili",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 3.99,
+            "calories": 250,
+            "protein": 12.0,
+            "fat": 14.0,
+            "carbs": 22.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 142,
+        "fields": {
+            "name": "Canned Sweet Potatoes (15 oz)",
+            "brand": "Gaea",
+            "is_woman_owned": true,
+            "min_price": 2.49,
+            "max_price": 3.99,
+            "calories": 130,
+            "protein": 2.0,
+            "fat": 0.5,
+            "carbs": 30.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Canned Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 143,
+        "fields": {
+            "name": "Spaghetti (16 oz)",
+            "brand": "Barilla",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.99,
+            "calories": 200,
+            "protein": 7.0,
+            "fat": 1.0,
+            "carbs": 42.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 144,
+        "fields": {
+            "name": "Penne Pasta (16 oz)",
+            "brand": "Ronzoni",
+            "is_woman_owned": false,
+            "min_price": 1.29,
+            "max_price": 2.49,
+            "calories": 200,
+            "protein": 7.0,
+            "fat": 1.0,
+            "carbs": 42.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 145,
+        "fields": {
+            "name": "Whole Wheat Pasta (16 oz)",
+            "brand": "Barilla",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 3.99,
+            "calories": 180,
+            "protein": 6.0,
+            "fat": 1.5,
+            "carbs": 37.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 146,
+        "fields": {
+            "name": "Elbow Macaroni (16 oz)",
+            "brand": "Mueller\u2019s",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 200,
+            "protein": 7.0,
+            "fat": 1.0,
+            "carbs": 41.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 147,
+        "fields": {
+            "name": "Rice (Long Grain, 32 oz)",
+            "brand": "Uncle Ben\u2019s",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 160,
+            "protein": 4.0,
+            "fat": 0.5,
+            "carbs": 35.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 148,
+        "fields": {
+            "name": "Jasmine Rice (32 oz)",
+            "brand": "Dynasty",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.49,
+            "calories": 160,
+            "protein": 3.0,
+            "fat": 0.5,
+            "carbs": 35.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 149,
+        "fields": {
+            "name": "Brown Rice (32 oz)",
+            "brand": "Lundberg",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 6.99,
+            "calories": 150,
+            "protein": 3.0,
+            "fat": 1.0,
+            "carbs": 32.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 150,
+        "fields": {
+            "name": "Risotto (Parmesan, 5.5 oz)",
+            "brand": "RiceSelect",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 190,
+            "protein": 6.0,
+            "fat": 4.0,
+            "carbs": 30.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 151,
+        "fields": {
+            "name": "Angel Hair Pasta (16 oz)",
+            "brand": "Barilla",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 190,
+            "protein": 7.0,
+            "fat": 1.0,
+            "carbs": 42.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 152,
+        "fields": {
+            "name": "Arborio Rice (16 oz)",
+            "brand": "RiceSelect",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 170,
+            "protein": 4.0,
+            "fat": 0.5,
+            "carbs": 37.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 153,
+        "fields": {
+            "name": "Fettuccine (16 oz)",
+            "brand": "De Cecco",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 3.99,
+            "calories": 210,
+            "protein": 7.0,
+            "fat": 1.5,
+            "carbs": 43.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 154,
+        "fields": {
+            "name": "Instant Rice (8 oz)",
+            "brand": "Minute Rice",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 210,
+            "protein": 4.0,
+            "fat": 0.5,
+            "carbs": 46.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 155,
+        "fields": {
+            "name": "Orzo (16 oz)",
+            "brand": "Barilla",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 3.99,
+            "calories": 200,
+            "protein": 7.0,
+            "fat": 1.0,
+            "carbs": 42.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 156,
+        "fields": {
+            "name": "Basmati Rice (32 oz)",
+            "brand": "Dynasty",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.49,
+            "calories": 160,
+            "protein": 3.0,
+            "fat": 0.5,
+            "carbs": 35.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 157,
+        "fields": {
+            "name": "Lasagna Noodles (16 oz)",
+            "brand": "Barilla",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 210,
+            "protein": 7.0,
+            "fat": 1.0,
+            "carbs": 43.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 158,
+        "fields": {
+            "name": "Brown Rice (Instant, 8 oz)",
+            "brand": "Uncle Ben\u2019s",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 3.49,
+            "calories": 150,
+            "protein": 3.0,
+            "fat": 0.5,
+            "carbs": 34.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 159,
+        "fields": {
+            "name": "Whole Wheat Penne (16 oz)",
+            "brand": "Barilla",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 3.99,
+            "calories": 190,
+            "protein": 6.0,
+            "fat": 1.5,
+            "carbs": 37.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 160,
+        "fields": {
+            "name": "Vermicelli Noodles (8 oz)",
+            "brand": "Thai Kitchen",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.49,
+            "calories": 180,
+            "protein": 5.0,
+            "fat": 0.5,
+            "carbs": 39.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 161,
+        "fields": {
+            "name": "Gluten-Free Pasta (16 oz)",
+            "brand": "Barilla",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 190,
+            "protein": 5.0,
+            "fat": 1.0,
+            "carbs": 42.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 162,
+        "fields": {
+            "name": "Pasta Shells (16 oz)",
+            "brand": "Barilla",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.99,
+            "calories": 200,
+            "protein": 7.0,
+            "fat": 1.0,
+            "carbs": 42.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 163,
+        "fields": {
+            "name": "Instant Rice (Flavored, 8 oz)",
+            "brand": "Minute Rice",
+            "is_woman_owned": false,
+            "min_price": 1.29,
+            "max_price": 2.49,
+            "calories": 200,
+            "protein": 4.0,
+            "fat": 1.0,
+            "carbs": 45.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 164,
+        "fields": {
+            "name": "Organic Brown Rice (32 oz)",
+            "brand": "Lundberg",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 7.49,
+            "calories": 150,
+            "protein": 3.0,
+            "fat": 1.0,
+            "carbs": 32.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 165,
+        "fields": {
+            "name": "Organic Spaghetti (16 oz)",
+            "brand": "Bionaturae",
+            "is_woman_owned": true,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 190,
+            "protein": 7.0,
+            "fat": 1.0,
+            "carbs": 41.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Pasta and Rice"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 166,
+        "fields": {
+            "name": "Ketchup (20 oz)",
+            "brand": "Heinz",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 150,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 38.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 167,
+        "fields": {
+            "name": "Mustard (14 oz)",
+            "brand": "French\u2019s",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.99,
+            "calories": 60,
+            "protein": 2.0,
+            "fat": 0.5,
+            "carbs": 8.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 168,
+        "fields": {
+            "name": "Mayonnaise (15 oz)",
+            "brand": "Hellmann\u2019s",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 90,
+            "protein": 1.0,
+            "fat": 9.0,
+            "carbs": 1.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 169,
+        "fields": {
+            "name": "Barbecue Sauce (18 oz)",
+            "brand": "Sweet Baby Ray\u2019s",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 150,
+            "protein": 1.0,
+            "fat": 0.5,
+            "carbs": 37.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 170,
+        "fields": {
+            "name": "Soy Sauce (10 oz)",
+            "brand": "Kikkoman",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 15,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 1.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 171,
+        "fields": {
+            "name": "Hot Sauce (5 oz)",
+            "brand": "Tabasco",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 3.49,
+            "calories": 0,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 172,
+        "fields": {
+            "name": "Olive Oil (16 oz)",
+            "brand": "Bertolli",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 8.99,
+            "calories": 120,
+            "protein": 0.0,
+            "fat": 14.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 173,
+        "fields": {
+            "name": "Balsamic Vinegar (16 oz)",
+            "brand": "Pompeian",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 14,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 3.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 174,
+        "fields": {
+            "name": "Salsa (16 oz)",
+            "brand": "Tostitos",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.49,
+            "calories": 80,
+            "protein": 1.0,
+            "fat": 0.5,
+            "carbs": 18.0,
+            "calcium": 2.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 175,
+        "fields": {
+            "name": "Ranch Dressing (16 oz)",
+            "brand": "Hidden Valley",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 140,
+            "protein": 1.0,
+            "fat": 14.0,
+            "carbs": 2.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 176,
+        "fields": {
+            "name": "Honey (12 oz)",
+            "brand": "Sue Bee",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 60,
+            "protein": 0.2,
+            "fat": 0.0,
+            "carbs": 17.0,
+            "calcium": 2.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 177,
+        "fields": {
+            "name": "Tahini (8 oz)",
+            "brand": "Soom Foods",
+            "is_woman_owned": true,
+            "min_price": 5.99,
+            "max_price": 8.99,
+            "calories": 190,
+            "protein": 5.0,
+            "fat": 16.0,
+            "carbs": 6.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 178,
+        "fields": {
+            "name": "Sriracha Sauce (10 oz)",
+            "brand": "Huy Fong",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 100,
+            "protein": 2.0,
+            "fat": 0.0,
+            "carbs": 24.0,
+            "calcium": 4.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 179,
+        "fields": {
+            "name": "Pesto (6 oz)",
+            "brand": "Barilla",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 180,
+            "protein": 3.0,
+            "fat": 18.0,
+            "carbs": 4.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 180,
+        "fields": {
+            "name": "Soy Sauce (Gluten-Free, 10 oz)",
+            "brand": "Tamari",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 6.49,
+            "calories": 15,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 1.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 181,
+        "fields": {
+            "name": "Dijon Mustard (8 oz)",
+            "brand": "Maille",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 10,
+            "protein": 0.5,
+            "fat": 0.5,
+            "carbs": 2.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 182,
+        "fields": {
+            "name": "Teriyaki Sauce (10 oz)",
+            "brand": "Kikkoman",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 60,
+            "protein": 2.0,
+            "fat": 1.0,
+            "carbs": 11.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 183,
+        "fields": {
+            "name": "Apple Cider Vinegar (16 oz)",
+            "brand": "Bragg",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 5.49,
+            "calories": 5,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 1.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 184,
+        "fields": {
+            "name": "Taco Sauce (8 oz)",
+            "brand": "Old El Paso",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 30,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 7.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 185,
+        "fields": {
+            "name": "Sweet Chili Sauce (12 oz)",
+            "brand": "Thai Kitchen",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.99,
+            "calories": 80,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 20.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 186,
+        "fields": {
+            "name": "Chili Sauce (12 oz)",
+            "brand": "Tessemae's",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 7.49,
+            "calories": 50,
+            "protein": 1.0,
+            "fat": 2.0,
+            "carbs": 10.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Condiments"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 187,
+        "fields": {
+            "name": "Chicken Breasts (1 lb)",
+            "brand": "Perdue",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 7.99,
+            "calories": 120,
+            "protein": 26.0,
+            "fat": 2.0,
+            "carbs": 0.0,
+            "calcium": 12.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 188,
+        "fields": {
+            "name": "Ground Beef (80% lean, 1 lb)",
+            "brand": "365 by Whole Foods",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 230,
+            "protein": 21.0,
+            "fat": 17.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 189,
+        "fields": {
+            "name": "Pork Chops (Bone-In, 1 lb)",
+            "brand": "Smithfield",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 9.99,
+            "calories": 180,
+            "protein": 23.0,
+            "fat": 9.0,
+            "carbs": 0.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 190,
+        "fields": {
+            "name": "Ribeye Steak (1 lb)",
+            "brand": "Omaha Steaks",
+            "is_woman_owned": false,
+            "min_price": 8.99,
+            "max_price": 15.99,
+            "calories": 230,
+            "protein": 23.0,
+            "fat": 17.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 191,
+        "fields": {
+            "name": "Ground Turkey (93% lean, 1 lb)",
+            "brand": "Jennie-O",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 6.99,
+            "calories": 160,
+            "protein": 23.0,
+            "fat": 7.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 192,
+        "fields": {
+            "name": "Chicken Thighs (Bone-In, 1 lb)",
+            "brand": "Bell & Evans",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 9.99,
+            "calories": 190,
+            "protein": 22.0,
+            "fat": 11.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 193,
+        "fields": {
+            "name": "Beef Tenderloin (1 lb)",
+            "brand": "Strauss Brands",
+            "is_woman_owned": true,
+            "min_price": 16.99,
+            "max_price": 24.99,
+            "calories": 200,
+            "protein": 24.0,
+            "fat": 12.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 194,
+        "fields": {
+            "name": "Pork Ribs (1 rack)",
+            "brand": "St. Louis Ribs",
+            "is_woman_owned": false,
+            "min_price": 8.99,
+            "max_price": 14.99,
+            "calories": 230,
+            "protein": 24.0,
+            "fat": 16.0,
+            "carbs": 0.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 195,
+        "fields": {
+            "name": "Ground Lamb (1 lb)",
+            "brand": "Grass Run Farms",
+            "is_woman_owned": true,
+            "min_price": 8.99,
+            "max_price": 14.99,
+            "calories": 230,
+            "protein": 23.0,
+            "fat": 18.0,
+            "carbs": 0.0,
+            "calcium": 12.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 196,
+        "fields": {
+            "name": "Beef Brisket (1 lb)",
+            "brand": "Creekstone Farms",
+            "is_woman_owned": false,
+            "min_price": 9.99,
+            "max_price": 15.99,
+            "calories": 250,
+            "protein": 24.0,
+            "fat": 20.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 197,
+        "fields": {
+            "name": "Chicken Wings (1 lb)",
+            "brand": "Tyson",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 7.99,
+            "calories": 240,
+            "protein": 20.0,
+            "fat": 18.0,
+            "carbs": 0.0,
+            "calcium": 12.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 198,
+        "fields": {
+            "name": "Turkey Breasts (1 lb)",
+            "brand": "Butterball",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 8.99,
+            "calories": 120,
+            "protein": 26.0,
+            "fat": 2.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 199,
+        "fields": {
+            "name": "Lamb Chops (1 lb)",
+            "brand": "Pure Country Farms",
+            "is_woman_owned": true,
+            "min_price": 14.99,
+            "max_price": 22.99,
+            "calories": 240,
+            "protein": 23.0,
+            "fat": 18.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 200,
+        "fields": {
+            "name": "Prime Rib (1 lb)",
+            "brand": "Allen Brothers",
+            "is_woman_owned": false,
+            "min_price": 16.99,
+            "max_price": 29.99,
+            "calories": 300,
+            "protein": 28.0,
+            "fat": 22.0,
+            "carbs": 0.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 3.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 201,
+        "fields": {
+            "name": "Pork Tenderloin (1 lb)",
+            "brand": "Coleman Natural",
+            "is_woman_owned": true,
+            "min_price": 6.99,
+            "max_price": 11.99,
+            "calories": 200,
+            "protein": 22.0,
+            "fat": 10.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 202,
+        "fields": {
+            "name": "Ground Pork (1 lb)",
+            "brand": "Niman Ranch",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 8.99,
+            "calories": 220,
+            "protein": 20.0,
+            "fat": 16.0,
+            "carbs": 0.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 203,
+        "fields": {
+            "name": "Chicken Legs (1 lb)",
+            "brand": "Foster Farms",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 160,
+            "protein": 20.0,
+            "fat": 8.0,
+            "carbs": 0.0,
+            "calcium": 12.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 204,
+        "fields": {
+            "name": "Beef Short Ribs (1 lb)",
+            "brand": "D'Artagnan",
+            "is_woman_owned": true,
+            "min_price": 12.99,
+            "max_price": 19.99,
+            "calories": 300,
+            "protein": 25.0,
+            "fat": 25.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 205,
+        "fields": {
+            "name": "Veal Cutlets (1 lb)",
+            "brand": "Veal & Lamb",
+            "is_woman_owned": false,
+            "min_price": 7.99,
+            "max_price": 14.99,
+            "calories": 220,
+            "protein": 25.0,
+            "fat": 10.0,
+            "carbs": 0.0,
+            "calcium": 25.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.5,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 206,
+        "fields": {
+            "name": "Bison Steaks (1 lb)",
+            "brand": "Northstar Bison",
+            "is_woman_owned": true,
+            "min_price": 10.99,
+            "max_price": 19.99,
+            "calories": 230,
+            "protein": 26.0,
+            "fat": 12.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 207,
+        "fields": {
+            "name": "Beef Sausages (1 lb)",
+            "brand": "Aidells",
+            "is_woman_owned": false,
+            "min_price": 5.49,
+            "max_price": 9.99,
+            "calories": 250,
+            "protein": 20.0,
+            "fat": 20.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Butcher Meats"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 208,
+        "fields": {
+            "name": "Sliced Ham (1 lb)",
+            "brand": "Oscar Mayer",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 8.99,
+            "calories": 60,
+            "protein": 10.0,
+            "fat": 1.0,
+            "carbs": 1.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 209,
+        "fields": {
+            "name": "Sliced Salami (1 lb)",
+            "brand": "Genoa Salami",
+            "is_woman_owned": false,
+            "min_price": 8.99,
+            "max_price": 14.99,
+            "calories": 250,
+            "protein": 12.0,
+            "fat": 22.0,
+            "carbs": 1.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 210,
+        "fields": {
+            "name": "Sliced Roast Beef (1 lb)",
+            "brand": "Applegate",
+            "is_woman_owned": false,
+            "min_price": 6.99,
+            "max_price": 10.99,
+            "calories": 150,
+            "protein": 20.0,
+            "fat": 7.0,
+            "carbs": 0.0,
+            "calcium": 25.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 211,
+        "fields": {
+            "name": "Sliced Pepperoni (1 lb)",
+            "brand": "Margherita",
+            "is_woman_owned": false,
+            "min_price": 7.99,
+            "max_price": 12.99,
+            "calories": 280,
+            "protein": 15.0,
+            "fat": 25.0,
+            "carbs": 2.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.0,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 212,
+        "fields": {
+            "name": "Sliced Provolone (1 lb)",
+            "brand": "BelGioioso",
+            "is_woman_owned": false,
+            "min_price": 8.99,
+            "max_price": 14.99,
+            "calories": 330,
+            "protein": 22.0,
+            "fat": 28.0,
+            "carbs": 2.0,
+            "calcium": 400.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 213,
+        "fields": {
+            "name": "Sliced Cheddar (1 lb)",
+            "brand": "Cabot Creamery",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 9.99,
+            "calories": 110,
+            "protein": 7.0,
+            "fat": 9.0,
+            "carbs": 1.0,
+            "calcium": 200.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 214,
+        "fields": {
+            "name": "Sliced Swiss (1 lb)",
+            "brand": "Emmi Roth",
+            "is_woman_owned": false,
+            "min_price": 7.99,
+            "max_price": 12.99,
+            "calories": 120,
+            "protein": 8.0,
+            "fat": 10.0,
+            "carbs": 1.0,
+            "calcium": 250.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.0,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 215,
+        "fields": {
+            "name": "Sliced Mozzarella (1 lb)",
+            "brand": "Polly-O",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 9.99,
+            "calories": 280,
+            "protein": 22.0,
+            "fat": 18.0,
+            "carbs": 4.0,
+            "calcium": 300.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 216,
+        "fields": {
+            "name": "Sliced Gouda (1 lb)",
+            "brand": "Beemster",
+            "is_woman_owned": false,
+            "min_price": 8.99,
+            "max_price": 13.99,
+            "calories": 120,
+            "protein": 10.0,
+            "fat": 9.0,
+            "carbs": 1.0,
+            "calcium": 200.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 217,
+        "fields": {
+            "name": "Sliced Colby Jack (1 lb)",
+            "brand": "Tillamook",
+            "is_woman_owned": false,
+            "min_price": 7.99,
+            "max_price": 11.99,
+            "calories": 110,
+            "protein": 7.0,
+            "fat": 9.0,
+            "carbs": 1.0,
+            "calcium": 200.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.0,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 218,
+        "fields": {
+            "name": "Deli Roast Chicken (1 lb)",
+            "brand": "Boar's Head",
+            "is_woman_owned": false,
+            "min_price": 6.99,
+            "max_price": 10.99,
+            "calories": 180,
+            "protein": 20.0,
+            "fat": 7.0,
+            "carbs": 0.0,
+            "calcium": 25.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 219,
+        "fields": {
+            "name": "Sliced Pastrami (1 lb)",
+            "brand": "Kayem",
+            "is_woman_owned": false,
+            "min_price": 8.99,
+            "max_price": 14.99,
+            "calories": 250,
+            "protein": 16.0,
+            "fat": 22.0,
+            "carbs": 2.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 2.0,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 220,
+        "fields": {
+            "name": "Deli Ham (1 lb)",
+            "brand": "Hormel",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 70,
+            "protein": 12.0,
+            "fat": 1.0,
+            "carbs": 1.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 221,
+        "fields": {
+            "name": "Sliced Pepper Jack (1 lb)",
+            "brand": "Sargento",
+            "is_woman_owned": false,
+            "min_price": 7.99,
+            "max_price": 12.99,
+            "calories": 110,
+            "protein": 6.0,
+            "fat": 9.0,
+            "carbs": 1.0,
+            "calcium": 200.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.0,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 222,
+        "fields": {
+            "name": "Sliced Turkey Breast (1 lb)",
+            "brand": "Tessemae's",
+            "is_woman_owned": true,
+            "min_price": 7.49,
+            "max_price": 11.49,
+            "calories": 120,
+            "protein": 23.0,
+            "fat": 2.0,
+            "carbs": 1.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 223,
+        "fields": {
+            "name": "Sliced Swiss (1 lb)",
+            "brand": "Soom Foods",
+            "is_woman_owned": true,
+            "min_price": 6.99,
+            "max_price": 10.99,
+            "calories": 110,
+            "protein": 8.0,
+            "fat": 8.0,
+            "carbs": 1.0,
+            "calcium": 150.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 224,
+        "fields": {
+            "name": "Sliced Cheddar (1 lb)",
+            "brand": "Brilliant Earth",
+            "is_woman_owned": true,
+            "min_price": 5.99,
+            "max_price": 8.99,
+            "calories": 110,
+            "protein": 7.0,
+            "fat": 9.0,
+            "carbs": 1.0,
+            "calcium": 200.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 225,
+        "fields": {
+            "name": "Sliced Provolone (1 lb)",
+            "brand": "Green Heart Deli",
+            "is_woman_owned": true,
+            "min_price": 7.99,
+            "max_price": 12.99,
+            "calories": 120,
+            "protein": 8.0,
+            "fat": 10.0,
+            "carbs": 2.0,
+            "calcium": 200.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Deli Meats and Cheeses"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 226,
+        "fields": {
+            "name": "Sparkling Water (12-pack)",
+            "brand": "LaCroix",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 0,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 227,
+        "fields": {
+            "name": "Bottled Water (16.9 oz)",
+            "brand": "Nestl\u00e9 Pure Life",
+            "is_woman_owned": false,
+            "min_price": 1.29,
+            "max_price": 2.49,
+            "calories": 0,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 228,
+        "fields": {
+            "name": "Green Tea (16.9 oz)",
+            "brand": "Honest Tea",
+            "is_woman_owned": true,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 60,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 14.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 229,
+        "fields": {
+            "name": "Lemonade (16 oz)",
+            "brand": "Simply Lemonade",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 120,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 32.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 230,
+        "fields": {
+            "name": "Cold Brew Coffee (12 oz)",
+            "brand": "Stumptown",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 90,
+            "protein": 2.0,
+            "fat": 0.0,
+            "carbs": 18.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 231,
+        "fields": {
+            "name": "Organic Iced Tea (16 oz)",
+            "brand": "Runa",
+            "is_woman_owned": true,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 80,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 20.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 232,
+        "fields": {
+            "name": "Coconut Water (16.9 oz)",
+            "brand": "Vita Coco",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 60,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 15.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 233,
+        "fields": {
+            "name": "Kombucha (16 oz)",
+            "brand": "GT\u2019s Kombucha",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 50,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 12.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 234,
+        "fields": {
+            "name": "Organic Lemonade (12 oz)",
+            "brand": "Suja",
+            "is_woman_owned": true,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 90,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 23.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 235,
+        "fields": {
+            "name": "Cucumber Mint Sparkling Water (12-pack)",
+            "brand": "Spindrift",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 8.99,
+            "calories": 0,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 236,
+        "fields": {
+            "name": "Herbal Tea (16 oz)",
+            "brand": "Celestial Seasonings",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 0,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 237,
+        "fields": {
+            "name": "Iced Coffee (16 oz)",
+            "brand": "Starbucks",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 120,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 28.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 238,
+        "fields": {
+            "name": "Cold Brew Coffee (16 oz)",
+            "brand": "Blue Bottle Coffee",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.99,
+            "calories": 120,
+            "protein": 2.0,
+            "fat": 0.0,
+            "carbs": 25.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 239,
+        "fields": {
+            "name": "Green Juice (16 oz)",
+            "brand": "Suja Organic",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 7.49,
+            "calories": 150,
+            "protein": 3.0,
+            "fat": 1.0,
+            "carbs": 36.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 1.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 240,
+        "fields": {
+            "name": "Sparkling Water (12-pack)",
+            "brand": "Bubly",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 0,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 241,
+        "fields": {
+            "name": "Organic Peach Tea (16 oz)",
+            "brand": "Honest Tea",
+            "is_woman_owned": true,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 70,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 17.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 242,
+        "fields": {
+            "name": "Cold Brew Coffee (8 oz)",
+            "brand": "Chameleon",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 120,
+            "protein": 3.0,
+            "fat": 0.0,
+            "carbs": 22.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 243,
+        "fields": {
+            "name": "Sparkling Lemon Water (12-pack)",
+            "brand": "Perrier",
+            "is_woman_owned": false,
+            "min_price": 5.49,
+            "max_price": 7.99,
+            "calories": 0,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 244,
+        "fields": {
+            "name": "Fruit Punch (16 oz)",
+            "brand": "Hawaiian Punch",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.99,
+            "calories": 140,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 36.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 245,
+        "fields": {
+            "name": "Sparkling Water (16 oz)",
+            "brand": "Polar Seltzer",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 0,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 246,
+        "fields": {
+            "name": "Lemon Ginger Tea (16 oz)",
+            "brand": "Yogi Tea",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 40,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 10.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Non-Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 247,
+        "fields": {
+            "name": "Organic Mac and Cheese (9 oz)",
+            "brand": "Annie\u2019s",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 250,
+            "protein": 7.0,
+            "fat": 10.0,
+            "carbs": 31.0,
+            "calcium": 80.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 248,
+        "fields": {
+            "name": "Veggie Burger (4 patties)",
+            "brand": "MorningStar Farms",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 160,
+            "protein": 13.0,
+            "fat": 8.0,
+            "carbs": 13.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 249,
+        "fields": {
+            "name": "Frozen Lasagna (25 oz)",
+            "brand": "Stouffer\u2019s",
+            "is_woman_owned": false,
+            "min_price": 6.99,
+            "max_price": 9.99,
+            "calories": 330,
+            "protein": 20.0,
+            "fat": 17.0,
+            "carbs": 30.0,
+            "calcium": 200.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 250,
+        "fields": {
+            "name": "Burrito (Frozen, 1 count)",
+            "brand": "Amy\u2019s Kitchen",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 6.99,
+            "calories": 310,
+            "protein": 10.0,
+            "fat": 10.0,
+            "carbs": 45.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 251,
+        "fields": {
+            "name": "Frozen Veggie Tacos (4 count)",
+            "brand": "Gardein",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 210,
+            "protein": 7.0,
+            "fat": 7.0,
+            "carbs": 32.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 252,
+        "fields": {
+            "name": "Organic Pasta Primavera (10 oz)",
+            "brand": "Sweet Earth",
+            "is_woman_owned": false,
+            "min_price": 5.49,
+            "max_price": 8.99,
+            "calories": 270,
+            "protein": 12.0,
+            "fat": 12.0,
+            "carbs": 35.0,
+            "calcium": 100.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 253,
+        "fields": {
+            "name": "Ready-to-eat Hummus (8 oz)",
+            "brand": "Sabra",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 150,
+            "protein": 5.0,
+            "fat": 10.0,
+            "carbs": 14.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 254,
+        "fields": {
+            "name": "Grilled Chicken Caesar Wrap (1)",
+            "brand": "Wild Garden",
+            "is_woman_owned": false,
+            "min_price": 6.99,
+            "max_price": 9.99,
+            "calories": 350,
+            "protein": 25.0,
+            "fat": 12.0,
+            "carbs": 35.0,
+            "calcium": 80.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 255,
+        "fields": {
+            "name": "Spaghetti Bolognese (16 oz)",
+            "brand": "Bertolli",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 9.99,
+            "calories": 400,
+            "protein": 22.0,
+            "fat": 18.0,
+            "carbs": 40.0,
+            "calcium": 150.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 256,
+        "fields": {
+            "name": "Chili with Beans (15 oz)",
+            "brand": "Hormel",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 230,
+            "protein": 14.0,
+            "fat": 9.0,
+            "carbs": 20.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 257,
+        "fields": {
+            "name": "Frozen Mac and Cheese (8 oz)",
+            "brand": "Kraft",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 290,
+            "protein": 10.0,
+            "fat": 13.0,
+            "carbs": 35.0,
+            "calcium": 80.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 258,
+        "fields": {
+            "name": "Vegetarian Chili (15 oz)",
+            "brand": "Amy\u2019s Kitchen",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 6.99,
+            "calories": 200,
+            "protein": 10.0,
+            "fat": 6.0,
+            "carbs": 30.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 259,
+        "fields": {
+            "name": "Organic Veggie Burgers (4 patties)",
+            "brand": "Dr. Praeger\u2019s",
+            "is_woman_owned": true,
+            "min_price": 5.99,
+            "max_price": 8.99,
+            "calories": 170,
+            "protein": 10.0,
+            "fat": 8.0,
+            "carbs": 15.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 260,
+        "fields": {
+            "name": "Spaghetti (Whole Wheat, 1 lb)",
+            "brand": "Banza",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 200,
+            "protein": 12.0,
+            "fat": 2.0,
+            "carbs": 30.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 261,
+        "fields": {
+            "name": "Vegetable Stir Fry (Frozen, 12 oz)",
+            "brand": "Cedar\u2019s",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 250,
+            "protein": 6.0,
+            "fat": 9.0,
+            "carbs": 35.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 262,
+        "fields": {
+            "name": "Frozen Pizza (12-inch)",
+            "brand": "DiGiorno",
+            "is_woman_owned": false,
+            "min_price": 6.99,
+            "max_price": 10.99,
+            "calories": 320,
+            "protein": 14.0,
+            "fat": 16.0,
+            "carbs": 35.0,
+            "calcium": 100.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 263,
+        "fields": {
+            "name": "Pesto Pasta (9 oz)",
+            "brand": "Treehouse Foods",
+            "is_woman_owned": true,
+            "min_price": 5.99,
+            "max_price": 9.99,
+            "calories": 290,
+            "protein": 11.0,
+            "fat": 12.0,
+            "carbs": 36.0,
+            "calcium": 100.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 264,
+        "fields": {
+            "name": "Chicken Pot Pie (10 oz)",
+            "brand": "Marie Callender\u2019s",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 340,
+            "protein": 14.0,
+            "fat": 16.0,
+            "carbs": 30.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Prepared Foods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 265,
+        "fields": {
+            "name": "All-Purpose Flour (5 lb)",
+            "brand": "King Arthur Flour",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 100,
+            "protein": 3.0,
+            "fat": 0.5,
+            "carbs": 22.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.1,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 266,
+        "fields": {
+            "name": "Organic Baking Powder (8 oz)",
+            "brand": "Bob\u2019s Red Mill",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.99,
+            "calories": 10,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 2.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 267,
+        "fields": {
+            "name": "Baking Soda (16 oz)",
+            "brand": "Arm & Hammer",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 0,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 268,
+        "fields": {
+            "name": "Granulated Sugar (4 lb)",
+            "brand": "Domino",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 5.49,
+            "calories": 770,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 200.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 269,
+        "fields": {
+            "name": "Organic Brown Sugar (2 lb)",
+            "brand": "Wholesome Sweeteners",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 850,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 220.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 270,
+        "fields": {
+            "name": "Unsweetened Cocoa Powder (8 oz)",
+            "brand": "Ghirardelli",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 50,
+            "protein": 2.0,
+            "fat": 1.0,
+            "carbs": 10.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 271,
+        "fields": {
+            "name": "Organic Honey (12 oz)",
+            "brand": "Nature Nate\u2019s",
+            "is_woman_owned": true,
+            "min_price": 6.99,
+            "max_price": 9.99,
+            "calories": 60,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 17.0,
+            "calcium": 4.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 272,
+        "fields": {
+            "name": "Coconut Oil (14 oz)",
+            "brand": "Nutiva",
+            "is_woman_owned": true,
+            "min_price": 5.99,
+            "max_price": 9.99,
+            "calories": 120,
+            "protein": 0.0,
+            "fat": 14.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 273,
+        "fields": {
+            "name": "Baking Chocolate Chips (12 oz)",
+            "brand": "Ghirardelli",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.49,
+            "calories": 180,
+            "protein": 2.0,
+            "fat": 9.0,
+            "carbs": 26.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 274,
+        "fields": {
+            "name": "Whole Wheat Flour (5 lb)",
+            "brand": "Bob\u2019s Red Mill",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 100,
+            "protein": 4.0,
+            "fat": 0.5,
+            "carbs": 22.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.1,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 275,
+        "fields": {
+            "name": "Gluten-Free Flour (2 lb)",
+            "brand": "Cup4Cup",
+            "is_woman_owned": true,
+            "min_price": 7.99,
+            "max_price": 11.99,
+            "calories": 110,
+            "protein": 3.0,
+            "fat": 0.0,
+            "carbs": 25.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.1,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 276,
+        "fields": {
+            "name": "Brown Sugar (2 lb)",
+            "brand": "C&H Sugar",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 850,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 220.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 277,
+        "fields": {
+            "name": "All-Purpose Flour (5 lb)",
+            "brand": "Bob\u2019s Red Mill",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 100,
+            "protein": 3.0,
+            "fat": 0.5,
+            "carbs": 22.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.1,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 278,
+        "fields": {
+            "name": "Baking Chocolate (4 oz)",
+            "brand": "Baker\u2019s",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 220,
+            "protein": 2.0,
+            "fat": 12.0,
+            "carbs": 26.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 279,
+        "fields": {
+            "name": "Cornstarch (16 oz)",
+            "brand": "Argo",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 30,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 7.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 280,
+        "fields": {
+            "name": "Vanilla Extract (2 oz)",
+            "brand": "Nielsen-Massey",
+            "is_woman_owned": true,
+            "min_price": 7.99,
+            "max_price": 10.99,
+            "calories": 15,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 3.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 281,
+        "fields": {
+            "name": "Brown Rice Flour (2 lb)",
+            "brand": "Bob\u2019s Red Mill",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.99,
+            "calories": 200,
+            "protein": 5.0,
+            "fat": 1.0,
+            "carbs": 44.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.1,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 282,
+        "fields": {
+            "name": "Organic Coconut Flour (16 oz)",
+            "brand": "Anthony\u2019s Goods",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 6.99,
+            "calories": 120,
+            "protein": 3.0,
+            "fat": 5.0,
+            "carbs": 16.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 283,
+        "fields": {
+            "name": "All-Purpose Flour (5 lb)",
+            "brand": "King Arthur Flour",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 100,
+            "protein": 3.0,
+            "fat": 0.5,
+            "carbs": 22.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.1,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 284,
+        "fields": {
+            "name": "Unsalted Butter (1 lb)",
+            "brand": "Land O'Lakes",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 6.99,
+            "calories": 810,
+            "protein": 0.0,
+            "fat": 92.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Baking Goods"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 285,
+        "fields": {
+            "name": "Organic Chicken Broth (32 oz)",
+            "brand": "Swanson",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 15,
+            "protein": 1.0,
+            "fat": 0.5,
+            "carbs": 1.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 286,
+        "fields": {
+            "name": "Tomato Basil Soup (15 oz)",
+            "brand": "Pacific Foods",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 140,
+            "protein": 3.0,
+            "fat": 6.0,
+            "carbs": 20.0,
+            "calcium": 80.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 287,
+        "fields": {
+            "name": "Organic Vegetable Broth (32 oz)",
+            "brand": "Imagine",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 20,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 4.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 288,
+        "fields": {
+            "name": "Chicken Noodle Soup (15 oz)",
+            "brand": "Progresso",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.99,
+            "calories": 140,
+            "protein": 7.0,
+            "fat": 2.0,
+            "carbs": 22.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 289,
+        "fields": {
+            "name": "Lentil Soup (15 oz)",
+            "brand": "Amy\u2019s Kitchen",
+            "is_woman_owned": true,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 210,
+            "protein": 10.0,
+            "fat": 2.0,
+            "carbs": 35.0,
+            "calcium": 70.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 290,
+        "fields": {
+            "name": "Organic Beef Broth (32 oz)",
+            "brand": "Kitchen Basics",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.99,
+            "calories": 25,
+            "protein": 2.0,
+            "fat": 1.0,
+            "carbs": 2.0,
+            "calcium": 25.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 291,
+        "fields": {
+            "name": "Tomato Soup (15 oz)",
+            "brand": "Campbell\u2019s",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 120,
+            "protein": 3.0,
+            "fat": 4.0,
+            "carbs": 22.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 292,
+        "fields": {
+            "name": "Organic Mushroom Broth (32 oz)",
+            "brand": "Pacific Foods",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 6.99,
+            "calories": 20,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 4.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 293,
+        "fields": {
+            "name": "Chicken Tortilla Soup (15 oz)",
+            "brand": "Campbell\u2019s",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 220,
+            "protein": 12.0,
+            "fat": 9.0,
+            "carbs": 18.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 294,
+        "fields": {
+            "name": "Miso Soup (8 oz)",
+            "brand": "Hikari Miso",
+            "is_woman_owned": true,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 50,
+            "protein": 3.0,
+            "fat": 1.0,
+            "carbs": 6.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 295,
+        "fields": {
+            "name": "Organic Split Pea Soup (15 oz)",
+            "brand": "Amy\u2019s Kitchen",
+            "is_woman_owned": true,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 210,
+            "protein": 10.0,
+            "fat": 1.0,
+            "carbs": 35.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 296,
+        "fields": {
+            "name": "Organic Chicken Bone Broth (16 oz)",
+            "brand": "Kettle & Fire",
+            "is_woman_owned": true,
+            "min_price": 5.99,
+            "max_price": 8.99,
+            "calories": 80,
+            "protein": 10.0,
+            "fat": 4.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 297,
+        "fields": {
+            "name": "Clam Chowder (15 oz)",
+            "brand": "Campbell\u2019s",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 280,
+            "protein": 10.0,
+            "fat": 20.0,
+            "carbs": 20.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 298,
+        "fields": {
+            "name": "Butternut Squash Soup (15 oz)",
+            "brand": "Pacific Foods",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 120,
+            "protein": 2.0,
+            "fat": 3.0,
+            "carbs": 27.0,
+            "calcium": 60.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 299,
+        "fields": {
+            "name": "Bone Broth (16 oz)",
+            "brand": "Bare Bones",
+            "is_woman_owned": true,
+            "min_price": 5.49,
+            "max_price": 7.99,
+            "calories": 70,
+            "protein": 10.0,
+            "fat": 3.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 300,
+        "fields": {
+            "name": "Organic Roasted Red Pepper Soup (15 oz)",
+            "brand": "Amy\u2019s Kitchen",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 150,
+            "protein": 3.0,
+            "fat": 6.0,
+            "carbs": 25.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 301,
+        "fields": {
+            "name": "Chicken and Wild Rice Soup (15 oz)",
+            "brand": "Progresso",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 180,
+            "protein": 9.0,
+            "fat": 6.0,
+            "carbs": 24.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 302,
+        "fields": {
+            "name": "Organic Black Bean Soup (15 oz)",
+            "brand": "Amy\u2019s Kitchen",
+            "is_woman_owned": true,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 220,
+            "protein": 12.0,
+            "fat": 4.0,
+            "carbs": 35.0,
+            "calcium": 50.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.5,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 303,
+        "fields": {
+            "name": "Beef Broth (32 oz)",
+            "brand": "College Inn",
+            "is_woman_owned": false,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 20,
+            "protein": 2.0,
+            "fat": 1.0,
+            "carbs": 2.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Soups and Broths"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 304,
+        "fields": {
+            "name": "Milk Chocolate Bar (3.5 oz)",
+            "brand": "Ghirardelli",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.99,
+            "calories": 210,
+            "protein": 3.0,
+            "fat": 13.0,
+            "carbs": 24.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 305,
+        "fields": {
+            "name": "Dark Chocolate Bar (3.5 oz)",
+            "brand": "Green & Black\u2019s",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 200,
+            "protein": 2.0,
+            "fat": 14.0,
+            "carbs": 18.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 306,
+        "fields": {
+            "name": "Organic Milk Chocolate (3 oz)",
+            "brand": "Alter Eco",
+            "is_woman_owned": true,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 170,
+            "protein": 2.0,
+            "fat": 10.0,
+            "carbs": 19.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 307,
+        "fields": {
+            "name": "Dark Chocolate Almonds (7 oz)",
+            "brand": "Sahale Snacks",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 6.99,
+            "calories": 220,
+            "protein": 5.0,
+            "fat": 13.0,
+            "carbs": 22.0,
+            "calcium": 40.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 308,
+        "fields": {
+            "name": "Milk Chocolate Caramel (5 oz)",
+            "brand": "Werther\u2019s Original",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 160,
+            "protein": 1.0,
+            "fat": 7.0,
+            "carbs": 25.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 309,
+        "fields": {
+            "name": "Organic Dark Chocolate (3 oz)",
+            "brand": "Endangered Species",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 200,
+            "protein": 2.0,
+            "fat": 13.0,
+            "carbs": 21.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 310,
+        "fields": {
+            "name": "Chocolate-Covered Pretzels (10 oz)",
+            "brand": "Snyder's of Hanover",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.49,
+            "calories": 220,
+            "protein": 3.0,
+            "fat": 11.0,
+            "carbs": 30.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 311,
+        "fields": {
+            "name": "Peanut Butter Cups (3.1 oz)",
+            "brand": "Reese\u2019s",
+            "is_woman_owned": false,
+            "min_price": 1.49,
+            "max_price": 2.99,
+            "calories": 210,
+            "protein": 5.0,
+            "fat": 12.0,
+            "carbs": 24.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 312,
+        "fields": {
+            "name": "Organic Dark Chocolate (3 oz)",
+            "brand": "Taza Chocolate",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 6.99,
+            "calories": 170,
+            "protein": 3.0,
+            "fat": 9.0,
+            "carbs": 24.0,
+            "calcium": 30.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 313,
+        "fields": {
+            "name": "Chocolate Chip Cookies (12 oz)",
+            "brand": "Tate's Bake Shop",
+            "is_woman_owned": true,
+            "min_price": 4.99,
+            "max_price": 6.99,
+            "calories": 150,
+            "protein": 2.0,
+            "fat": 7.0,
+            "carbs": 20.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 314,
+        "fields": {
+            "name": "Milk Chocolate Crispy Treats (6 oz)",
+            "brand": "Nestle Crunch",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.49,
+            "calories": 140,
+            "protein": 1.0,
+            "fat": 6.0,
+            "carbs": 20.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 315,
+        "fields": {
+            "name": "Mint Chocolate (3.5 oz)",
+            "brand": "Andes",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 170,
+            "protein": 1.0,
+            "fat": 9.0,
+            "carbs": 24.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 316,
+        "fields": {
+            "name": "Dark Chocolate Sea Salt Caramels (5 oz)",
+            "brand": "Compartes Chocolatier",
+            "is_woman_owned": true,
+            "min_price": 7.99,
+            "max_price": 10.99,
+            "calories": 200,
+            "protein": 2.0,
+            "fat": 10.0,
+            "carbs": 25.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 317,
+        "fields": {
+            "name": "Chocolate-Covered Almonds (8 oz)",
+            "brand": "Kirkland Signature",
+            "is_woman_owned": false,
+            "min_price": 6.99,
+            "max_price": 9.99,
+            "calories": 240,
+            "protein": 6.0,
+            "fat": 19.0,
+            "carbs": 16.0,
+            "calcium": 80.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 318,
+        "fields": {
+            "name": "Chocolate-Covered Raisins (12 oz)",
+            "brand": "Sun-Maid",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.99,
+            "calories": 180,
+            "protein": 2.0,
+            "fat": 6.0,
+            "carbs": 29.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 319,
+        "fields": {
+            "name": "Dark Chocolate Coconut Bars (3.5 oz)",
+            "brand": "Theo Chocolate",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 180,
+            "protein": 2.0,
+            "fat": 12.0,
+            "carbs": 22.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 320,
+        "fields": {
+            "name": "Milk Chocolate Toffee (4 oz)",
+            "brand": "Heath",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.49,
+            "calories": 200,
+            "protein": 1.0,
+            "fat": 12.0,
+            "carbs": 28.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 321,
+        "fields": {
+            "name": "Organic Fruit Chews (6 oz)",
+            "brand": "Surf Sweets",
+            "is_woman_owned": true,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 90,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 22.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 322,
+        "fields": {
+            "name": "Milk Chocolate Caramel Corn (8 oz)",
+            "brand": "Popcornopolis",
+            "is_woman_owned": false,
+            "min_price": 4.49,
+            "max_price": 6.49,
+            "calories": 160,
+            "protein": 2.0,
+            "fat": 7.0,
+            "carbs": 25.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 323,
+        "fields": {
+            "name": "Chocolate Mint Thins (9 oz)",
+            "brand": "Girl Scouts",
+            "is_woman_owned": false,
+            "min_price": 3.49,
+            "max_price": 5.49,
+            "calories": 160,
+            "protein": 1.0,
+            "fat": 7.0,
+            "carbs": 22.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Candy and Chocolate"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 324,
+        "fields": {
+            "name": "Wild-Caught Salmon Fillets (6 oz)",
+            "brand": "Vital Choice",
+            "is_woman_owned": true,
+            "min_price": 8.99,
+            "max_price": 12.99,
+            "calories": 280,
+            "protein": 30.0,
+            "fat": 18.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 570.0,
+            "vitamin_b12": 4.0,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 325,
+        "fields": {
+            "name": "Shrimp (8 oz)",
+            "brand": "Wild Brine",
+            "is_woman_owned": true,
+            "min_price": 5.49,
+            "max_price": 9.99,
+            "calories": 120,
+            "protein": 22.0,
+            "fat": 1.0,
+            "carbs": 0.0,
+            "calcium": 25.0,
+            "vitamin_d": 50.0,
+            "vitamin_b12": 2.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 326,
+        "fields": {
+            "name": "Canned Tuna in Olive Oil (5 oz)",
+            "brand": "Wild Planet",
+            "is_woman_owned": true,
+            "min_price": 3.99,
+            "max_price": 5.99,
+            "calories": 120,
+            "protein": 25.0,
+            "fat": 6.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 500.0,
+            "vitamin_b12": 4.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 327,
+        "fields": {
+            "name": "Cod Filets (6 oz)",
+            "brand": "FishPeople Seafood",
+            "is_woman_owned": false,
+            "min_price": 6.49,
+            "max_price": 9.99,
+            "calories": 130,
+            "protein": 23.0,
+            "fat": 3.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 350.0,
+            "vitamin_b12": 3.0,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 328,
+        "fields": {
+            "name": "Mussels (10 oz)",
+            "brand": "Maine Coast",
+            "is_woman_owned": false,
+            "min_price": 7.49,
+            "max_price": 11.99,
+            "calories": 150,
+            "protein": 20.0,
+            "fat": 5.0,
+            "carbs": 2.0,
+            "calcium": 25.0,
+            "vitamin_d": 300.0,
+            "vitamin_b12": 2.0,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 329,
+        "fields": {
+            "name": "Alaskan Pollock Fillets (6 oz)",
+            "brand": "Trident Seafood",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 8.99,
+            "calories": 140,
+            "protein": 25.0,
+            "fat": 3.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 200.0,
+            "vitamin_b12": 3.0,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 330,
+        "fields": {
+            "name": "Smoked Salmon (4 oz)",
+            "brand": "Acme Smoked Fish",
+            "is_woman_owned": false,
+            "min_price": 7.99,
+            "max_price": 11.99,
+            "calories": 240,
+            "protein": 22.0,
+            "fat": 14.0,
+            "carbs": 0.0,
+            "calcium": 35.0,
+            "vitamin_d": 500.0,
+            "vitamin_b12": 3.0,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 331,
+        "fields": {
+            "name": "Organic Shrimp (8 oz)",
+            "brand": "SeaPak",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 130,
+            "protein": 22.0,
+            "fat": 3.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 40.0,
+            "vitamin_b12": 1.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 332,
+        "fields": {
+            "name": "Crab Meat (6 oz)",
+            "brand": "Phillips Seafood",
+            "is_woman_owned": false,
+            "min_price": 8.99,
+            "max_price": 12.99,
+            "calories": 120,
+            "protein": 24.0,
+            "fat": 2.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 100.0,
+            "vitamin_b12": 2.0,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 333,
+        "fields": {
+            "name": "Lobster Tails (8 oz)",
+            "brand": "Luke\u2019s Lobster",
+            "is_woman_owned": true,
+            "min_price": 13.99,
+            "max_price": 19.99,
+            "calories": 210,
+            "protein": 25.0,
+            "fat": 10.0,
+            "carbs": 0.0,
+            "calcium": 30.0,
+            "vitamin_d": 550.0,
+            "vitamin_b12": 4.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 334,
+        "fields": {
+            "name": "Oysters (6 oz)",
+            "brand": "Rappahannock River",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 9.99,
+            "calories": 120,
+            "protein": 10.0,
+            "fat": 2.0,
+            "carbs": 5.0,
+            "calcium": 80.0,
+            "vitamin_d": 500.0,
+            "vitamin_b12": 6.0,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 335,
+        "fields": {
+            "name": "Salmon Burger Patties (6 oz)",
+            "brand": "Sitka Salmon Shares",
+            "is_woman_owned": true,
+            "min_price": 8.49,
+            "max_price": 11.99,
+            "calories": 220,
+            "protein": 23.0,
+            "fat": 12.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 500.0,
+            "vitamin_b12": 4.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 336,
+        "fields": {
+            "name": "Smoked Mackerel (4 oz)",
+            "brand": "FishPeople Seafood",
+            "is_woman_owned": false,
+            "min_price": 6.49,
+            "max_price": 9.49,
+            "calories": 160,
+            "protein": 20.0,
+            "fat": 10.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 350.0,
+            "vitamin_b12": 3.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 337,
+        "fields": {
+            "name": "Scallops (6 oz)",
+            "brand": "Sea of Cortez",
+            "is_woman_owned": true,
+            "min_price": 9.99,
+            "max_price": 14.99,
+            "calories": 120,
+            "protein": 20.0,
+            "fat": 2.0,
+            "carbs": 0.0,
+            "calcium": 15.0,
+            "vitamin_d": 100.0,
+            "vitamin_b12": 2.0,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 338,
+        "fields": {
+            "name": "Clams (8 oz)",
+            "brand": "Shuckin\u2019 Shack",
+            "is_woman_owned": false,
+            "min_price": 5.49,
+            "max_price": 8.99,
+            "calories": 100,
+            "protein": 15.0,
+            "fat": 2.0,
+            "carbs": 5.0,
+            "calcium": 30.0,
+            "vitamin_d": 200.0,
+            "vitamin_b12": 2.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 339,
+        "fields": {
+            "name": "Sardines in Olive Oil (4 oz)",
+            "brand": "King Oscar",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.49,
+            "calories": 120,
+            "protein": 20.0,
+            "fat": 6.0,
+            "carbs": 0.0,
+            "calcium": 30.0,
+            "vitamin_d": 400.0,
+            "vitamin_b12": 3.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 340,
+        "fields": {
+            "name": "Tempura Shrimp (7 oz)",
+            "brand": "SeaPak",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 8.99,
+            "calories": 200,
+            "protein": 10.0,
+            "fat": 14.0,
+            "carbs": 15.0,
+            "calcium": 20.0,
+            "vitamin_d": 100.0,
+            "vitamin_b12": 1.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 341,
+        "fields": {
+            "name": "Halibut Filets (6 oz)",
+            "brand": "Trident Seafood",
+            "is_woman_owned": false,
+            "min_price": 10.99,
+            "max_price": 15.99,
+            "calories": 180,
+            "protein": 27.0,
+            "fat": 5.0,
+            "carbs": 0.0,
+            "calcium": 30.0,
+            "vitamin_d": 300.0,
+            "vitamin_b12": 3.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 342,
+        "fields": {
+            "name": "Shrimp Scampi (8 oz)",
+            "brand": "Maine Coast",
+            "is_woman_owned": false,
+            "min_price": 7.99,
+            "max_price": 11.99,
+            "calories": 250,
+            "protein": 18.0,
+            "fat": 10.0,
+            "carbs": 15.0,
+            "calcium": 40.0,
+            "vitamin_d": 200.0,
+            "vitamin_b12": 2.5,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 343,
+        "fields": {
+            "name": "Wild-Caught Salmon (6 oz)",
+            "brand": "Vital Choice",
+            "is_woman_owned": true,
+            "min_price": 8.99,
+            "max_price": 12.99,
+            "calories": 280,
+            "protein": 30.0,
+            "fat": 18.0,
+            "carbs": 0.0,
+            "calcium": 20.0,
+            "vitamin_d": 570.0,
+            "vitamin_b12": 4.0,
+            "type": "Seafood"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 344,
+        "fields": {
+            "name": "Chardonnay (750 ml)",
+            "brand": "Kendall-Jackson",
+            "is_woman_owned": false,
+            "min_price": 12.99,
+            "max_price": 20.99,
+            "calories": 120,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 2.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 345,
+        "fields": {
+            "name": "Pale Ale (12 oz)",
+            "brand": "Sierra Nevada",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 3.99,
+            "calories": 180,
+            "protein": 2.0,
+            "fat": 0.0,
+            "carbs": 14.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 346,
+        "fields": {
+            "name": "Pinot Grigio (750 ml)",
+            "brand": "Meiomi",
+            "is_woman_owned": false,
+            "min_price": 13.99,
+            "max_price": 22.99,
+            "calories": 120,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 2.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 347,
+        "fields": {
+            "name": "IPA (12 oz)",
+            "brand": "Lagunitas Brewing",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.49,
+            "calories": 200,
+            "protein": 2.0,
+            "fat": 0.0,
+            "carbs": 15.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 348,
+        "fields": {
+            "name": "Cabernet Sauvignon (750 ml)",
+            "brand": "Robert Mondavi",
+            "is_woman_owned": false,
+            "min_price": 15.99,
+            "max_price": 23.99,
+            "calories": 120,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 2.0,
+            "calcium": 15.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 349,
+        "fields": {
+            "name": "Spiced Rum (750 ml)",
+            "brand": "Sailor Jerry",
+            "is_woman_owned": false,
+            "min_price": 18.99,
+            "max_price": 27.99,
+            "calories": 95,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 350,
+        "fields": {
+            "name": "Craft Beer (16 oz)",
+            "brand": "Allagash Brewing",
+            "is_woman_owned": false,
+            "min_price": 4.99,
+            "max_price": 7.99,
+            "calories": 200,
+            "protein": 2.0,
+            "fat": 0.0,
+            "carbs": 18.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 351,
+        "fields": {
+            "name": "Organic Red Wine (750 ml)",
+            "brand": "Bonterra Vineyards",
+            "is_woman_owned": true,
+            "min_price": 17.99,
+            "max_price": 25.99,
+            "calories": 120,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 3.0,
+            "calcium": 20.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 352,
+        "fields": {
+            "name": "Margarita (12 oz)",
+            "brand": "Jose Cuervo",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 8.99,
+            "calories": 220,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 30.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 353,
+        "fields": {
+            "name": "Lager Beer (12 oz)",
+            "brand": "Budweiser",
+            "is_woman_owned": false,
+            "min_price": 1.99,
+            "max_price": 3.49,
+            "calories": 150,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 13.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 354,
+        "fields": {
+            "name": "Whiskey (750 ml)",
+            "brand": "Maker\u2019s Mark",
+            "is_woman_owned": false,
+            "min_price": 29.99,
+            "max_price": 45.99,
+            "calories": 105,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 355,
+        "fields": {
+            "name": "Cider (12 oz)",
+            "brand": "Strongbow",
+            "is_woman_owned": false,
+            "min_price": 2.99,
+            "max_price": 4.99,
+            "calories": 160,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 24.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 356,
+        "fields": {
+            "name": "Vodka (750 ml)",
+            "brand": "Tito's Handmade",
+            "is_woman_owned": false,
+            "min_price": 19.99,
+            "max_price": 29.99,
+            "calories": 96,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 357,
+        "fields": {
+            "name": "Champagne (750 ml)",
+            "brand": "Veuve Clicquot",
+            "is_woman_owned": false,
+            "min_price": 49.99,
+            "max_price": 69.99,
+            "calories": 90,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 1.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 358,
+        "fields": {
+            "name": "Prosecco (750 ml)",
+            "brand": "La Marca",
+            "is_woman_owned": false,
+            "min_price": 12.99,
+            "max_price": 19.99,
+            "calories": 120,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 2.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 359,
+        "fields": {
+            "name": "Whiskey Sour (12 oz)",
+            "brand": "Jack Daniel\u2019s",
+            "is_woman_owned": false,
+            "min_price": 5.99,
+            "max_price": 7.99,
+            "calories": 200,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 26.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 360,
+        "fields": {
+            "name": "Beer (16 oz)",
+            "brand": "Heineken",
+            "is_woman_owned": false,
+            "min_price": 2.49,
+            "max_price": 4.49,
+            "calories": 150,
+            "protein": 1.0,
+            "fat": 0.0,
+            "carbs": 12.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 361,
+        "fields": {
+            "name": "Wine Spritzer (12 oz)",
+            "brand": "FitVine Wine",
+            "is_woman_owned": true,
+            "min_price": 5.49,
+            "max_price": 8.99,
+            "calories": 90,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 2.0,
+            "calcium": 10.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 362,
+        "fields": {
+            "name": "Whiskey (750 ml)",
+            "brand": "Bushmills Irish",
+            "is_woman_owned": false,
+            "min_price": 29.99,
+            "max_price": 39.99,
+            "calories": 110,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    },
+    {
+        "model": "KartKat.groceryitem",
+        "pk": 363,
+        "fields": {
+            "name": "Tequila (750 ml)",
+            "brand": "Don Julio",
+            "is_woman_owned": false,
+            "min_price": 39.99,
+            "max_price": 59.99,
+            "calories": 98,
+            "protein": 0.0,
+            "fat": 0.0,
+            "carbs": 0.0,
+            "calcium": 0.0,
+            "vitamin_d": 0.0,
+            "vitamin_b12": 0.0,
+            "type": "Alcoholic Beverages"
+        }
+    }
+]
