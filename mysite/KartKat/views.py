@@ -16,7 +16,7 @@ from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
-from .models import ShoppingList, ShoppingListItem, Recipe, GroceryItem, Reward
+from .models import ShoppingList, ShoppingListItem, Recipe, GroceryItem, Reward, Inventory
 from .forms import ShoppingListForm, ShoppingListItemForm
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -188,8 +188,28 @@ def delete_list(request, list_id):
 
 def map(request):
     key = os.environ.get('API_KEY')
+    inventory_items = Inventory.objects.all()
+    store_and_products = {}
+    for inventory_item in inventory_items: # add each product to dictionary of the store's name
+        store_name = inventory_item.store_name
+        item = store_and_products.get(store_name, {})
+        price = inventory_item.price
+        food = inventory_item.grocery_item.name
+        item[food] = price
+        store_and_products[store_name] = item
+
+    shopping_list_items = ShoppingListItem.objects.all()
+    shopping_list_names = [shopping_list_item.name for shopping_list_item in shopping_list_items]
+    shopping_list_nums = [shopping_list_item.shopping_list.name for shopping_list_item in shopping_list_items]
+    shopping_list = {}
+    for i in range(len(shopping_list_names)):
+        items_in_list = shopping_list.get(shopping_list_nums[i], [])
+        items_in_list.append(shopping_list_names[i])
+        shopping_list[shopping_list_nums[i]] = items_in_list
     context = {
         'key': key,
+        'stores_and_products': store_and_products,
+        'shopping_list': shopping_list
     }
     return render(request, 'map.html', context)
 

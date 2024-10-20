@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 <title>Map</title>
+
 <script>
     function initMap() {
     let autocomplete;
@@ -216,11 +217,16 @@
     function displayLocationList(locations) {
             const locationListElement = document.getElementById('location-list');
             const sortSelectElement = document.getElementById('sort-select');
-
             if (locations.length > 0) {
                 locationListElement.innerHTML = '<h2>Nearby Grocery Stores:</h2>';
                 const ul = document.createElement('ul');
                 locations.forEach((location, index) => {
+                    // var totalPrice = 0;
+                    // var locationItems = storesAndProducts[location.name];
+                    // shoppingLists["Fruits"].forEach((item, index) => {
+                    //     totalPrice += locationItems.hasOwnProperty(item) ? locationItems[item] : 0;
+                    // });
+
                     const li = document.createElement('li');
                     const routeInfo = location.routeInfo ?
                         `<br>Distance: ${location.routeInfo.distance}, Travel Time: ${location.routeInfo.duration}` :
@@ -239,7 +245,9 @@
                 sortSelectElement.style.display = 'none';
             }
         }
+
 }
+
 </script>
 
 <script async defer
@@ -328,5 +336,17 @@
 <div id="location-list" style="margin-top: 20px; padding: 20px;">
     <!-- The list of locations will be inserted here -->
 </div>
+
+<h2>Shopping Lists</h2>
+<ul>
+    {% for list_name, items in shopping_list.items %}
+        <li><strong>{{ list_name }}</strong></li>
+        <ul>
+            {% for item in items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</ul>
 
 {% endblock %}
