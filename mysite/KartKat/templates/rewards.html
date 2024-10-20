@@ -196,6 +196,15 @@
         {% include 'google_login.html' %}
     {% endif %}
 
+    <div class="container">
+        <h2>Unlocked Rewards</h2>
+        {% for reward in unlocked_rewards %}
+        <div class="reward">
+            <h2>{{ reward.name }}</h2>
+            <p>{{ reward.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
 
 
 </body>
