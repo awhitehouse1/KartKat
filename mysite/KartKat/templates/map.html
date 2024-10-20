@@ -230,18 +230,21 @@
         let shoppingList = htmlElement.getAttribute('data-shoppingList');
         shoppingList = shoppingList.replace(/(?<!\w)'(.*?)'(?!\w)/g, '"$1"');
         const jsonShoppingList = JSON.parse(shoppingList);
+
+        // Get selected shopping list from the dropdown
+        const selectedShoppingList = document.getElementById('shopping-list-select').value;
+
         let storesAndProducts = htmlElement.getAttribute('data-storesAndProducts');
         storesAndProducts = storesAndProducts.replace(/(?<!\w)'(.*?)'(?!\w)/g, '"$1"');
         storesAndProducts = storesAndProducts.replace(/Decimal\("([^"]+)"\)/g, '"$1"');
         const jsonStoresAndProducts = JSON.parse(storesAndProducts);
         let locationItems = jsonStoresAndProducts[location.name];
+
         if (typeof locationItems === 'object' && locationItems !== null) {
-            console.log("Made it in here")
-            jsonShoppingList["Fruits"].forEach((item, index) => {
+            jsonShoppingList[selectedShoppingList].forEach((item, index) => {
                 const closestMatch = Object.keys(locationItems).find(locationItem =>
                         locationItem.toLowerCase().includes(item.toLowerCase())
                 );
-                console.log(item)
                 // If a closest match is found, add its price to totalPrice
                 if (closestMatch) {
                     totalPrice += parseFloat(locationItems[closestMatch]);
@@ -254,7 +257,7 @@
     function displayLocationList(locations) {
             const locationListElement = document.getElementById('location-list');
             const sortSelectElement = document.getElementById('sort-select');
-
+            const shoppingListSelectElement = document.getElementById('shopping-list-select');
             const htmlElement = document.documentElement;
             // Access the data-variableName attribute
             let shoppingList = htmlElement.getAttribute('data-shoppingList');
@@ -295,12 +298,24 @@
 
                 // Show the sort select when there are locations
                 sortSelectElement.style.display = 'inline-block';
+                shoppingListSelectElement.style.display = 'inline_block';
             } else {
                 locationListElement.innerHTML = '<p>No nearby grocery stores found.</p>';
 
                 // Hide the sort select when there are no locations
                 sortSelectElement.style.display = 'none';
+                shoppingListSelectElement.style.display = 'none';
             }
+            const shoppingListSelect = document.getElementById('shopping-list-select');
+            shoppingListSelect.innerHTML = ''; // Clear existing options
+
+            Object.keys(jsonShoppingList).forEach(listName => {
+                const option = document.createElement('option');
+                option.value = listName;
+                option.textContent = listName.charAt(0).toUpperCase() + listName.slice(1); // Capitalize first letter
+                shoppingListSelect.appendChild(option);
+                console.log(option);
+            });
         }
 
 }
@@ -389,6 +404,11 @@
     <option value="distance">Distance</option>
     <option value="duration">Travel Time</option>
     <option value="price">Price</option>
+</select>
+
+<select id="shopping-list-select" style="margin-left: 10px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    <option value="Fruits">Fruits</option>
+    <!-- Additional options will be added dynamically via JavaScript -->
 </select>
 
 <div id="location-list" style="margin-top: 20px; padding: 20px;">
