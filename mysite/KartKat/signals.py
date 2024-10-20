@@ -10,4 +10,3 @@ def create_default_rewards(sender, **kwargs):
         Reward.objects.get_or_create(name='Seafood Lover', description='Unlocked for buying seafood.')
         Reward.objects.get_or_create(name="Supporter of Women's Business", description='Unlocked for buying items from women-owned businesses.')
         # Add more rewards as needed
-   

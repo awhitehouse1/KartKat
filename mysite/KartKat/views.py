@@ -211,7 +211,15 @@ def delete_crossed_off_items(request):
             list_id = item['listId']
             item_id = item['itemId']
             shopping_list_item = get_object_or_404(ShoppingListItem, id=item_id, shopping_list_id=list_id)
-
+            ShoppingListItem.objects.filter(id=item_id, shopping_list_id=list_id).delete()
+            grocery_items = GroceryItem.objects.all()
+            grocery_item_names = [grocery_item.name for grocery_item in grocery_items]
+            closest_match, score = process.extractOne(shopping_list_item.name, grocery_item_names)
+            if score >= 80:  # Example threshold for a good match
+                rewards = Reward.objects.all()
+                grocery_item = get_object_or_404(GroceryItem, name=closest_match)
+                ShoppingListItem.objects.filter(id=item_id, shopping_list_id=list_id).delete()
+                print("grocery item", grocery_item)
             grocery_items = GroceryItem.objects.all()
             grocery_item_names = [grocery_item.name for grocery_item in grocery_items]
             closest_match, score = process.extractOne(shopping_list_item.name, grocery_item_names)
@@ -235,9 +243,7 @@ def delete_crossed_off_items(request):
                     rewards.filter(name="Healthy Shopper").update(unlocked=True)
                 elif grocery_item.type == "Seafood":
                     print("Seafood")
-                    rewards.filter(name="Seafood Lover").update(unlocked=True)     
-
-                shopping_list_item.delete()
+                    rewards.filter(name="Seafood Lover").update(unlocked=True)
 
         return JsonResponse({'status': 'success'})
     return JsonResponse({'status': 'error'}, status=400)
