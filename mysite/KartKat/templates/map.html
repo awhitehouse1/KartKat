@@ -213,10 +213,45 @@
                 sortedLocations.sort((a, b) => a.routeInfo.distanceValue - b.routeInfo.distanceValue);
             } else if (sortBy === 'duration') {
                 sortedLocations.sort((a, b) => a.routeInfo.durationValue - b.routeInfo.durationValue);
+            } else if (sortBy === 'price') {
+                sortedLocations.sort((a, b) => {
+                    const priceA = getPriceForLocation(a);
+                    const priceB = getPriceForLocation(b);
+                    return priceA - priceB;
+                });
+                console.log(sortedLocations)
             }
-
             displayLocationList(sortedLocations);
+    }
+
+    function getPriceForLocation(location) {
+        let totalPrice = 0;
+        // const locationListElement = document.getElementById('location-list');
+        // const sortSelectElement = document.getElementById('sort-select');
+        const htmlElement = document.documentElement;
+        let shoppingList = htmlElement.getAttribute('data-shoppingList');
+        shoppingList = shoppingList.replace(/'/g, '"');
+        const jsonShoppingList = JSON.parse(shoppingList);
+        let storesAndProducts = htmlElement.getAttribute('data-storesAndProducts');
+        storesAndProducts = storesAndProducts.replace(/(?<!\w)'(.*?)'(?!\w)/g, '"$1"');
+        storesAndProducts = storesAndProducts.replace(/Decimal\("([^"]+)"\)/g, '"$1"');
+        const jsonStoresAndProducts = JSON.parse(storesAndProducts);
+        let locationItems = jsonStoresAndProducts[location.name];
+        if (typeof locationItems === 'object' && locationItems !== null) {
+            console.log("Made it in here")
+            jsonShoppingList["Fruits"].forEach((item, index) => {
+                const closestMatch = Object.keys(locationItems).find(locationItem =>
+                        locationItem.toLowerCase().includes(item.toLowerCase())
+                );
+                console.log(item)
+                // If a closest match is found, add its price to totalPrice
+                if (closestMatch) {
+                    totalPrice += parseFloat(locationItems[closestMatch]);
+                }
+            });
         }
+        return totalPrice > 0 ? totalPrice : Infinity; // Treat locations with no matching items as the lowest price
+    }
 
     function displayLocationList(locations) {
             const locationListElement = document.getElementById('location-list');
@@ -240,13 +275,20 @@
                     let locationItems = jsonStoresAndProducts[location.name];
                     if (typeof locationItems === 'object' && locationItems !== null) {
                         jsonShoppingList["Fruits"].forEach((item, index) => {
-                            totalPrice += locationItems.hasOwnProperty(item) ? locationItems[item] : 0;
+                            const closestMatch = Object.keys(locationItems).find(locationItem =>
+                                locationItem.toLowerCase().includes(item.toLowerCase())
+                            );
+
+                            // If a closest match is found, add its price to totalPrice
+                            if (closestMatch) {
+                                totalPrice += parseFloat(locationItems[closestMatch]);
+                            }
                         });
                     }
 
                     const li = document.createElement('li');
                     const routeInfo = location.routeInfo ?
-                        `<br>Distance: ${location.routeInfo.distance}, Travel Time: ${location.routeInfo.duration}, Price: $${totalPrice}` :
+                        `<br>Distance: ${location.routeInfo.distance}, Travel Time: ${location.routeInfo.duration}, Price: ${totalPrice > 0 ? `$${totalPrice.toFixed(2)}` : 'N/A - Does not sell items from your shopping list'}` :
                         '<br>Route information not available';
                     li.innerHTML = `<strong>${index + 1}. ${location.name}</strong> - ${location.vicinity}${routeInfo}`;
                     ul.appendChild(li);
@@ -348,6 +390,7 @@
     <option value="none">Sort by...</option>
     <option value="distance">Distance</option>
     <option value="duration">Travel Time</option>
+    <option value="price">Price</option>
 </select>
 
 <div id="location-list" style="margin-top: 20px; padding: 20px;">
