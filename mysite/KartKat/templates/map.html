@@ -12,12 +12,13 @@
     let openInfoWindow = null;
     let currentMarkers = [];
     let map;
-    const MIN_ZOOM = 12; // Set the minimum zoom level
+    const MIN_ZOOM = 12;
+    let currentLocations = []; // Store the current list of locations
 
     var mapOptions = {
         center: { lat: 38.0336, lng: -78.5080 },
         zoom: 15,
-        minZoom: MIN_ZOOM, // Set the minimum zoom level for the map
+        minZoom: MIN_ZOOM,
         styles: [
             {
                 featureType: 'poi',
@@ -62,6 +63,11 @@
         }
     });
 
+    // Add event listener for the sort select
+    document.getElementById('sort-select').addEventListener('change', function() {
+        sortAndDisplayLocations();
+    });
+
     function searchNearbyPlaces() {
         currentMarkers.forEach(marker => marker.setMap(null));
         currentMarkers = [];
@@ -70,48 +76,95 @@
 
         var request = {
             location: originLocation,
-            radius: radiusValue * 1000 || 5000, // Convert km to meters
+            radius: radiusValue * 1609.34, // Convert miles to meters
             type: ['grocery_or_supermarket']
         };
 
         placesService.nearbySearch(request, function (results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
-                results.forEach(function (result) {
-                    var marker = new google.maps.Marker({
-                        position: result.geometry.location,
-                        map: map,
-                        title: result.name
-                    });
+                let locationsWithRoutes = [];
+                let processedCount = 0;
 
-                    currentMarkers.push(marker);
+                results.forEach(function (result, index) {
+                    calculateRoute(originLocation, result.geometry.location, function(routeInfo) {
+                        if (routeInfo && routeInfo.distanceValue <= radiusValue * 1609.34) {
+                            var marker = new google.maps.Marker({
+                                position: result.geometry.location,
+                                map: map,
+                                title: result.name
+                            });
 
-                    marker.addListener('click', function () {
-                        if (openInfoWindow) {
-                            openInfoWindow.close();
+                            currentMarkers.push(marker);
+
+                            marker.addListener('click', function () {
+                                if (openInfoWindow) {
+                                    openInfoWindow.close();
+                                }
+
+                                calculateAndDisplayRoute(originLocation, result.geometry.location);
+
+                                var infoWindow = new google.maps.InfoWindow({
+                                    content: `<h3>${result.name}</h3><p>${result.vicinity}</p>`
+                                });
+
+                                infoWindow.open(map, marker);
+                                openInfoWindow = infoWindow;
+                            });
+
+                            locationsWithRoutes.push({
+                                ...result,
+                                routeInfo: routeInfo
+                            });
                         }
 
-                        calculateAndDisplayRoute(originLocation, result.geometry.location);
+                        processedCount++;
+                        if (processedCount === results.length) {
+                            // All routes have been calculated
+                            currentLocations = locationsWithRoutes;
+                            sortAndDisplayLocations();
 
-                        var infoWindow = new google.maps.InfoWindow({
-                            content: `<h3>${result.name}</h3><p>${result.vicinity}</p>`
-                        });
+                            if (currentMarkers.length > 0) {
+                                // Adjust map bounds to fit all markers
+                                var bounds = new google.maps.LatLngBounds();
+                                currentMarkers.forEach(marker => bounds.extend(marker.getPosition()));
+                                map.fitBounds(bounds);
 
-                        infoWindow.open(map, marker);
-                        openInfoWindow = infoWindow;
+                                // Add a listener for when the zoom changes
+                                google.maps.event.addListenerOnce(map, 'zoom_changed', function() {
+                                    if (map.getZoom() > MIN_ZOOM) {
+                                        map.setZoom(MIN_ZOOM);
+                                    }
+                                });
+                            } else {
+                                map.setCenter(originLocation);
+                                map.setZoom(MIN_ZOOM);
+                            }
+                        }
                     });
                 });
+            }
+        });
+    }
 
-                // Adjust map bounds to fit all markers
-                var bounds = new google.maps.LatLngBounds();
-                currentMarkers.forEach(marker => bounds.extend(marker.getPosition()));
-                map.fitBounds(bounds);
+    function calculateRoute(origin, destination, callback) {
+        var selectedMode = document.getElementById('mode').value;
 
-                // Add a listener for when the zoom changes
-                google.maps.event.addListenerOnce(map, 'zoom_changed', function() {
-                    if (map.getZoom() > MIN_ZOOM) {
-                        map.setZoom(MIN_ZOOM);
-                    }
+        directionsService.route({
+            origin: origin,
+            destination: destination,
+            travelMode: google.maps.TravelMode[selectedMode.toUpperCase()]
+        }, function (response, status) {
+            if (status === google.maps.DirectionsStatus.OK) {
+                var route = response.routes[0].legs[0];
+                callback({
+                    distance: route.distance.text,
+                    duration: route.duration.text,
+                    distanceValue: route.distance.value,
+                    durationValue: route.duration.value
                 });
+            } else {
+                callback(null);
+                console.error('Directions request failed due to ' + status);
             }
         });
     }
@@ -138,6 +191,47 @@
             }
         });
     }
+
+    function sortAndDisplayLocations() {
+            const sortBy = document.getElementById('sort-select').value;
+
+            let sortedLocations = [...currentLocations];
+
+            if (sortBy === 'distance') {
+                sortedLocations.sort((a, b) => a.routeInfo.distanceValue - b.routeInfo.distanceValue);
+            } else if (sortBy === 'duration') {
+                sortedLocations.sort((a, b) => a.routeInfo.durationValue - b.routeInfo.durationValue);
+            }
+
+            displayLocationList(sortedLocations);
+        }
+
+    function displayLocationList(locations) {
+            const locationListElement = document.getElementById('location-list');
+            const sortSelectElement = document.getElementById('sort-select');
+
+            if (locations.length > 0) {
+                locationListElement.innerHTML = '<h2>Nearby Grocery Stores:</h2>';
+                const ul = document.createElement('ul');
+                locations.forEach((location, index) => {
+                    const li = document.createElement('li');
+                    const routeInfo = location.routeInfo ?
+                        `<br>Distance: ${location.routeInfo.distance}, Travel Time: ${location.routeInfo.duration}` :
+                        '<br>Route information not available';
+                    li.innerHTML = `<strong>${index + 1}. ${location.name}</strong> - ${location.vicinity}${routeInfo}`;
+                    ul.appendChild(li);
+                });
+                locationListElement.appendChild(ul);
+
+                // Show the sort select when there are locations
+                sortSelectElement.style.display = 'inline-block';
+            } else {
+                locationListElement.innerHTML = '<p>No nearby grocery stores found.</p>';
+
+                // Hide the sort select when there are no locations
+                sortSelectElement.style.display = 'none';
+            }
+        }
 }
 </script>
 
@@ -216,6 +310,16 @@
 
 <div class="mapholder">
     <div id="map"></div>
+</div>
+
+<select id="sort-select" style="margin-left: 10px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; display: none;">
+    <option value="none">Sort by...</option>
+    <option value="distance">Distance</option>
+    <option value="duration">Travel Time</option>
+</select>
+
+<div id="location-list" style="margin-top: 20px; padding: 20px;">
+    <!-- The list of locations will be inserted here -->
 </div>
 
 {% endblock %}
