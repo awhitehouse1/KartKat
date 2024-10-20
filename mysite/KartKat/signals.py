@@ -1,6 +1,7 @@
 from django.db.models.signals import post_migrate
 from django.dispatch import receiver
 from .models import Reward
+
 @receiver(post_migrate)
 def create_default_rewards(sender, **kwargs):
     if sender.name == 'KartKat':  # Replace 'kartkat' with your app name

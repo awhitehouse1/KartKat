@@ -220,6 +220,16 @@ def delete_crossed_off_items(request):
                 grocery_item = get_object_or_404(GroceryItem, name=closest_match)
                 ShoppingListItem.objects.filter(id=item_id, shopping_list_id=list_id).delete()
                 print("grocery item", grocery_item)
+            grocery_items = GroceryItem.objects.all()
+            grocery_item_names = [grocery_item.name for grocery_item in grocery_items]
+            closest_match, score = process.extractOne(shopping_list_item.name, grocery_item_names)
+
+            if score >= 80:  # Example threshold for a good match
+                rewards = Reward.objects.all()
+
+                grocery_item = get_object_or_404(GroceryItem, name=closest_match)
+                print("grocery item", grocery_item)
+
                 # Check the calcium content
                 if grocery_item.calcium > 260:  # Example threshold
                     # Perform some action if the calcium content is above the threshold
