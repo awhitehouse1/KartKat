@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,8 @@
         body {
             font-family: "Avenir", "Proxima Nova", Serif;
             background-color: white;
-            margin: 0; /* Remove margin to eliminate space at the top */
-            padding: 0; /* Remove any additional padding */
+            margin: 0;
+            padding: 0;
         }
 
         h1 {
@@ -32,39 +33,36 @@
         }
 
         nav {
-            height: 70px; /* Adjust navbar height */
+            height: 70px;
             list-style-type: none;
-            margin: 0; /* Remove margin */
-            padding: 0; /* Remove padding */
+            margin: 0;
+            padding: 0;
             overflow: hidden;
             background-color: #2a9d8f;
             display: flex;
-            justify-content: space-between; /* Ensure items are spaced on the left and right */
-            align-items: center; /* Center align items vertically */
-            position: fixed; /* Make navbar fixed at the top */
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            padding: 0 20px; /* Add some padding for the content */
+            padding: 0 20px;
         }
 
         .navleft {
-            display: flex;
-            justify-content: flex-start;
-            text-align: center;
-            flex-grow: 1; /* This ensures the left part takes up the remaining space */
-
+        display: flex;
+        justify-content: flex-start; /* Align items to the left */
+        align-items: center; /* Center align items vertically */
+        margin-right: auto; /* Push all content to the left */
         }
 
+
         .logo {
-            display: block;
-            color: white;
-            text-align: center;
-            vertical-align: middle;
-            padding: 0px 40px;
-            text-decoration: none;
-            font-size: xx-large;
-            margin-top: -15px;
+            max-height: 120px; /* Adjust logo size to fit the navbar */
+            margin-right: 20px; /* Space between the logo and the links */
+            background-color: #CBEFED; /* Add a white background behind the logo */
+            padding: 1px; /* Add padding to create space between the logo and the background */
+            border-radius: 8px; /* Optional: rounded corners for a cleaner look */
         }
 
         .navspecial {
@@ -73,43 +71,31 @@
             align-items: center;
         }
 
-        .nav {
-            display: flex;
-            align-items: center;
-            font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        }
-
         .navdesign {
-            display: block;
             color: white;
             text-align: center;
             padding: 12px 40px;
             text-decoration: none;
             font-size: 20px;
         }
-
-        .brsmall {
-            display: block;
-            margin-bottom: .5em;
-            flex-grow: 1;
-        }
-
     </style>
 </head>
 <body>
 
     <nav class="nav">
         <div class="navleft">
-            <a class="active navdesign" href="{% url 'index' %}">Shopping List</a>
-            <a class="active navdesign" href="{% url 'recipe_list' %}">Recipe Page</a>
-            <a class="active navdesign" href="{% url 'map' %}">Search Grocery Stores</a>
+            <a href="{% url 'index' %}">
+                <img src="{% static 'images/KartKatLogo.png' %}" alt="KatKart Logo" class="logo">
+            </a>
+            <a class="navdesign" href="{% url 'index' %}">Shopping List</a>
+            <a class="navdesign" href="{% url 'recipe_list' %}">Recipe Page</a>
+            <a class="navdesign" href="{% url 'map' %}">Search Grocery Stores</a>
             <a class="navdesign" href="{% url 'rewards' %}">Rewards</a>
-
         </div>
         <div class="navspecial">
             <a class="navdesign" href="{% url 'logout' %}">Logout</a>
         </div>
     </nav>
-    <!-- Main content goes here -->
+
 </body>
 </html>
