@@ -226,11 +226,9 @@
 
     function getPriceForLocation(location) {
         let totalPrice = 0;
-        // const locationListElement = document.getElementById('location-list');
-        // const sortSelectElement = document.getElementById('sort-select');
         const htmlElement = document.documentElement;
         let shoppingList = htmlElement.getAttribute('data-shoppingList');
-        shoppingList = shoppingList.replace(/'/g, '"');
+        shoppingList = shoppingList.replace(/(?<!\w)'(.*?)'(?!\w)/g, '"$1"');
         const jsonShoppingList = JSON.parse(shoppingList);
         let storesAndProducts = htmlElement.getAttribute('data-storesAndProducts');
         storesAndProducts = storesAndProducts.replace(/(?<!\w)'(.*?)'(?!\w)/g, '"$1"');
@@ -260,7 +258,7 @@
             const htmlElement = document.documentElement;
             // Access the data-variableName attribute
             let shoppingList = htmlElement.getAttribute('data-shoppingList');
-            shoppingList = shoppingList.replace(/'/g, '"');
+            shoppingList = shoppingList.replace(/(?<!\w)'(.*?)'(?!\w)/g, '"$1"');
             const jsonShoppingList = JSON.parse(shoppingList);
             let storesAndProducts = htmlElement.getAttribute('data-storesAndProducts');
             storesAndProducts = storesAndProducts.replace(/(?<!\w)'(.*?)'(?!\w)/g, '"$1"');
