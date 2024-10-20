@@ -190,15 +190,6 @@
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{% url 'index' %}">Shopping List</a></li>
-                <li><a href="{% url 'recipe_list' %}">Recipe Page</a></li>
-            </ul>
-        </nav>
-    </header>
-
     {% if user.is_authenticated %}
         {% include 'navbar.html' %}
         {% include 'shopping_list.html' %}
