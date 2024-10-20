@@ -16,10 +16,11 @@ from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
-from .models import ShoppingList, ShoppingListItem, Recipe
+from .models import ShoppingList, ShoppingListItem, Recipe, GroceryItem, Reward
 from .forms import ShoppingListForm, ShoppingListItemForm
 from openai import OpenAI
 from dotenv import load_dotenv
+from fuzzywuzzy import process
 
 load_dotenv()
 
@@ -54,7 +55,7 @@ def chatbot(request):
                                 item_str = " and ".join(item_names)
                             else:
                                 item_str = ", ".join(item_names[:-1]) + ", and " + item_names[-1]
-                            chatbot_response = f"Here are the items in {shopping_list.name}: {item_str}"
+                            chatbot_response = f"The items in {shopping_list.name} {item_str}"
                         else:
                             chatbot_response = f"The shopping list '{shopping_list.name}' has no items yet."
                     except ShoppingList.DoesNotExist:
@@ -97,7 +98,7 @@ def chatbot(request):
                     else:
                         shopping_list_str = ", ".join(shopping_list_names[:-1]) + ", and " + shopping_list_names[-1]
                     
-                    chatbot_response = f"Here are your shopping lists: {shopping_list_str}. Would you like to see the items for any specific list?"
+                    chatbot_response = f"You have shopping lists called {shopping_list_str}. Would you like to see the items for any specific list?"
                 else:
                     chatbot_response = "You don't have any shopping lists right now. Try creating one!"
 
@@ -198,7 +199,8 @@ def logout_view(request):
 
 
 def rewards(request):
-    return render(request, 'rewards.html')
+    unlocked_rewards = Reward.objects.filter(unlocked=True)
+    return render(request, 'rewards.html', {'unlocked_rewards': unlocked_rewards})
 
 
 @csrf_exempt
@@ -208,7 +210,30 @@ def delete_crossed_off_items(request):
         for item in data["items"]:
             list_id = item['listId']
             item_id = item['itemId']
+            shopping_list_item = get_object_or_404(ShoppingListItem, id=item_id, shopping_list_id=list_id)
             ShoppingListItem.objects.filter(id=item_id, shopping_list_id=list_id).delete()
+            grocery_items = GroceryItem.objects.all()
+            grocery_item_names = [grocery_item.name for grocery_item in grocery_items]
+            closest_match, score = process.extractOne(shopping_list_item.name, grocery_item_names)
+            if score >= 80:  # Example threshold for a good match
+                rewards = Reward.objects.all()
+                grocery_item = get_object_or_404(GroceryItem, name=closest_match)
+                ShoppingListItem.objects.filter(id=item_id, shopping_list_id=list_id).delete()
+                print("grocery item", grocery_item)
+                # Check the calcium content
+                if grocery_item.calcium > 260:  # Example threshold
+                    # Perform some action if the calcium content is above the threshold
+                    print(f"Item {grocery_item.name} has high calcium content: {grocery_item.calcium}mg")
+                    rewards.filter(name="Calcium Champion").update(unlocked=True)
+                elif grocery_item.is_woman_owned:
+                    print("women owned")
+                    rewards.filter(name="Supporter of Women's Business").update(unlocked=True)
+                elif grocery_item.type == "Fresh Produce":
+                    print("Fresh Produce")
+                    rewards.filter(name="Healthy Shopper").update(unlocked=True)
+                elif grocery_item.type == "Seafood":
+                    print("Seafood")
+                    rewards.filter(name="Seafood Lover").update(unlocked=True)
 
         return JsonResponse({'status': 'success'})
     return JsonResponse({'status': 'error'}, status=400)

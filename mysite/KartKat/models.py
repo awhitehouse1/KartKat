@@ -47,3 +47,10 @@ class Inventory(models.Model):
     def __str__(self):
         return self.store_name
 
+class Reward(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    unlocked = models.BooleanField(default=False)
+    def __str__(self):
+        return self.name
+
