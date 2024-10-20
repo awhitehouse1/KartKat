@@ -237,7 +237,7 @@ def delete_crossed_off_items(request):
                     print("Seafood")
                     rewards.filter(name="Seafood Lover").update(unlocked=True)     
 
-                shopping_list_item.delete()
+            ShoppingListItem.objects.filter(id=item_id, shopping_list_id=list_id).delete()
 
         return JsonResponse({'status': 'success'})
     return JsonResponse({'status': 'error'}, status=400)
