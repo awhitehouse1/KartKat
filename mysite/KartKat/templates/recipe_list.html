@@ -16,10 +16,19 @@
             color: white;
             padding: 10px 20px;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Make sure this is high */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
         }
+
         .container {
             padding: 20px;
+            margin-top: 80px; /* Make sure this margin is enough to clear the height of the navbar */
         }
+
         .recipe {
             background-color: white;
             border: 1px solid #ddd;
@@ -28,7 +37,9 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: relative;
+            z-index: -1; /* Ensure the recipes don't overlap with the navbar */
         }
+
         .recipe h2 {
             margin-top: 0;
         }
