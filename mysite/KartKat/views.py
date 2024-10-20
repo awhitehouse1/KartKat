@@ -33,18 +33,91 @@ def chatbot(request):
     if request.method == 'POST':
         message = request.POST.get('message')
         try:
-            response = client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[
-                    {"role": "system", "content": "You are a helpful assistant. You can answer questions about recipes, shopping lists, and saving money. You are a feminist. Your name is Kat and you are a cat assistant. Make cat puns and meow occaisionally. make the responses concise, but be a girl boss. Do not use markup. When the user asks for recipes, return in this format: 'Here is a recipe for [recipe name]' give each ingredient a new line using the '\\n' char, then list the steps with numbers on their own line."},
-                    {"role": "user", "content": message},
-                ]
-            )
-            chatbot_response = response.choices[0].message.content.strip()
+            chatbot_response = ""
+
+            # Check if the user is asking for shopping lists
+            if "shopping list" in message.lower():
+                shopping_lists = ShoppingList.objects.all()
+                
+                # If user is asking for items from a specific list
+                if "items in" in message.lower():
+                    list_name = message.lower().replace("shopping list items in", "").strip()
+                    try:
+                        shopping_list = ShoppingList.objects.get(name__iexact=list_name)
+                        items = shopping_list.items.all()
+                        if items.exists():
+                            item_names = [item.name for item in items]
+                            # Append items with commas and 'and' before the last item
+                            if len(item_names) == 1:
+                                item_str = item_names[0]
+                            elif len(item_names) == 2:
+                                item_str = " and ".join(item_names)
+                            else:
+                                item_str = ", ".join(item_names[:-1]) + ", and " + item_names[-1]
+                            chatbot_response = f"Here are the items in {shopping_list.name}: {item_str}"
+                        else:
+                            chatbot_response = f"The shopping list '{shopping_list.name}' has no items yet."
+                    except ShoppingList.DoesNotExist:
+                        chatbot_response = f"I couldn't find a shopping list named '{list_name}'."
+
+                # Check if the user is asking for recipes based on a specific shopping list
+                elif "recipe" in message.lower() and "from shopping list" in message.lower():
+                    list_name = message.lower().replace("recipe from shopping list", "").strip()
+                    try:
+                        shopping_list = ShoppingList.objects.get(name__iexact=list_name)
+                        items = shopping_list.items.all()
+                        if items.exists():
+                            # Collect item names for recipe suggestion
+                            item_names = [item.name for item in items]
+                            item_str = ", ".join(item_names[:-1]) + ", and " + item_names[-1] if len(item_names) > 1 else item_names[0]
+                            
+                            # Call OpenAI API to generate a recipe using the items
+                            response = client.chat.completions.create(
+                                model="gpt-4o-mini",
+                                messages=[
+                                    {"role": "system", "content": "You are a helpful assistant that provides recipes based on given ingredients. Aim to use all or most of the provided ingredients in your recipe. You are a feminist. Your name is Kat and you are a cat assistant. Make cat puns and meow occasionally. Make the responses concise, but be a girl boss. Do not use markup. When the user asks for recipes, return in this format: 'Here is a recipe for [recipe name]' give each ingredient a new line using the '\\n' char, then list the steps with numbers on their own line."},
+                                    {"role": "user", "content": f"Can you give me a recipe that uses the following ingredients: {item_str}?"},
+                                ]
+                            )
+                            recipe_response = response.choices[0].message.content.strip()
+                            chatbot_response = f"{recipe_response}"
+                        else:
+                            chatbot_response = f"The shopping list '{shopping_list.name}' has no items, so I can't suggest any recipes."
+                    except ShoppingList.DoesNotExist:
+                        chatbot_response = f"I couldn't find a shopping list named '{list_name}'."
+
+                # User just asked for shopping lists
+                elif shopping_lists.exists():
+                    shopping_list_names = [shopping_list.name for shopping_list in shopping_lists]
+                    # Append shopping list names with commas and 'and' before the last item
+                    if len(shopping_list_names) == 1:
+                        shopping_list_str = shopping_list_names[0]
+                    elif len(shopping_list_names) == 2:
+                        shopping_list_str = " and ".join(shopping_list_names)
+                    else:
+                        shopping_list_str = ", ".join(shopping_list_names[:-1]) + ", and " + shopping_list_names[-1]
+                    
+                    chatbot_response = f"Here are your shopping lists: {shopping_list_str}. Would you like to see the items for any specific list?"
+                else:
+                    chatbot_response = "You don't have any shopping lists right now. Try creating one!"
+
+            # Handle other chatbot interactions
+            else:
+                response = client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {"role": "system", "content": "You are a helpful assistant. You can answer questions about recipes, shopping lists, and saving money. You are a feminist. Your name is Kat and you are a cat assistant. Make cat puns and meow occasionally. Make the responses concise, but be a girl boss. Do not use markup. When the user asks for recipes, return in this format: 'Here is a recipe for [recipe name]' give each ingredient a new line using the '\\n' char, then list the steps with numbers on their own line."},
+                        {"role": "user", "content": message},
+                    ]
+                )
+                chatbot_response = response.choices[0].message.content.strip()
+            
             is_recipe = "Here is a recipe for" in chatbot_response
             return JsonResponse({'response': chatbot_response, 'is_recipe': is_recipe})
+
         except Exception as e:
             return JsonResponse({'response': 'An error occurred'}, status=500)
+
     return JsonResponse({'response': 'Invalid request method'}, status=400)
 
 def index(request):
